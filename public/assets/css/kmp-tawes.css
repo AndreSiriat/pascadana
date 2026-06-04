@@ -1,0 +1,753 @@
+/* =========================================
+GLOBAL
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fa;
+    color:#1d1d1d;
+}
+
+section{
+    width:100%;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+.section-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-header span{
+    color:#00bcd4;
+    font-weight:600;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+.section-header h2{
+    font-size:42px;
+    margin-top:12px;
+    font-weight:700;
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.tawes-hero{
+    min-height:100vh;
+    background:url('../img/5.jpeg') center center/cover no-repeat;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    padding:140px 8% 120px;
+    overflow:hidden;
+}
+
+.tawes-hero .overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right,
+    rgba(0,0,0,.88),
+    rgba(0,0,0,.45));
+}
+
+.tawes-hero-content{
+    position:relative;
+    z-index:2;
+    max-width:720px;
+    color:#fff;
+}
+
+.tagline{
+    color:#00d4ff;
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:600;
+    display:inline-block;
+    margin-bottom:20px;
+}
+
+.tawes-hero-content h1{
+    font-size:92px;
+    line-height:1;
+    margin-bottom:25px;
+    font-weight:800;
+}
+
+.tawes-hero-content p{
+    font-size:18px;
+    line-height:1.9;
+    max-width:650px;
+    opacity:.92;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    margin-top:45px;
+    flex-wrap:wrap;
+}
+
+.hero-stats{
+    position:absolute;
+    bottom:40px;
+    right:8%;
+    display:flex;
+    gap:18px;
+    z-index:2;
+}
+
+.btn-primary{
+    background:#00c8e0;
+    color:#fff;
+    padding:16px 34px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.4);
+    color:#fff;
+    padding:16px 34px;
+    border-radius:14px;
+    text-decoration:none;
+}
+
+
+.stat-box{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.08);
+    padding:28px;
+    border-radius:24px;
+    width:190px;
+    color:#fff;
+}
+
+.stat-box h2{
+    font-size:34px;
+    margin-bottom:10px;
+    font-weight:700;
+}
+
+.stat-box span{
+    font-size:14px;
+    line-height:1.6;
+    display:block;
+}
+
+
+
+
+/* =========================================
+OVERVIEW
+========================================= */
+
+.tawes-overview{
+    padding:120px 8%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+    background:#fff;
+}
+
+.section-label{
+    color:#00bcd4;
+    letter-spacing:2px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.overview-left h2{
+    font-size:52px;
+    line-height:1.2;
+    margin:20px 0;
+}
+
+.overview-left p{
+    line-height:2;
+    color:#666;
+}
+
+.overview-right img{
+    border-radius:30px;
+    height:650px;
+    object-fit:cover;
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+}
+
+.overview-points{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.point{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#f7f9fc;
+    padding:22px;
+    border-radius:18px;
+}
+
+.point i{
+    width:50px;
+    height:50px;
+    background:#00c8e0;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* =========================================
+PREMIUM REVEAL
+========================================= */
+
+.overview-left{
+    opacity:0;
+    transform:translateX(-80px);
+    transition:
+    transform 1.1s cubic-bezier(.22,1,.36,1),
+    opacity 1.1s ease;
+}
+
+.overview-right{
+    opacity:0;
+    transform:translateX(80px);
+    transition:
+    transform 3.5s cubic-bezier(.22,1,.36,1),
+    opacity 3.5s ease;
+}
+
+.overview-points{
+    opacity:0;
+    transform:translateY(30px);
+    transition:
+    transform 1s cubic-bezier(.22,1,.36,1),
+    opacity 1s ease;
+    transition-delay:1s;
+}
+
+/* Active */
+
+.overview-left.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.overview-right.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.overview-points.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Image Premium Zoom */
+
+.overview-right img{
+    width:100%;
+    border-radius:30px;
+    height:650px;
+    object-fit:cover;
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+
+    transform:scale(1.08);
+    transition:
+    transform 1.8s cubic-bezier(.22,1,.36,1);
+}
+
+.overview-right.show img{
+    transform:scale(1);
+}
+
+
+/* =========================================
+SPECS
+========================================= */
+
+.ship-specs {
+    padding: 120px 8%;
+    background: #ffffff; /* Memastikan background luar bersih */
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.spec-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+    
+    /* MENAMBAHKAN BORDER TIPIS HALUS (Warna abu-abu super soft) */
+    border: 1px solid #e2e8f0; 
+    
+    /* Transisi agar perubahan warna border dan bayangan berjalan halus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek ketika kartu disorot (Hover) */
+.spec-card:hover {
+    border-color: #00bcd4; /* Border tipis berubah menjadi warna biru tema Anda */
+    box-shadow: 0 15px 35px rgba(0, 188, 212, 0.1); /* Bayangan sedikit kebiruan agar lebih clean */
+}
+
+.spec-card h3 {
+    margin-bottom: 12px;
+    color: #44546a;;
+
+}
+
+.spec-card p {
+    color:#666;
+}
+
+/* =========================================
+ANIMATION
+========================================= */
+
+.spec-card{
+    opacity:0;
+    transform:translateY(60px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.22,1,.36,1);
+    will-change:transform,opacity;
+}
+
+.spec-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Stagger Delay */
+
+.spec-card:nth-child(1){ transition-delay:.05s; }
+.spec-card:nth-child(2){ transition-delay:.10s; }
+.spec-card:nth-child(3){ transition-delay:.15s; }
+.spec-card:nth-child(4){ transition-delay:.20s; }
+.spec-card:nth-child(5){ transition-delay:.25s; }
+.spec-card:nth-child(6){ transition-delay:.30s; }
+
+/* =========================================
+FACILITIES
+========================================= */
+
+.facilities-section {
+    padding: 120px 8%;
+    background: #fff;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    
+    /* --- PERBAIKAN DI SINI --- */
+    /* Mengunci tinggi dasar setiap baris tunggal agar seragam di 380px */
+    grid-auto-rows: 380px; 
+}
+
+.facility-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    /* min-height dihancurkan/dihapus agar patuh pada ukuran grid-auto-rows */
+    height: 100%; 
+}
+
+.facility-card.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.facility-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.facility-card:hover img {
+    transform: scale(1.08);
+}
+
+.facility-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.1));
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.facility-overlay span {
+    font-size: 52px;
+    opacity: .2;
+    font-weight: 800;
+}
+
+.facility-overlay h3 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.facility-overlay p {
+    line-height: 1.7;
+    opacity: .9;
+}
+
+/* =========================================
+KESELAMATAN SECTION
+========================================= */
+
+.safety-section {
+    padding: 120px 8%;
+    background: #ffffff;
+    box-sizing: border-box; /* Memastikan padding tidak merusak kalkulasi lebar */
+
+    /* --- AKTIFKAN DAN LOCK DI TENGAH MENGGUNAKAN INI --- */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Memaksa konten kiri & kanan berkumpul rapi di tengah layar */
+    gap: 60px;               /* Jarak pembatas tengah antara teks dan galeri */
+    width: 100%;
+}
+
+/* --- KONTEN SISI KIRI (INFO) --- */
+.safety-left {
+    flex: 1; /* Mengambil 50% ruang secara proporsional */
+}
+
+.safety-left .section-label {
+    color: #00bcd4;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.safety-left h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.safety-left > p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+/* List Item Keselamatan */
+.safety-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Jarak antar poin keselamatan */
+}
+
+.safety-item {
+    display: flex;
+    align-items: flex-start; /* Icon tetap di atas saat teks p memanjang */
+    gap: 20px;
+}
+
+/* Desain Icon */
+.safety-item i {
+    font-size: 24px;
+    color: #00bcd4; /* Menggunakan warna biru tema Anda */
+    background: rgba(0, 188, 212, 0.08); /* Background bulat soft kebiruan */
+    padding: 14px;
+    border-radius: 14px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Mencegah icon gepeng saat teks di kanan panjang */
+}
+
+.safety-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.safety-item p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+
+/* --- KONTEN SISI KANAN (GALERI FOTO) --- */
+.safety-gallery {
+    flex: 1; /* Mengambil 50% ruang secara proporsional */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membagi menjadi 2 kolom foto */
+    gap: 20px; /* Jarak antar foto */
+}
+
+.safety-gallery img {
+    width: 100%;
+    height: 240px; /* Mengunci tinggi gambar agar seragam dan rapi */
+    object-fit: cover; /* Memotong gambar secara proporsional tanpa merusaknya */
+    border-radius: 20px; /* Sudut melengkung halus khas modern corporate */
+    border: 1px solid #e2e8f0; /* Border tipis halus di sekeliling foto */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03); /* Bayangan super tipis */
+    transition: transform 0.3s ease;
+}
+
+/* Efek interaktif ringan saat foto disorot */
+.safety-gallery img:hover {
+    transform: scale(1.03); /* Foto sedikit membesar secara halus */
+}
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:992px){
+
+    .hero-stats{
+        display:none;
+    }
+
+    .tawes-overview{
+        grid-template-columns:1fr;
+    }
+
+    .specs-grid,
+    .facilities-grid{
+        grid-template-columns:1fr;
+    }
+
+    .facility-card.large{
+        grid-column:span 1;
+        grid-row:span 1;
+    }
+
+    .overview-left h2,
+    .cta-content h2{
+        font-size:38px;
+    }
+
+    .section-header h2{
+        font-size:34px;
+    }
+
+    .overview-right img{
+        height:500px;
+    }
+}
+
+@media(max-width:768px){
+
+    .overview-points{
+        grid-template-columns:1fr;
+    }
+
+    .facility-card{
+        min-height:320px;
+    }
+
+    .cta-content h2{
+        font-size:32px;
+    }
+}
+
+/* =========================================
+RESPONSIVE LAYOUT (MOBILE)
+========================================= */
+@media (max-width: 768px) {
+    .tawes-hero {
+        min-height: auto;             
+        flex-direction: column;        
+        justify-content: center;
+        padding: 120px 20px 60px;      
+    }
+
+    .tawes-hero .overlay {
+       
+        background: linear-gradient(to bottom, 
+            rgba(0, 0, 0, 0.9) 0%, 
+            rgba(0, 0, 0, 0.7) 60%, 
+            rgba(0, 0, 0, 0.85) 100%);
+    }
+
+    .tawes-hero-content {
+        max-width: 100%;
+        text-align: left;            
+    }
+
+    .tagline {
+        font-size: 11px;                
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .tawes-hero-content h1 {
+        font-size: 46px;              
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+
+    .tawes-hero-content p {
+        font-size: 15px;                /* Ukuran deskripsi lebih proporsional */
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        gap: 12px;                      /* Merapatkan jarak antar tombol */
+        margin-top: 35px;
+    }
+
+    .btn-primary, .btn-outline {
+        width: 100%;                    /* Tombol dibuat penuh memenuhi layar mobile */
+        text-align: center;             /* Teks tombol di tengah */
+        padding: 14px 24px;             /* Padding tombol sedikit lebih ramping */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Memindahkan susunan box statistik ke bawah tombol */
+.hero-stats{
+        display:none;
+    }
+
+    .stat-box {
+        width: 100%;                    /* Lebar box statistik mengikuti lebar layar HP */
+        padding: 20px;                  /* Mengurangi padding dalam box */
+        display: flex;
+        align-items: center;            /* Menyusun isi box secara horizontal */
+        justify-content: space-between; /* Judul di kiri, keterangan di kanan */
+        gap: 15px;
+        border-radius: 16px;            /* Lekukan sudut disesuaikan */
+    }
+
+    .stat-box h2 {
+        font-size: 28px;                /* Ukuran angka/status diperkecil */
+        margin-bottom: 0;               /* Reset margin bawah karena posisinya sudah bersebelahan */
+        min-width: 90px;                /* Mengunci space angka agar rapi */
+    }
+
+    .stat-box span {
+        font-size: 13px;
+        text-align: right;              /* Teks keterangan rata kanan */
+    }
+    
+    .section-header h2 {
+        font-size: 30px;                /* Cadangan jika Anda menggunakan header section di mobile */
+    }
+}
+
+/* =========================================
+RESPONSIVE SAFETY SECTION (MOBILE)
+========================================= */
+@media (max-width: 768px) {
+    
+    .safety-section {
+        /* Mengubah arah susunan dari kiri-kanan menjadi atas-bawah */
+        flex-direction: column !important; 
+        /* Menyesuaikan padding luar agar tidak terlalu kosong di layar HP */
+        padding: 60px 20px !important; 
+        /* Jarak antara blok teks informasi dan blok galeri foto di bawahnya */
+        gap: 40px !important; 
+    }
+
+    /* Mengamankan lebar sisi info agar penuh seukuran layar HP */
+    .safety-left {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    /* Mengurangi ukuran judul h2 agar pas dan tidak terpotong di HP */
+    .safety-left h2 {
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 16px !important;
+    }
+
+    /* Merampingkan jarak pembatas bawah pada deskripsi */
+    .safety-left > p {
+        font-size: 15px !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* Merapatkan jarak antar poin list keselamatan */
+    .safety-list {
+        gap: 20px !important;
+    }
+
+    /* Menyesuaikan ukuran icon box sedikit lebih ramping untuk mobile */
+    .safety-item i, .safety-icon-ilr {
+        width: 46px !important;
+        height: 46px !important;
+        padding: 12px !important;
+        font-size: 20px !important;
+        border-radius: 12px !important;
+    }
+
+    .safety-item h4 {
+        font-size: 16px !important;
+    }
+
+    .safety-item p {
+        font-size: 13px !important;
+    }
+
+    /* --- PENGATURAN GALERI FOTO DI MOBILE --- */
+    .safety-gallery {
+        width: 100% !important;
+        flex: none !important;
+        /* Mengubah grid galeri menjadi otomatis menyesuaikan ruang HP */
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 12px !important; /* Merapatkan jarak antar foto */
+    }
+
+    .safety-gallery img {
+        /* Mengurangi tinggi foto agar tidak terlalu memakan layar vertikal HP */
+        height: 150px !important; 
+        border-radius: 14px !important; /* Lekukan sudut disesuaikan lebih kecil */
+    }
+}

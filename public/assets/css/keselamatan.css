@@ -1,0 +1,468 @@
+/* ================= SAFETY HERO ================= */
+/* ================= HERO ================= */
+
+.hero-breadcrumb{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+    font-size: 15px;
+    line-height: 1;
+}
+
+.hero-breadcrumb a{
+    color: rgba(255,255,255,.75);
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.hero-breadcrumb a:hover{
+    color: #00bcd4;
+}
+
+.hero-breadcrumb span{
+    color: #00bcd4;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hero-breadcrumb strong{
+    color: #fff;
+    font-weight: 700;
+}
+
+.safety-hero{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    padding-top: 60px;
+}
+
+.safety-hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.safety-overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.45)
+    );
+}
+
+.safety-hero-content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: #fff;
+    max-width: 800px;
+}
+
+.safety-hero-content span{
+    display: inline-block;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: #00bcd4;
+    font-weight: 800;
+}
+
+.safety-hero-content h1{
+    font-size: 90px;
+    line-height: .95;
+    margin-bottom: 25px;
+    font-weight: 700;
+    max-width: 900px;
+}
+
+.safety-hero-content p{
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgba(255,255,255,.85);
+}
+
+/* ================= INTRO ================= */
+.safety-intro{
+    padding: 120px 10%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+    background: #f5f7fb;
+}
+
+.mini-title{
+    color: #00a6d6;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.intro-left h2{
+    font-size: 50px;
+    line-height: 1.2;
+    margin: 20px 0;
+    color: #0d1b34;
+}
+
+.intro-left p{
+    font-size: 17px;
+    line-height: 1.9;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.glass-card{
+    background: white;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.glass-card h3{
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #0d1b34;
+}
+
+.glass-card ul{
+    padding-left: 0;
+}
+
+.glass-card ul li{
+    list-style: none;
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: #444;
+    position: relative;
+    padding-left: 28px;
+}
+
+.glass-card ul li::before{
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00b6d6;
+    font-weight: bold;
+}
+
+
+/* ================= HEADING ================= */
+.section-heading{
+    margin-bottom: 70px;
+}
+
+.section-heading span{
+    display: inline-block;
+    color: #00a8d8;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.section-heading h2{
+    font-size: 48px;
+    color: #0d1b34;
+}
+
+.section-heading p{
+    margin-top: 20px;
+    color: #666;
+    line-height: 1.9;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/* ================= EQUIPMENT ================= */
+.equipment-section{
+    padding: 120px 10%;
+    background: white;
+}
+
+.equipment-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.equipment-card{
+    background: #fff;
+    border-radius: 30px;
+    padding: 40px;
+    border: 1px solid #eee;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.equipment-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.equipment-number{
+    font-size: 70px;
+    font-weight: 800;
+    color: rgba(0,0,0,0.05);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.equipment-card h3{
+    font-size: 30px;
+    color: #0d1b34;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.equipment-card p{
+    color: #666;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.equipment-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.equipment-detail span{
+    background: #f5f7fb;
+    padding: 12px 18px;
+    border-radius: 14px;
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* ================= CERTIFICATE ================= */
+.certificate-section{
+    padding: 120px 10%;
+    background: #081120;
+}
+
+.certificate-section .section-heading h2,
+.certificate-section .section-heading p{
+    color: white;
+}
+
+.certificate-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.certificate-card{
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 28px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.certificate-card:hover{
+    transform: translateY(-8px);
+}
+
+.certificate-card img{
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    background: #fff;
+    padding: 15px;
+}
+
+.certificate-content{
+    padding: 30px;
+}
+
+.certificate-content h3{
+    color: white;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.certificate-content p{
+    color: rgba(255,255,255,0.75);
+    line-height: 1.8;
+}
+
+
+/* ================= TIMELINE ================= */
+.timeline-section{
+    padding: 120px 10%;
+    background: #f5f7fb;
+}
+
+.timeline{
+    position: relative;
+    margin-top: 60px;
+    padding-left: 40px;
+    border-left: 2px solid #00b7d9;
+}
+
+.timeline-item{
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.timeline-dot{
+    width: 18px;
+    height: 18px;
+    background: #00b7d9;
+    border-radius: 50%;
+    position: absolute;
+    left: -50px;
+    top: 10px;
+}
+
+.timeline-content{
+    background: white;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.timeline-content h3{
+    font-size: 28px;
+    color: #0d1b34;
+    margin-bottom: 15px;
+}
+
+.timeline-content p{
+    color: #666;
+    line-height: 1.9;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:1100px){
+
+    .equipment-grid,
+    .certificate-grid,
+    .safety-intro{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 991px) {
+
+    .safety-hero{
+        height: 100vh;
+        padding-top: 0;
+    }
+
+    .safety-hero-content{
+        left: 30px;
+        right: 30px;
+        max-width: unset;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .safety-hero-content span{
+        display: inline-block;
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+        color: #00bcd4;
+    }
+
+    .safety-hero-content h1{
+        font-size: 48px;
+        line-height: 0.95;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .safety-hero-content p{
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 90%;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .intro-left h2{
+        font-size: 25px;
+        line-height: 1.15;
+        letter-spacing: -1px;
+        margin-bottom: 24px;
+        max-width: 90%;
+    }
+    .section-heading h2{
+        font-size: 34px;
+    }
+
+    .equipment-card h3,
+    .certificate-content h3,
+    .timeline-content h3{
+        font-size: 24px;
+    }
+
+    .equipment-card,
+    .timeline-content,
+    .glass-card{
+        padding: 28px;
+    }
+
+    .certificate-card img{
+        height: 250px;
+    }
+
+    .timeline{
+        padding-left: 25px;
+    }
+
+    .timeline-dot{
+        left: -35px;
+    }
+
+}
+
+@media (max-width: 991px){
+
+    .hero-breadcrumb{
+        gap: 6px;
+        margin-bottom: 16px;
+        font-size: 11px;
+        letter-spacing: .3px;
+    }
+    .hero-breadcrumb a{
+        color: rgba(255,255,255,.75);
+    }
+
+    .hero-breadcrumb span{
+        color: #00bcd4;
+        font-weight: 600;
+    }
+
+    .hero-breadcrumb strong{
+        color: #fff;
+        font-weight: 700;
+    }
+
+}

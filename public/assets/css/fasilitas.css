@@ -1,0 +1,335 @@
+/* ================= GLOBAL ================= */
+
+body{
+    overflow-x: hidden;
+}
+
+section{
+    position: relative;
+}
+
+/* ================= HERO ================= */
+
+.fasilitas-hero{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.fasilitas-hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.2)
+    );
+}
+
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: white;
+    max-width: 700px;
+}
+
+.hero-content span{
+    letter-spacing: 4px;
+    font-size: 14px;
+    opacity: .8;
+}
+
+.hero-content h1{
+    font-size: 95px;
+    line-height: 1;
+    margin: 25px 0;
+}
+
+.hero-content p{
+    font-size: 20px;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 40px;
+}
+
+.hero-btn{
+    display: inline-block;
+    padding: 18px 40px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: .4s;
+}
+
+.hero-btn:hover{
+    transform: translateY(-5px);
+}
+
+/* ================= INTRO ================= */
+
+.intro-section{
+    padding: 120px 8%;
+    background: white;
+}
+
+.intro-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+}
+
+.intro-left{
+    flex: 1;
+}
+
+.intro-right{
+    flex: 1;
+}
+
+.mini-title{
+    color: teal;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.intro-left h2{
+    font-size: 55px;
+    line-height: 1.2;
+    margin-top: 20px;
+}
+
+.intro-right p{
+    font-size: 18px;
+    line-height: 2;
+    color: #555;
+}
+
+/* ================= KAPAL ================= */
+
+.kapal-section{
+    padding: 120px 8%;
+    background: #0f172a;
+    color: white;
+}
+
+.kapal-container{
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+.reverse{
+    background: #111827;
+}
+
+.kapal-image{
+    flex: 1;
+}
+
+.kapal-image img{
+    width: 100%;
+    border-radius: 30px;
+    height: 650px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.kapal-image img:hover{
+    transform: scale(1.03);
+}
+
+.kapal-content{
+    flex: 1;
+}
+
+.kapal-label{
+    color: #38bdf8;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.kapal-content h2{
+    font-size: 70px;
+    margin: 20px 0;
+}
+
+.kapal-content p{
+    font-size: 18px;
+    line-height: 2;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 40px;
+}
+
+.facility-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.facility-card{
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    transition: .4s;
+}
+
+.facility-card:hover{
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.15);
+}
+
+.facility-card h3{
+    font-size: 20px;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery-section{
+    padding: 120px 0;
+    background: white;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title span{
+    color: teal;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.section-title h2{
+    font-size: 55px;
+    margin-top: 20px;
+}
+
+.gallery-wrapper{
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 0 8%;
+    scroll-behavior: smooth;
+}
+
+.gallery-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.gallery-item{
+    min-width: 420px;
+    height: 550px;
+    border-radius: 30px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.gallery-item:hover img{
+    transform: scale(1.08);
+}
+
+/* ================= EXPERIENCE ================= */
+
+.experience-section{
+    padding: 120px 8%;
+    background: #f8fafc;
+}
+
+.experience-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+
+.exp-box{
+    background: white;
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: .4s;
+}
+
+.exp-box:hover{
+    transform: translateY(-10px);
+}
+
+.exp-box h2{
+    font-size: 55px;
+    color: teal;
+    margin-bottom: 20px;
+}
+
+.exp-box p{
+    font-size: 18px;
+    color: #555;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:991px){
+
+    .hero-content h1{
+        font-size: 55px;
+    }
+
+    .hero-content p{
+        font-size: 16px;
+    }
+
+    .intro-container,
+    .kapal-container{
+        flex-direction: column;
+    }
+
+    .intro-left h2{
+        font-size: 38px;
+    }
+
+    .kapal-content h2{
+        font-size: 48px;
+    }
+
+    .kapal-image img{
+        height: 400px;
+    }
+
+    .facility-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item{
+        min-width: 280px;
+        height: 400px;
+    }
+
+    .section-title h2{
+        font-size: 38px;
+    }
+
+    .experience-container{
+        grid-template-columns: 1fr;
+    }
+
+}

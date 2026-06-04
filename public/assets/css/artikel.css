@@ -1,0 +1,136 @@
+/* =========================================================
+   ARTICLE DETAIL
+========================================================= */
+
+.article-detail {
+    background: #f4f7fb;
+}
+
+.article-hero {
+    position: relative;
+    min-height: 720px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    color: #fff;
+}
+
+.article-hero-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.article-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 15, 30, 0.96),
+            rgba(5, 15, 30, 0.58),
+            rgba(5, 15, 30, 0.14)
+        );
+}
+
+.article-hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(1120px, 90%);
+    margin: 0 auto;
+    padding: 160px 0 90px;
+}
+
+.article-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 34px;
+    color: rgba(255,255,255,0.88);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.article-meta-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.article-meta-top span {
+    padding: 10px 15px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.13);
+    backdrop-filter: blur(12px);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.article-category {
+    background: #fff !important;
+    color: #0a2342 !important;
+}
+
+.article-hero-content h1 {
+    max-width: 980px;
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: -1.8px;
+}
+
+.article-hero-content p {
+    margin-top: 26px;
+    color: rgba(255,255,255,0.76);
+    font-size: 16px;
+}
+
+.article-container {
+    width: min(920px, 90%);
+    margin: -70px auto 0;
+    position: relative;
+    z-index: 5;
+    padding-bottom: 120px;
+}
+
+.article-content {
+    background: #fff;
+    border-radius: 32px;
+    padding: 64px;
+    box-shadow: 0 30px 70px rgba(15, 23, 42, 0.12);
+    color: #1e293b;
+    font-size: 18px;
+    line-height: 2.05;
+}
+
+.article-content::first-letter {
+    float: left;
+    font-size: 72px;
+    line-height: 0.9;
+    padding-right: 12px;
+    font-weight: 900;
+    color: #0a2342;
+}
+
+@media (max-width: 768px) {
+    .article-hero {
+        min-height: 620px;
+    }
+
+    .article-hero-content {
+        padding-bottom: 70px;
+    }
+
+    .article-content {
+        padding: 34px 26px;
+        font-size: 16px;
+    }
+}

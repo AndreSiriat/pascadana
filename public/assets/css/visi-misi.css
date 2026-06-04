@@ -1,0 +1,302 @@
+/* ================= HERO ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fa;
+    color:#1d1d1d;
+}
+
+section{
+    width:100%;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+.section-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-header span{
+    color:#00bcd4;
+    font-weight:600;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+.section-header h2{
+    font-size:42px;
+    margin-top:12px;
+    font-weight:700;
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.tunu-hero{
+    min-height:80vh;
+    background:url('../img/15.jpeg') center center/cover no-repeat;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    padding:140px 8% 120px;
+    overflow:hidden;
+}
+
+.tunu-hero .overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right,
+    rgba(0,0,0,.88),
+    rgba(0,0,0,.45));
+}
+
+.tunu-hero-content{
+    position:relative;
+    z-index:2;
+    max-width:720px;
+    color:#fff;
+}
+
+.tagline{
+    color:#00d4ff;
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:600;
+    display:inline-block;
+    margin-bottom:20px;
+}
+
+.tunu-hero-content h1{
+    font-size:92px;
+    line-height:1;
+    margin-bottom:25px;
+    font-weight:800;
+}
+
+.tunu-hero-content p{
+    font-size:18px;
+    line-height:1.9;
+    max-width:650px;
+    opacity:.92;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    margin-top:45px;
+    flex-wrap:wrap;
+}
+
+.hero-stats{
+    position:absolute;
+    bottom:40px;
+    right:8%;
+    display:flex;
+    gap:18px;
+    z-index:2;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    margin-top:45px;
+}
+
+.btn-primary,
+.btn-outline{
+    width:120px;
+    height:64px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#00c8e0;
+    color:#fff;
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.4);
+    color:#fff;
+    background:rgba(255,255,255,.04);
+}
+
+.btn-primary:hover,
+.btn-outline:hover{
+    transform:translateY(-4px);
+}
+
+
+/* ================= GLOBAL ================= */
+
+.vm-container{
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* ================= VISI ================= */
+
+.visi-section{
+    padding: 120px 0;
+    background: white;
+}
+
+.visi-box{
+    background: #0f172a;
+    padding: 80px;
+    border-radius: 35px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.small-title{
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: #38bdf8;
+}
+
+.visi-box h2{
+    font-size: 55px;
+    margin: 25px 0;
+    line-height: 1.2;
+}
+
+.visi-box p{
+    font-size: 20px;
+    line-height: 2;
+    color: rgba(255,255,255,0.8);
+    max-width: 900px;
+}
+
+/* ================= MISI ================= */
+
+.misi-section{
+    padding: 120px 0;
+    background: #f8fafc;
+}
+
+.section-header{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-header span{
+    color: #00bcd4;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.section-header h2{
+    font-size: 52px;
+    margin-top: 20px;
+    line-height: 1.3;
+}
+
+.misi-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.misi-card{
+    background: white;
+    padding: 45px;
+    border-radius: 30px;
+    transition: .4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.misi-card:hover{
+    transform: translateY(-10px);
+}
+
+.misi-card h3{
+    font-size: 60px;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.misi-card p{
+    line-height: 1.9;
+    color: #555;
+    font-size: 17px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:991px){
+
+
+    .visi-box{
+        padding: 40px;
+    }
+
+    .visi-box h2{
+        font-size: 36px;
+    }
+
+    .visi-box p{
+        font-size: 16px;
+    }
+
+    .section-header h2{
+        font-size: 36px;
+    }
+
+    .misi-grid{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:992px){
+
+    .tunu-hero{
+        height:auto;
+        padding:140px 5% 80px;
+    }
+
+    .hero-stats{
+        position:relative;
+        right:auto;
+        bottom:auto;
+        margin-top:50px;
+        flex-direction:column;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero-buttons{
+        flex-direction:row;
+    }
+
+}

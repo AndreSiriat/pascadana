@@ -1,0 +1,363 @@
+/* ==========================================================================
+   1. HERO SECTION (LAYOUT RESPONSIF & ANTI-BOCOR)
+   ========================================================================== */
+
+.hero-breadcrumb{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+    font-size: 15px;
+    line-height: 1;
+}
+
+.hero-breadcrumb a{
+    color: rgba(255,255,255,.75);
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.hero-breadcrumb a:hover{
+    color: #00bcd4;
+}
+
+.hero-breadcrumb span{
+    color: #00bcd4;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hero-breadcrumb strong{
+    color: #fff;
+    font-weight: 700;
+}
+
+.safety-hero{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    padding-top: 60px;
+}
+
+.safety-hero img{
+    width: 100%;
+    height: 115%;
+    object-fit: cover;
+}
+
+.safety-overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.45)
+    );
+}
+
+.safety-hero-content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: #fff;
+    max-width: 800px;
+}
+
+.safety-hero-content span{
+    display: inline-block;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: #00bcd4;
+    font-weight: 800;
+}
+
+.safety-hero-content h1{
+    font-size: 90px;
+    line-height: .95;
+    margin-bottom: 25px;
+    font-weight: 700;
+    max-width: 900px;
+}
+
+.safety-hero-content p{
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgba(255,255,255,.85);
+}
+
+
+/* ==========================================================================
+   2. MAIN CONTENT SECTION (PREMIUM WHITE CORPORATE)
+   ========================================================================== */
+
+.crew-management-section {
+    padding: 120px 10%;
+    background: #ffffff; /* Putih Bersih Premium */
+    overflow: hidden;
+    position: relative;
+}
+
+.crew-container {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* --- Blok Gambar Kiri --- */
+.crew-image-wrapper {
+    position: relative;
+}
+
+.crew-image-card {
+    position: relative;
+    border-radius: 34px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.07); /* Soft shadow premium */
+}
+
+.crew-image-card img {
+    width: 100%;
+    height: 680px;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.crew-image-card:hover img {
+    transform: scale(1.03);
+}
+
+.crew-overlay-card {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(15, 23, 42, 0.55) 10%,
+        rgba(15, 23, 42, 0.1) 50%,
+        transparent 100%
+    );
+}
+
+.crew-floating-badge {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* --- Blok Konten Kanan --- */
+.crew-content {
+    color: #334155; /* Teks abu-gelap korporat berkelas */
+}
+
+.mini-title {
+    display: inline-block;
+    color: #00bcd4; /* Warna aksen biru laut tajam */
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.crew-content h2 {
+    font-size: 48px;
+    line-height: 1.25;
+    margin: 12px 0 24px;
+    color: #0f172a; /* Warna tajam gelap untuk headline utama */
+    font-weight: 800;
+}
+
+.crew-content p {
+    color: #475569;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* --- Grid Fitur --- */
+.crew-feature-grid {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.crew-feature {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.feature-line {
+    width: 4px;
+    min-width: 4px;
+    height: 55px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #00c6ff, #00bcd4);
+}
+
+.crew-feature h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.crew-feature span {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 14.5px;
+}
+
+/* --- Blok Kartu Statistik --- */
+.crew-stats {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 45px;
+}
+
+.crew-stat-box {
+    background: #f8fafc; /* Latar box abu-abu ultra-light bersih */
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 22px 24px;
+    min-width: 160px;
+    flex: 1;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.01);
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.crew-stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(0, 114, 255, 0.06);
+    border-color: #cbd5e1;
+}
+
+.crew-stat-box h4 {
+    font-size: 24px;
+    margin-bottom: 4px;
+    color: #00bcd4;
+    font-weight: 700;
+}
+
+.crew-stat-box span {
+    color: #64748b;
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+
+/* ==========================================================================
+   3. RESPONSIVE STYLES (BREAKPOINTS)
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+    .crew-container {
+        gap: 40px;
+    }
+    .alma-hero-content h1 {
+        font-size: 54px;
+    }
+    .crew-content h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .crew-container {
+        grid-template-columns: 1fr; /* Stack layout menjadi 1 kolom vertical */
+        gap: 50px;
+    }
+
+    .crew-image-card img {
+        height: 500px;
+    }
+
+    .hero-breadcrumb {
+        gap: 6px;
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .safety-hero{
+        height: 100vh;
+        padding-top: 0;
+    }
+
+    .safety-hero-content{
+        left: 30px;
+        right: 30px;
+        max-width: unset;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .safety-hero-content span{
+        display: inline-block;
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+        color: #00bcd4;
+    }
+
+    .safety-hero-content h1{
+        font-size: 48px;
+        line-height: 0.95;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .safety-hero-content p{
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 90%;
+    }
+
+}
+
+@media (max-width: 991px){
+
+    .hero-breadcrumb{
+        gap: 6px;
+        margin-bottom: 16px;
+        font-size: 11px;
+        letter-spacing: .3px;
+    }
+    .hero-breadcrumb a{
+        color: rgba(255,255,255,.75);
+    }
+
+    .hero-breadcrumb span{
+        color: #00bcd4;
+        font-weight: 600;
+    }
+
+    .hero-breadcrumb strong{
+        color: #fff;
+        font-weight: 700;
+    }
+
+}

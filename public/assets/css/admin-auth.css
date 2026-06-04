@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.login-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top right, rgba(56, 189, 248, 0.18), transparent 35%),
+        linear-gradient(135deg, #06121f, #0a2342);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 28px;
+    padding: 38px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.28);
+}
+
+.login-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 34px;
+}
+
+.brand-mark {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    background: #0a2342;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.login-brand h1 {
+    font-size: 24px;
+    color: #0a2342;
+    font-weight: 900;
+}
+
+.login-brand p {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #0a2342;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.form-group input {
+    width: 100%;
+    border: 1px solid #dbe3ec;
+    border-radius: 15px;
+    padding: 14px 16px;
+    background: #f8fafc;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus {
+    background: #ffffff;
+    border-color: #0a2342;
+    box-shadow: 0 0 0 4px rgba(10, 35, 66, 0.08);
+}
+
+.login-btn {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 8px;
+    background: #0a2342;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.login-error {
+    margin-bottom: 18px;
+    padding: 13px 15px;
+    border-radius: 14px;
+    background: #fee2e2;
+    color: #b91c1c;
+    font-size: 14px;
+    font-weight: 700;
+}
