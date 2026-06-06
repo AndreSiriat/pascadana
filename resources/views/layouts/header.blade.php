@@ -121,17 +121,19 @@
             </ul>
 
             <div class="navbar-right">
-                <a href="#" class="search-btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-                <a href="#" class="route-btn">
-                    Jelajah Rute
-                </a>
-            </div>
-
+            <a href="#" class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            
+            
+            <a href="{{ route('kapal') }}#armada-kami" class="route-btn">
+                Jelajah Rute
+            </a>
         </div>
 
-    </div>
+                </div>
+
+            </div>
 </nav>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

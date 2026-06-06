@@ -180,6 +180,20 @@
     padding: 0 10px;
 }
 
+/* Menghilangkan dekorasi link standar pada kotak fitur */
+.feature-link {
+    text-decoration: none;
+    color: inherit; /* Mengikuti warna teks asli bawaan feature-box */
+    display: block;
+}
+
+/* Opsional: Memberikan efek sedikit membesar atau hover saat kotak diarahkan kursor */
+.feature-link:hover .feature-box {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
 /* ARROWS */
 .hero-arrow {
     position: absolute;

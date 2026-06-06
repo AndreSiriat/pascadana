@@ -26,11 +26,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <div class="hero-container">
 
     <div class="hero-slider">
-        <video autoplay muted loop playsinline class="slide active" id="hero-video">
-            <source src="{{ asset('assets/img/101.mp4') }}" type="video/mp4">
-        </video>
+        
 
-        <img src="{{ asset('assets/img/27.jpeg') }}" alt="Ferry Image" class="slide">
+        <img src="{{ asset('assets/img/27.jpeg') }}" alt="Ferry Image" class="slide active">
     </div>
 
     <div class="overlay"></div>
@@ -49,33 +47,44 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         </span>
 
         <h1>
-            Transportasi Feri yang
+            Kepercayaan Dalam
             <br>
-            Aman & Terpercaya
+            Setiap Perjalanan
         </h1>
 
         <p>
-            Mitra Feri Kepercayaan Anda
+            Trusted Voyage
         </p>
 
         <div class="hero-features">
-            <div class="feature-box">
-                <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
-                <span>Layanan Penumpang</span>
-            </div>
-            <div class="feature-box">
-                <div class="feature-icon"><i class="fa-solid fa-car"></i></div>
-                <span>Pengangkutan Kendaraan</span>
-            </div>
-            <div class="feature-box">
-                <div class="feature-icon"><i class="fa-solid fa-route"></i></div>
-                <span>Berbagai Pilihan Rute</span>
-            </div>
-            <div class="feature-box">
-                <div class="feature-icon"><i class="fa-solid fa-calendar-days"></i></div>
-                <span>Jadwal Tepat Waktu</span>
-            </div>
+    <a href="{{ route('detail-kmp-tunu') }}#spesifikasi" style="text-decoration: none; color: inherit;">
+    <div class="feature-box">
+        <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+        <span>Layanan Penumpang</span>
+    </div>
+</a>
+
+<a href="{{ route('detail-kmp-tunu') }}#spesifikasi" style="text-decoration: none; color: inherit;">
+    <div class="feature-box">
+        <div class="feature-icon"><i class="fa-solid fa-car"></i></div>
+        <span>Pengangkutan Kendaraan</span>
+    </div>
+</a>
+
+    <a href="{{ route('kapal') }}#armada-kami" class="feature-link">
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-route"></i></div>
+            <span>Berbagai Pilihan Rute</span>
         </div>
+    </a>
+
+    <a href="{{ route('standar-keselamatan') }}" class="feature-link">
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <span>Prioritas Keselamatan</span>
+        </div>
+    </a>
+</div>
     </div>
 </div>
 

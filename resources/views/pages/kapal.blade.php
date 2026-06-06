@@ -26,7 +26,7 @@
     </div>
 </div>
 
-    <div class="pds-ship-section">
+    <div id="armada-kami" class="pds-ship-section">
         <div class="pds-ship-heading">
             <span>ARMADA KAMI</span>
             <h2>Armada Penyeberangan</h2>
