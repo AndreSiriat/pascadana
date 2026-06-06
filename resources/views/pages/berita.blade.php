@@ -9,6 +9,19 @@
 <!-- =========================================
      PREMIUM HERO CINEMATIC SECTION
 ========================================= -->
+@extends('layouts.app')
+
+@section('title', 'Berita & Aktivitas — PT Pasca Dana Sundari')
+
+@section('content')
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ asset('assets/css/berita.css') }}">
+
+<!-- HERO -->
 <section class="premium-hero">
     <div class="hero-ambient-glow"></div>
     <div class="hero-overlay-gradient"></div>
@@ -64,44 +77,48 @@
     </div>
 </section>
 
+
+<!-- NEWS -->
 <section class="news-stream-section">
+
     <div class="container-premium">
+
 
         @if($berita->count())
 
         <div class="news-meratus-layout">
 
-            <!-- KIRI: 5 BERITA -->
+            <!-- LEFT -->
             <main class="news-meratus-main">
 
                 @foreach($berita as $item)
 
-                    <article class="news-meratus-card">
+                <article class="news-meratus-card">
 
-                        <a href="{{ route('berita.detail', $item->slug) }}" class="news-meratus-image">
-                            <img src="{{ asset('assets/img/news/' . $item->thumbnail) }}" alt="{{ $item->judul }}">
-                        </a>
+                    <a href="{{ route('berita.detail', $item->slug) }}" class="news-meratus-image">
+                        <img src="{{ asset('assets/img/news/' . $item->thumbnail) }}" alt="{{ $item->judul }}">
+                    </a>
 
-                        <div class="news-meratus-content">
+                    <div class="news-meratus-content">
 
-                            <h2>
-                                <a href="{{ route('berita.detail', $item->slug) }}">
-                                    {{ Str::limit($item->judul, 78) }}
-                                </a>
-                            </h2>
+                        <h2>
+                            <a href="{{ route('berita.detail', $item->slug) }}">
+                                {{ Str::limit($item->judul, 82) }}
+                            </a>
+                        </h2>
 
-                            <p>
-                                {{ Str::limit(strip_tags($item->isi), 150, '...') }}
-                            </p>
+                        <p>
+                            {{ Str::limit(strip_tags($item->isi), 150, '...') }}
+                        </p>
 
-                            <div class="news-meratus-meta">
-                                <span>{{ $item->created_at->translatedFormat('M d, Y') }}</span>
-                                <strong>{{ strtoupper($item->kategori ?? 'OPERASIONAL') }}</strong>
-                            </div>
-
+                        <div class="news-meratus-meta">
+                            <span>{{ $item->created_at->translatedFormat('d M Y') }}</span>
+                            <strong>{{ strtoupper($item->kategori ?? 'OPERASIONAL') }}</strong>
                         </div>
 
-                    </article>
+                    </div>
+
+                </article>
 
                 @endforeach
 
@@ -111,43 +128,50 @@
 
             </main>
 
-            <!-- KANAN: BERITA TERBARU + KATEGORI -->
+            <!-- RIGHT SIDEBAR -->
             <aside class="news-meratus-sidebar">
 
                 <div class="meratus-sidebar-block">
                     <h3>Berita Terbaru</h3>
 
-                    @foreach($latestBerita as $latest)
+                    <div class="latest-news-wrapper">
 
-                    <article class="meratus-latest-card">
+                        @foreach($latestBerita as $latest)
 
-                        <a href="{{ route('berita.detail', $latest->slug) }}" class="meratus-latest-image">
-                            <img src="{{ asset('assets/img/news/' . $latest->thumbnail) }}" alt="{{ $latest->judul }}">
-                        </a>
+                        <article class="meratus-latest-card">
 
-                        <div class="meratus-latest-content">
-                            <h4>
-                                <a href="{{ route('berita.detail', $latest->slug) }}">
-                                    {{ Str::limit($latest->judul, 48) }}
-                                </a>
-                            </h4>
+                            <a href="{{ route('berita.detail', $latest->slug) }}" class="meratus-latest-image">
+                                <img src="{{ asset('assets/img/news/' . $latest->thumbnail) }}" alt="{{ $latest->judul }}">
+                            </a>
 
-                            <span>{{ $latest->created_at->translatedFormat('M d, Y') }}</span>
-                        </div>
+                            <div class="meratus-latest-content">
+                                <h4>
+                                    <a href="{{ route('berita.detail', $latest->slug) }}">
+                                        {{ Str::limit($latest->judul, 55) }}
+                                    </a>
+                                </h4>
 
-                    </article>
+                                <span>{{ $latest->created_at->translatedFormat('d M Y') }}</span>
+                            </div>
 
-                    @endforeach
+                        </article>
+
+                        @endforeach
+
+                    </div>
                 </div>
 
                 <div class="meratus-sidebar-block meratus-category">
                     <h3>Kategori</h3>
 
-                    @foreach($categories as $category)
+                    <div class="category-list-news">
+                        @foreach($categories as $category)
                         <a href="#">
-                            {{ $category->kategori }}
+                            <span>{{ $category->kategori }}</span>
+                            <i class="fa-solid fa-arrow-right-long"></i>
                         </a>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
 
             </aside>
@@ -164,6 +188,9 @@
         @endif
 
     </div>
+
 </section>
+
+@endsection
 
 @endsection
