@@ -141,7 +141,7 @@ SPESIFIKASI
 
 <section class="ship-specs" id="spesifikasi">
 
-    <div class="section-header">
+    <div id="spesifikasi" class="section-header">
         <span>DETAIL KAPAL</span>
         <h2>Spesifikasi KMP TUNU</h2>
     </div>

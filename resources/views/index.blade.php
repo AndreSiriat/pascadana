@@ -57,14 +57,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         </p>
 
         <div class="hero-features">
-    <a href="{{ route('detail-kmp-tunu') }}#spesifikasi" style="text-decoration: none; color: inherit;">
+<a href="{{ route('kmp-tunu') }}#spesifikasi" class="feature-link">
     <div class="feature-box">
-        <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
-        <span>Layanan Penumpang</span>
+        <div class="feature-icon"><i class="fa-solid fa-car"></i></div>
+        <span>Pengangkutan Kendaraan</span>
     </div>
 </a>
 
-<a href="{{ route('detail-kmp-tunu') }}#spesifikasi" style="text-decoration: none; color: inherit;">
+<a href="{{ route('kmp-tunu') }}#spesifikasi" class="feature-link">
     <div class="feature-box">
         <div class="feature-icon"><i class="fa-solid fa-car"></i></div>
         <span>Pengangkutan Kendaraan</span>
@@ -137,7 +137,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <div class="container about-wrapper">
 
         <div class="about-image">
-            <img src="{{ asset('assets/img/16.png') }}" alt="Pattern">
+            <img src="{{ asset('assets/img/69.png') }}" alt="Pattern">
         </div>
 
         <div class="about-content">
@@ -147,9 +147,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             </span>
 
             <h2 class="fade-up-element">
-                Menjelajah Laut,
+                Kepercayaan Dalam
                 <br>
-                Dengan Kepercayaan
+                Setiap Perjalanan
             </h2>
 
             <div class="about-line fade-up-element"></div>

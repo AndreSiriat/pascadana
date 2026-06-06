@@ -486,108 +486,6 @@
     }
 }
 
-/* ================= CSS NILAI-NILAI KAMI ================= */
-
-.values-section {
-    padding: 100px 0;
-    background-color: #ffffff;
-    font-family: 'Arial', sans-serif; 
-}
-
-.values-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header Section */
-.values-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.values-header h2 {
-    font-size: 32px;
-    color: #44546a;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-.values-header p {
-    color: #777;
-    line-height: 1.6;
-    font-size: 16px;
-}
-
-/* Grid Layout */
-.values-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-/* Card Styling */
-.value-card {
-    flex: 1;
-    background-color: #f2f2f2; /* Background abu-abu muda sesuai gambar */
-    padding: 40px 30px;
-    border-radius: 12px; /* Lengkungan halus di sudut */
-    text-align: left;
-    transition: transform 0.3s ease;
-}
-
-.value-card:hover {
-    transform: translateY(-5px); /* Efek melayang sedikit saat di-hover */
-}
-
-/* Icon Styling */
-.value-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 25px;
-}
-
-.value-icon img {
-    width: 100%;
-    height: auto;
-    /* Jika ikonmu berwarna, tambahkan filter grayscale jika ingin hitam putih seperti gambar */
-
-}
-
-/* Text Styling Inside Card */
-.value-card h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 15px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.value-card p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.8;
-    margin: 0;
-}
-
-/* Responsive: Untuk Tablet dan HP */
-@media (max-width: 992px) {
-    .values-grid {
-        flex-wrap: wrap; /* Membungkus kartu ke bawah */
-    }
-    .value-card {
-        flex: 0 0 calc(50% - 20px); /* Jadi 2 kolom di tablet */
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .value-card {
-        flex: 0 0 100%; /* Jadi 1 kolom di HP */
-    }
-}
-
 /* ================= CSS MANAGEMENT ================= */
 
 .management-section {
@@ -699,7 +597,7 @@
     font-size: 13px;
     font-weight: 800;
     letter-spacing: 1.7px;
-    color: #1237a6;
+    color: #335FA0;
 }
 
 .org-header h2{
@@ -948,6 +846,17 @@
     position: relative;
 }
 
+/* Logika Otomatis Selang-Seling untuk Baris Genap (2, 4, 6, dst) */
+.history-row:nth-child(even) {
+    direction: rtl;
+}
+
+/* Mengembalikan arah text di dalam baris genap agar tidak ikut terbalik membaca dari kanan */
+.history-row:nth-child(even) .history-left,
+.history-row:nth-child(even) .history-right {
+    direction: ltr;
+}
+
 /* CENTER */
 .history-center{
     display: flex;
@@ -976,15 +885,15 @@
     max-width: 430px;
 }
 
-/* LEFT TEXT */
-.history-left .history-text{
+/* Pengaturan perataan teks otomatis berdasarkan baris ganjil/genap */
+.history-row:nth-child(odd) .history-left .history-text {
     margin-left: auto;
     padding-right: 45px;
     text-align: right;
 }
 
-/* RIGHT TEXT */
-.history-right .history-text{
+.history-row:nth-child(even) .history-left .history-text {
+    margin-right: auto;
     padding-left: 45px;
     text-align: left;
 }
@@ -1019,15 +928,14 @@
     width: 360px;
 }
 
-/* LEFT IMAGE */
-.history-left .history-image{
-    margin-left: auto;
-    padding-right: 45px;
+/* Pengaturan padding gambar otomatis berdasarkan baris ganjil/genap */
+.history-row:nth-child(odd) .history-right .history-image {
+    padding-left: 45px;
 }
 
-/* RIGHT IMAGE */
-.history-right .history-image{
-    padding-left: 45px;
+.history-row:nth-child(even) .history-right .history-image {
+    margin-left: auto;
+    padding-right: 45px;
 }
 
 /* IMAGE STYLE */
@@ -1096,11 +1004,11 @@
         max-width: 100%;
     }
 
-    .history-left .history-text{
+    .history-row:nth-child(odd) .history-left .history-text {
         padding-right: 14px;
     }
 
-    .history-right .history-text{
+    .history-row:nth-child(even) .history-left .history-text {
         padding-left: 14px;
     }
 
@@ -1126,12 +1034,12 @@
         max-width: 140px;
     }
 
-    .history-left .history-image{
-        padding-right: 14px;
+    .history-row:nth-child(odd) .history-right .history-image {
+        padding-left: 14px;
     }
 
-    .history-right .history-image{
-        padding-left: 14px;
+    .history-row:nth-child(even) .history-right .history-image {
+        padding-right: 14px;
     }
 
     .history-image img{
@@ -1142,6 +1050,192 @@
         box-shadow: none;
     }
 
+}
+
+/* ================= TRANSFORMASI 2023 ================= */
+
+.transformasi-section {
+    padding: 110px 6%;
+    background: linear-gradient(180deg, #f7fafc 0%, #ffffff 100%);
+}
+
+.transformasi-container {
+    max-width: 1180px;
+    margin: auto;
+}
+
+.transformasi-header {
+    max-width: 760px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.transformasi-header span {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #335FA0;
+}
+
+.transformasi-header h2 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #1f3347;
+    margin-bottom: 18px;
+}
+
+.transformasi-header p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #64748b;
+}
+
+.transformasi-content {
+    display: grid;
+    grid-template-columns: 1fr 90px 1fr;
+    align-items: center;
+    gap: 35px;
+}
+
+.transformasi-card {
+    min-height: 300px;
+    padding: 42px;
+    border-radius: 26px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+}
+
+.transformasi-card span {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.transformasi-card h3 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1f3347;
+    margin-bottom: 18px;
+}
+
+.transformasi-card p {
+    font-size: 15.5px;
+    line-height: 1.9;
+    color: #64748b;
+}
+
+.transformasi-card.before span {
+    color: #94a3b8;
+}
+
+.transformasi-card.after {
+    background: linear-gradient(135deg, #0f3443, #00a8c8);
+}
+
+.transformasi-card.after span,
+.transformasi-card.after h3,
+.transformasi-card.after p {
+    color: #ffffff;
+}
+
+.transformasi-line {
+    position: relative;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transformasi-line::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    width: 2px;
+    background: linear-gradient(180deg, #cbd5e1, #00a8c8, #cbd5e1);
+}
+
+.line-dot {
+    position: relative;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08);
+}
+
+.line-dot.active {
+    width: 24px;
+    height: 24px;
+    background: #00c8e8;
+    box-shadow: 0 0 0 8px rgba(0, 200, 232, 0.14);
+}
+
+.transformasi-bottom {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.transformasi-bottom div {
+    padding: 28px;
+    border-radius: 22px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.transformasi-bottom h4 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1f3347;
+    margin-bottom: 10px;
+}
+
+.transformasi-bottom p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #64748b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .transformasi-content {
+        grid-template-columns: 1fr;
+    }
+
+    .transformasi-line {
+        height: 70px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 35px;
+    }
+
+    .transformasi-line::before {
+        width: 160px;
+        height: 2px;
+        top: 50%;
+        bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .transformasi-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .transformasi-header h2 {
+        font-size: 30px;
+    }
 }
 
 /* ========================================

@@ -18,9 +18,26 @@ class BerandaController extends Controller
 
     public function berita()
     {
-        $berita = Berita::latest()->paginate(7);
+        // Kiri hanya 5 berita per halaman
+        $berita = Berita::latest()
+            ->paginate(5);
 
-        return view('pages.berita', compact('berita'));
+        // Sidebar kanan 4 berita terbaru
+        $latestBerita = Berita::latest()
+            ->take(4)
+            ->get();
+
+        // Kategori sidebar
+        $categories = Berita::select('kategori')
+            ->whereNotNull('kategori')
+            ->distinct()
+            ->get();
+
+        return view('pages.berita', compact(
+            'berita',
+            'latestBerita',
+            'categories'
+        ));
     }
 
     public function detail($slug)

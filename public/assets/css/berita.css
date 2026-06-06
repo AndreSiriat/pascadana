@@ -27,12 +27,291 @@
     --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+
+.premium-hero {
+    position: relative;
+    background:
+        linear-gradient(90deg, rgba(3, 24, 51, 0.95), rgba(4, 70, 112, 0.75)),
+        url("../img/52.jpeg") center/cover no-repeat;
+    padding: 10rem 0 7rem 0;
+    overflow: hidden;
+}
+
 /* Reset Dasar Penyelaras */
 .container-premium {
     width: 100%;
-    max-width: 1320px;
+    max-width: 1600px !important;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 28px;
+}
+
+/* =========================================================
+   NEWS PAGE - MERATUS STYLE LIST + SIDEBAR
+========================================================= */
+
+.news-meratus-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 430px;
+    gap: 58px;
+    align-items: flex-start;
+}
+
+.news-meratus-main {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.news-meratus-card {
+    display: grid;
+    grid-template-columns: 460px minmax(0, 1fr);
+    gap: 36px;
+    align-items: center;
+    min-height: 300px;
+}
+
+.news-meratus-image {
+    width: 100%;
+    height: 300px !important;
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #eef2f7;
+}
+
+.news-meratus-image img,
+.meratus-latest-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.news-meratus-card:hover .news-meratus-image img,
+.meratus-latest-card:hover .meratus-latest-image img {
+    transform: scale(1.05);
+}
+
+.news-meratus-content h2 {
+    max-width: 560px;
+    margin: 0 0 18px;
+    font-family: var(--font-sans);
+    font-size: 25px;
+    line-height: 1.32;
+    font-weight: 800;
+    color: #050505;
+}
+
+.news-meratus-content h2 a,
+.meratus-latest-content h4 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.news-meratus-content h2 a:hover,
+.meratus-latest-content h4 a:hover {
+    color: var(--brand-accent);
+}
+
+.news-meratus-content p {
+    max-width: 560px;
+    margin: 0 0 42px;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.75;
+    color: #202532;
+}
+
+.news-meratus-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: var(--font-sans);
+}
+
+.news-meratus-meta span {
+    font-size: 15px;
+    color: #8a8f9c;
+}
+
+.news-meratus-meta strong {
+    font-size: 13px;
+    font-weight: 800;
+    color: #0a2342;
+}
+
+/* SIDEBAR */
+
+.news-meratus-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.meratus-sidebar-block {
+    margin-bottom: 44px;
+}
+
+.meratus-sidebar-block h3 {
+    margin: 0 0 34px;
+    font-family: var(--font-sans);
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 800;
+    color: #050505;
+}
+
+.meratus-latest-card {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 22px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.meratus-latest-image {
+    width: 180px;
+    height: 104px;
+    display: block;
+    overflow: hidden;
+    border-radius: 7px;
+    background: #eef2f7;
+}
+
+.meratus-latest-content h4 {
+    margin: 0 0 20px;
+    font-family: var(--font-sans);
+    font-size: 18px;
+    line-height: 1.08;
+    font-weight: 800;
+    color: #050505;
+}
+
+.meratus-latest-content span {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    color: #8a8f9c;
+}
+
+/* CATEGORY SIDEBAR */
+
+.meratus-category a {
+    display: block;
+    padding: 16px 0;
+    border-bottom: 1px solid #e6eaf0;
+    font-family: var(--font-sans);
+    color: #111827;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.meratus-category a:hover {
+    color: var(--brand-accent);
+    padding-left: 8px;
+}
+
+/* Matikan grid card lama hanya di halaman list baru */
+.news-asymmetric-grid {
+    display: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (min-width: 1500px) {
+    .container-premium {
+        max-width: 1500px;
+    }
+
+    .news-meratus-layout {
+        grid-template-columns: minmax(0, 1fr) 450px;
+        gap: 64px;
+    }
+
+    .news-meratus-card {
+        grid-template-columns: 500px minmax(0, 1fr);
+    }
+
+    .news-meratus-image {
+        height: 270px;
+    }
+
+    .meratus-latest-card {
+        grid-template-columns: 190px minmax(0, 1fr);
+    }
+
+    .meratus-latest-image {
+        width: 190px;
+        height: 112px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .news-meratus-layout {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .news-meratus-sidebar {
+        position: relative;
+        top: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-premium {
+        padding: 0 20px;
+    }
+
+    .news-meratus-main {
+        gap: 42px;
+    }
+
+    .news-meratus-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        min-height: auto;
+    }
+
+    .news-meratus-image {
+        height: 230px;
+    }
+
+    .news-meratus-content h2 {
+        font-size: 21px;
+    }
+
+    .news-meratus-content p {
+        margin-bottom: 26px;
+        font-size: 15px;
+    }
+
+    .meratus-sidebar-block h3 {
+        font-size: 28px;
+    }
+
+    .meratus-latest-card {
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 16px;
+        margin-bottom: 26px;
+    }
+
+    .meratus-latest-image {
+        width: 120px;
+        height: 78px;
+    }
+
+    .meratus-latest-content h4 {
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+
+    .meratus-latest-content span {
+        font-size: 13px;
+    }
 }
 
 /* ==========================================================================
@@ -113,10 +392,14 @@
     line-height: 1.15;
     margin-bottom: 1.5rem;
     font-weight: 700;
+    overflow: visible;
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, #FFF 30%, var(--brand-accent) 100%);
+    display: inline-block;
+    background: linear-gradient(135deg, #ffffff 30%, var(--brand-accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 

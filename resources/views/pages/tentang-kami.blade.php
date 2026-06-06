@@ -160,57 +160,6 @@
 </section>
 
 
-<!-- ================= SECTION BESAR ================= -->
-<section class="values-section">
-    <div class="values-container">
-        
-        <header class="values-header">
-            <h2>NILAI-NILAI KAMI</h2>
-            <p>Mendorong industri maju melalui nilai-nilai inti yang <br> membentuk budaya kerja dan keunggulan layanan kami.</p>
-        </header>
-
-        <div class="values-grid">
-            <div class="value-card">
-                <div class="value-icon">
-                    <img src="assets/img/34.png" alt="Inovasi">
-                </div>
-                <h3>TERPERCAYA</h3>
-                <p>Kepercayaan tidak hanya tumbuh dari pelayanan yang konsisten dan aman,
-                     tetapi juga dari sikap jujur, disiplin, 
-                     dan tanggung jawab seluruh karyawan dalam menjalankan tugas.</p>
-            </div>
-
-            <div class="value-card">
-                <div class="value-icon">
-                    <img src="assets/img/34.png" alt="Integritas">
-                </div>
-                <h3>INTEGRITAS</h3>
-                <p>Menggambarkan semangat Pasca Dana Sundari dalam memberikan pelayanan
-                     penyebrangan yang berlandaskan tanggung jawab dan profesionalisme
-                     demi keterhubungan antar daerah.</p>
-            </div>
-
-            <div class="value-card">
-                <div class="value-icon">
-                    <img src="assets/img/34.png" alt="Komitmen">
-                </div>
-                <h3>TANGGUH</h3>
-                <p> Berkomitmen untuk terus tumbuh dan adaptif menghadapi perkembangan industri maritim,
-                     melalui pengelolaan aset yang prima dan dedikasi pelayanan.</p>
-            </div>
-
-            <div class="value-card">
-                <div class="value-icon">
-                    <img src="assets/img/34.png" alt="Sosial">
-                </div>
-                <h3>PELOPOR</h3>
-                <p>Sebagai perusahaan yang berakar pada dunia maritim, 
-                    PT Pasca Dana Sundari memiliki visi untuk menjadi pelopor dalam menghadirkan layanan laut yang modern dan efisien.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
 
 <section class="management-section">
     <div class="mgt-container">
@@ -486,13 +435,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<!-- ========================================
-     HISTORY SECTION
-======================================== -->
-
 <section class="history-section">
 
-    <!-- HEADER -->
     <div class="history-header">
 
         <span>SEJARAH KAMI</span>
@@ -506,103 +450,89 @@ document.addEventListener("DOMContentLoaded", function () {
 
     </div>
 
-    <!-- TIMELINE -->
     <div class="history-timeline">
 
-        <!-- ITEM -->
         <div class="history-row">
 
-            <!-- TEXT -->
             <div class="history-left">
-
                 <div class="history-text">
-
                     <h3>1998</h3>
-
-                    <h4>
-                        Berdirinya Perusahaan dan Armada Pertama
-                    </h4>
-
+                    <h4>Berdirinya Perusahaan</h4>
                     <p>
-                        Didirikan pada 14 Januari 1998 di Jakarta berdasarkan
+                        Didirikan pada 14 September 1998 di Jakarta berdasarkan
                         Akta Pendirian Perseroan Terbatas yang disahkan oleh
                         Notaris Ny. Anna Sunarhadi, S.H.
                     </p>
-
                 </div>
-
             </div>
 
-            <!-- DOT -->
             <div class="history-center">
                 <div class="history-dot"></div>
             </div>
 
-            <!-- IMAGE -->
             <div class="history-right">
-
                 <div class="history-image">
                     <img src="{{ asset('assets/img/46.png') }}" alt="">
                 </div>
-
             </div>
 
         </div>
 
-        <!-- ITEM -->
         <div class="history-row">
 
-            <!-- IMAGE -->
             <div class="history-left">
-
-                <div class="history-image">
-                    <img src="{{ asset('assets/img/5.jpeg') }}" alt="">
+                <div class="history-text">
+                    <h3>2001</h3>
+                    <h4>Pembelian Kapal Cepat</h4>
+                    <p>
+                        PT Pasca Dana Sundari melakukan pembelian kapal cepat pertama untuk mendukung
+                        layanan lintasan Merak - Bakauheni
+                    </p>
                 </div>
-
             </div>
 
-            <!-- DOT -->
             <div class="history-center">
                 <div class="history-dot"></div>
             </div>
 
-            <!-- TEXT -->
             <div class="history-right">
-
-                <div class="history-text">
-
-                    <h3>2004</h3>
-
-                    <h4>
-                        Perluasan Cakupan
-                    </h4>
-
-                    <p>
-                        PT Pasca Dana Sundari memperluas cakupan operasional
-                        melalui pembelian kapal KMP Tawes untuk mendukung
-                        layanan lintasan Kariangau Penajam.
-                    </p>
-
+                <div class="history-image">
+                    <img src="{{ asset('assets/img/46.png') }}" alt="">
                 </div>
-
             </div>
 
         </div>
 
-        <!-- ITEM -->
         <div class="history-row">
 
-            <!-- TEXT -->
             <div class="history-left">
-
                 <div class="history-text">
+                    <h3>2002</h3>
+                    <h4>Perluasan Cakupan</h4>
+                    <p>
+                        Perluasan cakupan operasional di lintasan Kariangau – Penajam melalui pengalihan dan perubahan kepemilikan Gross Akta KMP Tawes dari ASDP ke PT Pasca Dana Sundari (PDS) pada 17 April 2002.
+                    </p>
+                </div>
+            </div>
 
+            <div class="history-center">
+                <div class="history-dot"></div>
+            </div>
+
+            <div class="history-right">
+                <div class="history-image">
+                    <img src="{{ asset('assets/img/5.jpeg') }}" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="history-row">
+
+            <div class="history-left">
+                <div class="history-text">
                     <h3>2019</h3>
-
-                    <h4>
-                        Pembelian Lahan
-                    </h4>
-
+                    <h4>Pembelian Lahan</h4>
                     <p>
                         Pembelian lahan pun dilakukan Perusahaan
                         guna menunjang kebutuhan
@@ -610,80 +540,52 @@ document.addEventListener("DOMContentLoaded", function () {
                         Gunung Bahagia menjadi Lokasi
                         Kantor Pusat PT Pasca Dana Sundari
                     </p>
-
                 </div>
-
             </div>
 
-            <!-- DOT -->
             <div class="history-center">
                 <div class="history-dot"></div>
             </div>
 
-            <!-- IMAGE -->
             <div class="history-right">
-
                 <div class="history-image">
                     <img src="{{ asset('assets/img/49.png') }}" alt="">
                 </div>
-
             </div>
 
         </div>
 
-        <!-- ITEM -->
         <div class="history-row">
 
-            <!-- IMAGE -->
             <div class="history-left">
-
-                <div class="history-image">
-                    <img src="{{ asset('assets/img/50.jpeg') }}" alt="">
-                </div>
-
-            </div>
-
-            <!-- DOT -->
-            <div class="history-center">
-                <div class="history-dot"></div>
-            </div>
-
-            <!-- TEXT -->
-            <div class="history-right">
-
                 <div class="history-text">
-
                     <h3>2019</h3>
-
-                    <h4>
-                        Modernisasi Armada
-                    </h4>
-
+                    <h4>Modernisasi Armada</h4>
                     <p>
                         Memperluas jangkauan operasional dan meningkatkan
                         kapasitas armada perusahaan untuk pelayanan lebih baik.
                     </p>
-
                 </div>
+            </div>
 
+            <div class="history-center">
+                <div class="history-dot"></div>
+            </div>
+
+            <div class="history-right">
+                <div class="history-image">
+                    <img src="{{ asset('assets/img/50.jpeg') }}" alt="">
+                </div>
             </div>
 
         </div>
 
-        <!-- ITEM -->
         <div class="history-row">
 
-            <!-- TEXT -->
             <div class="history-left">
-
                 <div class="history-text">
-
                     <h3>2023</h3>
-
-                    <h4>
-                        Penguatan Budaya Keselamatan dan Profesionalitas
-                    </h4>
-
+                    <h4>Penguatan Budaya Keselamatan dan Profesionalitas</h4>
                     <p>
                         Sebagai bentuk komitmen
                         perusahaan terhadap keselamatan
@@ -693,23 +595,87 @@ document.addEventListener("DOMContentLoaded", function () {
                         bersama Direktur Utama dan jajaran
                         manajemen.
                     </p>
-
                 </div>
-
             </div>
 
-            <!-- DOT -->
             <div class="history-center">
                 <div class="history-dot"></div>
             </div>
 
-            <!-- IMAGE -->
             <div class="history-right">
-
                 <div class="history-image">
                     <img src="{{ asset('assets/img/51.jpeg') }}" alt="">
                 </div>
+            </div>
 
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TRANSFORMASI 2023 ================= -->
+<section class="transformasi-section" id="transformasi">
+
+    <div class="transformasi-container">
+
+        <div class="transformasi-header">
+            <span>TRANSFORMASI PERUSAHAAN</span>
+            <h2>Transformasi Manajemen Tahun 2023</h2>
+            <p>
+                Tahun 2023 menjadi titik penting bagi PT Pasca Dana Sundari dalam
+                membangun sistem kerja yang lebih tertata, profesional, dan berorientasi
+                pada keselamatan pelayaran.
+            </p>
+        </div>
+
+        <div class="transformasi-content">
+
+            <div class="transformasi-card before">
+                <span>Sebelum Transformasi</span>
+                <h3>Manajemen Belum Terstruktur</h3>
+                <p>
+                    Sebelumnya, pola kerja perusahaan masih berjalan secara tidak
+                    terpusat, kurang terdokumentasi, dan belum sepenuhnya memiliki
+                    alur koordinasi yang rapi.
+                </p>
+            </div>
+
+            <div class="transformasi-line">
+                <div class="line-dot"></div>
+                <div class="line-dot active"></div>
+                <div class="line-dot"></div>
+            </div>
+
+            <div class="transformasi-card after">
+                <span>Setelah Transformasi</span>
+                <h3>Sistem Kerja Lebih Profesional</h3>
+                <p>
+                    Melalui pembenahan manajemen pada tahun 2023, perusahaan mulai
+                    membangun struktur kerja yang lebih jelas, terukur, dan konsisten.
+                    Transformasi ini turut memperkuat penerapan standar keselamatan,
+                    termasuk pengembangan ISM Code sebagai pedoman operasional.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="transformasi-bottom">
+
+            <div>
+                <h4>Struktur Kerja</h4>
+                <p>Alur tanggung jawab dan koordinasi dibuat lebih jelas.</p>
+            </div>
+
+            <div>
+                <h4>Standar Operasional</h4>
+                <p>Proses kerja mulai disusun berdasarkan sistem dan prosedur.</p>
+            </div>
+
+            <div>
+                <h4>Keselamatan</h4>
+                <p>ISM Code menjadi salah satu pedoman utama dalam operasional.</p>
             </div>
 
         </div>

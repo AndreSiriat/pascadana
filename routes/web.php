@@ -9,17 +9,18 @@ use App\Http\Controllers\Admin\KritikSaranController as AdminKritikSaranControll
 use App\Http\Controllers\Admin\AuthController;
 
 
-// 1. Ubah Route Detail KMP Tunu (Untuk Card 1 & 2)
-Route::get('/kapal/kmp-tunu', function () {
+
+Route::get('/kmp-tunu', function () {
     // Diarahkan langsung ke file kmp-tunu.blade.php yang ada di folder pages
     return view('pages.kmp-tunu'); 
-})->name('detail-kmp-tunu');
+})->name('kmp-tunu');
 
 // 2. Ubah Route Standar Keamanan (Untuk Card 4)
 Route::get('/standar-keamanan', function () {
     // Diarahkan ke file standar-keselamatan.blade.php yang ada di folder pages Anda
     return view('pages.standar-keselamatan'); 
 })->name('standar-keamanan');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -60,7 +61,7 @@ Route::get('/maritim-policy', [BerandaController::class, 'maritimPolicy'])
 
 Route::view('/tentang-kami', 'pages.tentang-kami')->name('tentang-kami');
 Route::view('/visi-misi', 'pages.visi-misi')->name('visi-misi');
-
+Route::view('/transformasi', 'pages.transformasi')->name('transformasi');
 /*
 |--------------------------------------------------------------------------
 | MENDUKUNG BISNIS

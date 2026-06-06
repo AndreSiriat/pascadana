@@ -54,8 +54,18 @@
                                 Visi & Misi
                             </a>
                         </li>
+
+                        <li>
+                            <a class="dropdown-item {{ request()->routeIs('trasformasi') ? 'active' : '' }}" href="{{ route('transformasi') }}">
+                                Transformasi
+                            </a>
+                        </li>
+
+                        
                     </ul>
                 </li>
+
+                
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ request()->routeIs('kapal') || request()->routeIs('kmp-tunu') || request()->routeIs('kmp-tawes') || request()->routeIs('standar-keselamatan') ? 'active' : '' }}"
