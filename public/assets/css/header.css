@@ -2,6 +2,12 @@
    HEADER & NAVBAR STYLES (DESKTOP BASE)
    ========================================================================== */
 
+
+html,
+body {
+    scroll-behavior: auto !important;
+}
+
 /* Base Navbar Setup */
 .custom-navbar {
     background-color: rgba(255, 255, 255, 0.95);

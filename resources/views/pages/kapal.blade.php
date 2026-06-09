@@ -42,11 +42,11 @@
             <div class="pds-ship-card">
                 <div class="pds-ship-image">
                     <img src="assets/img/13.png" alt="KMP Tunu">
-                    <span>KMP TUNU</span>
+                    <span>KMP TUNU JAYA 2888</span>
                 </div>
 
                 <div class="pds-ship-body">
-                    <h3>KMP Tunu</h3>
+                    <h3>KMP TUNU JAYA 2888</h3>
                     <p>
                         KMP Tunu merupakan salah satu armada utama yang mendukung
                         layanan penyeberangan dengan kapasitas dan performa operasional
@@ -56,7 +56,7 @@
                     <div class="pds-ship-info">
                         <div>
                             <strong>Trayek</strong>
-                            <span>Balikpapan – Penajam</span>
+                            <span>Tampo – Torobulu</span>
                         </div>
                         <div>
                             <strong>Layanan</strong>
@@ -89,7 +89,7 @@
                     <div class="pds-ship-info">
                         <div>
                             <strong>Trayek</strong>
-                            <span>Tampo – Torobulu</span>
+                            <span>Kariangau – Penajam</span>
                         </div>
                         <div>
                             <strong>Layanan</strong>

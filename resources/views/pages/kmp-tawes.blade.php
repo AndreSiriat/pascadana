@@ -50,168 +50,88 @@ KMP tawes PREMIUM CORPORATE PAGE
 
 
 
-<!-- =========================================
-OVERVIEW
-========================================= -->
+<section class="fleet-profile-section" id="profil">
 
-<section class="tawes-overview">
-    <div class="overview-left">
-        <span class="section-label">PROFIL ARMADA</span>
+    <div class="fleet-profile-container">
 
-        <h2>
-            Armada Modern Untuk
-            Perjalanan Laut yang Aman
-            dan Nyaman
-        </h2>
+        <!-- LEFT CONTENT -->
+        <div class="fleet-profile-content">
 
-        <p>
-            KMP tawes merupakan armada penyeberangan yang dirancang untuk
-            memberikan pengalaman perjalanan yang aman, nyaman, dan efisien.
-            Dengan dukungan fasilitas modern, sistem keselamatan lengkap,
-            serta kru profesional, kapal ini menjadi bagian penting dalam
-            mendukung konektivitas antar wilayah (Tampo-Torobulu).
-        </p>
+            <span class="fleet-label">PROFIL ARMADA</span>
 
-        <div class="overview-points">
-            <div class="point">
-                <i class="fa-solid fa-shield-halved"></i>
-                <span>Sistem Keselamatan Lengkap</span>
+            <h2>
+                Kapal Penumpang Terpercaya untuk Perjalanan Aman dan Nyaman.
+            </h2>
+
+            <p>
+                KMP TAWES merupakan armada penyeberangan yang dirancang
+                untuk menghadirkan perjalanan laut yang aman, nyaman, dan efisien.
+                Dengan dukungan fasilitas memadai, sistem keselamatan lengkap,
+                serta kru profesional, kapal ini menjadi bagian penting dalam
+                mendukung konektivitas antar wilayah Kariangau – Penajam.
+            </p>
+
+            <div class="fleet-specs">
+
+                <div class="fleet-spec-item">
+                    <span>Nama Kapal</span>
+                    <strong>KMP TAWES</strong>
+                </div>
+
+                <div class="fleet-spec-item">
+                    <span>Jenis Armada</span>
+                    <strong>Roll-On/Roll-Off</strong>
+                </div>
+
+                <div class="fleet-spec-item">
+                    <span>Operator</span>
+                    <strong>PT Pasca Dana Sundari</strong>
+                </div>
+
+                <div class="fleet-spec-item">
+                    <span>Kapasitas</span>
+                    <strong>± 1200 Penumpang</strong>
+                </div>
+
             </div>
 
-            <div class="point">
-                <i class="fa-solid fa-couch"></i>
-                <span>Ruang Penumpang Nyaman</span>
-            </div>
+    
 
-            <div class="point">
-                <i class="fa-solid fa-users"></i>
-                <span>Kru Profesional & Berpengalaman</span>
-            </div>
+        </div>
 
-            <div class="point">
-                <i class="fa-solid fa-ship"></i>
-                <span>Standar Operasional Modern</span>
+        <!-- RIGHT IMAGE -->
+        <div class="fleet-profile-image">
+            <img src="{{ asset('assets/img/63.jpeg') }}" alt="KMP TUNU JAYA 2888">
+
+            <div class="fleet-route-card">
+                <span>Rute Operasional</span>
+                <strong>Kariangau – Penajam</strong>
             </div>
         </div>
+
     </div>
 
-    <div class="overview-right">
-        <img src="assets/img/63.jpeg" alt="">
-    </div>
 </section>
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector(".fleet-profile-section");
 
-const observer = new IntersectionObserver((entries)=>{
+    if (!section) return;
 
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            const section = entry.target;
-
-            section.querySelector('.overview-left')
-                   .classList.add('show');
-
-            section.querySelector('.overview-right')
-                   .classList.add('show');
-
-            section.querySelector('.overview-points')
-                   .classList.add('show');
-
-        }
-
-    });
-
-},{
-    threshold:0.25
-});
-
-observer.observe(
-    document.querySelector('.tawes-overview')
-);
-
-</script>
-
-
-
-<!-- =========================================
-SPESIFIKASI
-========================================= -->
-
-<section class="ship-specs" id="spesifikasi">
-
-    <div class="section-header">
-        <span>DETAIL KAPAL</span>
-        <h2>Spesifikasi KMP TAWES</h2>
-    </div>
-
-    <div class="specs-grid">
-
-        <div class="spec-card">
-            <h3>Nama Kapal</h3>
-            <p>KMP TAWES</p>
-        </div>
-
-        <div class="spec-card">
-            <h3>Jenis Armada</h3>
-            <p>Roll-On/Roll-Off (Ro-Ro)</p>
-        </div>
-
-        <div class="spec-card">
-            <h3>Operator</h3>
-            <p>PT Pasca Dana Sundari</p>
-        </div>
-
-        <div class="spec-card">
-            <h3>Kapasitas Penumpang</h3>
-            <p>500 Orang</p>
-        </div>
-
-        <div class="spec-card">
-            <h3>Kapasitas Kendaraan</h3>
-            <p>s/d 100 Kendaraan</p>
-        </div>
-
-        <div class="spec-card">
-            <h3>Pelayanan</h3>
-            <p>Nyaman, Aman & Profesional</p>
-        </div>
-
-    </div>
-</section>
-
-<script>
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    const cards = document.querySelectorAll('.spec-card');
-
-    const observer = new IntersectionObserver((entries, obs) => {
-
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-
-            if(entry.isIntersecting){
-
-                entry.target.classList.add('show');
-
-                obs.unobserve(entry.target);
-
+            if (entry.isIntersecting) {
+                section.classList.add("is-visible");
+                observer.unobserve(section);
             }
-
         });
-
-    },{
-        threshold:0.05,
-        rootMargin:'0px 0px -15% 0px'
+    }, {
+        threshold: 0.2
     });
 
-    cards.forEach(card => {
-        observer.observe(card);
-    });
-
+    observer.observe(section);
 });
-
 </script>
 
 
@@ -284,7 +204,7 @@ KESELAMATAN
 
         <h2>
             Sistem Keselamatan
-            dan Peralatan Darurat Lengkap
+            dan Perlengkapan Darurat Kapal
         </h2>
 
         <p>

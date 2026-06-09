@@ -27,45 +27,94 @@
                 </li>
 
                 <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle
-        {{
-            request()->routeIs('tentang-kami') ||
-            request()->routeIs('visi-misi') ||
-            request()->routeIs('alma') ||
-            request()->routeIs('keselamatan') ||
-            request()->routeIs('kelaikan') ||
-            request()->routeIs('manajemen')
-            ? 'active' : ''
-        }}"
-       href="#"
-       role="button"
-       data-bs-toggle="dropdown"
-       aria-expanded="false">
-        Tentang Kami
-    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item {{ request()->routeIs('tentang-kami') ? 'active' : '' }}" href="{{ route('tentang-kami') }}">
-                                Profil Perusahaan
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item {{ request()->routeIs('visi-misi') ? 'active' : '' }}" href="{{ route('visi-misi') }}">
-                                Visi & Misi
-                            </a>
-                        </li>
 
-                        <li>
-                            <a class="dropdown-item {{ request()->routeIs('trasformasi') ? 'active' : '' }}" href="{{ route('transformasi') }}">
-                                Transformasi
-                            </a>
-                        </li>
+                        <a class="nav-link dropdown-toggle
+                            {{
+                                request()->routeIs('tentang-kami') ||
+                                request()->routeIs('visi-misi') ||
+                                request()->routeIs('alma') ||
+                                request()->routeIs('keselamatan') ||
+                                request()->routeIs('kelaikan') ||
+                                request()->routeIs('manajemen') ||
+                                request()->routeIs('transformasi')
+                                ? 'active' : ''
+                            }}"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
 
-                        
-                    </ul>
-                </li>
+                            Tentang Kami
 
-                
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item about-jump"
+                                href="{{ route('tentang-kami') }}"
+                                data-target="">
+                                    Profil Perusahaan
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item about-jump"
+                                href="{{ route('tentang-kami') }}"
+                                data-target="visi-misi">
+                                    Visi & Misi
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item about-jump"
+                                href="{{ route('tentang-kami') }}"
+                                data-target="dewan-komisaris-direksi">
+                                    Dewan Komisaris & Direksi
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item about-jump"
+                                href="{{ route('tentang-kami') }}"
+                                data-target="manajemen">
+                                    Manajemen
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item about-jump"
+                                href="{{ route('tentang-kami') }}"
+                                data-target="struktur-organisasi">
+                                    Struktur Organisasi
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item about-jump"
+                                href="{{ route('tentang-kami') }}"
+                                data-target="sejarah-kami">
+                                    Sejarah Kami
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item about-jump"
+                                href="{{ route('tentang-kami') }}"
+                                data-target="transformasi">
+                                    Transformasi
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item about-jump"
+                                href="{{ route('tentang-kami') }}"
+                                data-target="falsafah-logo">
+                                    Falsafah Logo
+                                </a>
+                            </li>
+
+                        </ul>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ request()->routeIs('kapal') || request()->routeIs('kmp-tunu') || request()->routeIs('kmp-tawes') || request()->routeIs('standar-keselamatan') ? 'active' : '' }}"
@@ -191,5 +240,61 @@ document.addEventListener("DOMContentLoaded", function () {
     navbarCollapse.addEventListener("shown.bs.collapse", function () {
         navbarToggler.setAttribute("aria-expanded", "true");
     });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navbarOffset = 65;
+
+    function jumpToSection(targetId) {
+        if (!targetId) {
+            window.scrollTo(0, 0);
+            return;
+        }
+
+        const target = document.getElementById(targetId);
+
+        if (!target) return;
+
+        const position =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            navbarOffset;
+
+        window.scrollTo(0, position);
+    }
+
+    document.querySelectorAll(".about-jump").forEach(function (link) {
+
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.dataset.target;
+            const aboutUrl = this.getAttribute("href");
+            const currentPath = window.location.pathname;
+            const targetPath = new URL(aboutUrl, window.location.origin).pathname;
+
+            if (currentPath === targetPath) {
+                jumpToSection(targetId);
+            } else {
+                sessionStorage.setItem("aboutTarget", targetId);
+                window.location.href = aboutUrl;
+            }
+        });
+
+    });
+
+    const savedTarget = sessionStorage.getItem("aboutTarget");
+
+    if (savedTarget !== null) {
+        sessionStorage.removeItem("aboutTarget");
+
+        setTimeout(function () {
+            jumpToSection(savedTarget);
+        }, 0);
+    }
+
 });
 </script>

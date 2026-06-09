@@ -1,12 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Management;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\MaritimPolicyController;
 use App\Http\Controllers\KritikSaranController;
 use App\Http\Controllers\Admin\KritikSaranController as AdminKritikSaranController;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\ManagementController;
 
 
 
@@ -59,7 +61,21 @@ Route::get('/maritim-policy', [BerandaController::class, 'maritimPolicy'])
 |--------------------------------------------------------------------------
 */
 
-Route::view('/tentang-kami', 'pages.tentang-kami')->name('tentang-kami');
+Route::get('/tentang-kami', function () {
+
+    $dewan = Management::where('group', 'dewan')
+        ->where('status', 'active')
+        ->orderBy('urutan')
+        ->get();
+
+    $manajemen = Management::where('group', 'manajemen')
+        ->where('status', 'active')
+        ->orderBy('urutan')
+        ->get();
+
+    return view('pages.tentang-kami', compact('dewan', 'manajemen'));
+
+})->name('tentang-kami');
 Route::view('/visi-misi', 'pages.visi-misi')->name('visi-misi');
 Route::view('/transformasi', 'pages.transformasi')->name('transformasi');
 /*
@@ -140,11 +156,26 @@ Route::prefix('admin')
 
         /*
         |--------------------------------------------------------------------------
+        | Management
+        |--------------------------------------------------------------------------
+        */
+        Route::resource(
+            'management',
+            ManagementController::class
+        );
+
+
+        /*
+        |--------------------------------------------------------------------------
         | KRITIK & SARAN CMS
         |--------------------------------------------------------------------------
         */
         Route::get('/kritik-saran', [AdminKritikSaranController::class, 'index'])
             ->name('kritik-saran.index');
+
+
+
+        
 
     });
 

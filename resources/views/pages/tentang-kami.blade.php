@@ -95,7 +95,7 @@
 
 </section>
 
-<section class="vision-section">
+<section class="vision-section" id="visi-misi">
 
     <div class="vision-container">
 
@@ -161,96 +161,42 @@
 
 
 
-<section class="management-section">
+<section class="management-section" id="dewan-komisaris-direksi">
     <div class="mgt-container">
-        
+
         <div class="mgt-group">
             <h2 class="mgt-title">DEWAN KOMISARIS & DIREKSI</h2>
+
             <div class="mgt-grid">
-                <div class="mgt-card">
-                    <img src="assets/img/48.jpg" alt="Presiden Komisaris">
-                    <div class="mgt-overlay">
-                        <h3>Andi Bandian</h3>
-                        <p>Presiden Komisaris</p>
+                @foreach ($dewan as $item)
+                    <div class="mgt-card">
+                        <img src="{{ asset('assets/img/management/' . $item->foto) }}"
+                             alt="{{ $item->nama }}">
+
+                        <div class="mgt-overlay">
+                            <h3>{{ $item->nama }}</h3>
+                            <p>{{ $item->jabatan }}</p>
+                        </div>
                     </div>
-                </div>
-                <div class="mgt-card">
-                    <img src="assets/img/52.png" alt="Komisaris Independen">
-                    <div class="mgt-overlay">
-                        <h3>Yusuf Nur Ulama</h3>
-                        <p>Komisaris Independen</p>
-                    </div>
-                </div>
-                <div class="mgt-card">
-                    <img src="assets/img/38.jpg" alt="Komisaris">
-                    <div class="mgt-overlay">
-                        <h3>ARIF BUDIMAN</h3>
-                        <p>Komisaris</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 
-        <div class="mgt-group">
+        <div class="mgt-group" id="manajemen">
             <h2 class="mgt-title">MANAJEMEN</h2>
+
             <div class="mgt-grid four-cols">
-                <div class="mgt-card">
-                    <img src="assets/img/45.png" alt="Direktur">
-                    <div class="mgt-overlay">
-                        <h3>ANDRE SIRAIT</h3>
-                        <p>Presiden Direktur</p>
-                    </div>
-                </div>
-                <div class="mgt-card">
-                    <img src="assets/img/42.jpg" alt="Direktur">
-                    <div class="mgt-overlay">
-                        <h3>HENDRA KUSUMA</h3>
-                        <p>Direktur Operasional</p>
-                    </div>
-                </div>
-                <div class="mgt-card">
-                    <img src="assets/img/43.jpg" alt="Direktur">
-                    <div class="mgt-overlay">
-                        <h3>DONI SUPRAPTO</h3>
-                        <p>Direktur Keuangan</p>
-                    </div>
-                </div>
+                @foreach ($manajemen as $item)
+                    <div class="mgt-card">
+                        <img src="{{ asset('assets/img/management/' . $item->foto) }}"
+                             alt="{{ $item->nama }}">
 
-                                <div class="mgt-card">
-                    <img src="assets/img/52.png" alt="Komisaris Independen">
-                    <div class="mgt-overlay">
-                        <h3>Yusuf Nur Ulama</h3>
-                        <p>Komisaris Independen</p>
+                        <div class="mgt-overlay">
+                            <h3>{{ $item->nama }}</h3>
+                            <p>{{ $item->jabatan }}</p>
+                        </div>
                     </div>
-                </div>                <div class="mgt-card">
-                    <img src="assets/img/52.png" alt="Komisaris Independen">
-                    <div class="mgt-overlay">
-                        <h3>Yusuf Nur Ulama</h3>
-                        <p>Komisaris Independen</p>
-                    </div>
-                </div>                <div class="mgt-card">
-                    <img src="assets/img/52.png" alt="Komisaris Independen">
-                    <div class="mgt-overlay">
-                        <h3>Yusuf Nur Ulama</h3>
-                        <p>Komisaris Independen</p>
-                    </div>
-                </div>
-
-                                <div class="mgt-card">
-                    <img src="assets/img/52.png" alt="Komisaris Independen">
-                    <div class="mgt-overlay">
-                        <h3>Yusuf Nur Ulama</h3>
-                        <p>Komisaris Independen</p>
-                    </div>
-                </div>
-
-                <div class="mgt-card">
-                    <img src="assets/img/52.png" alt="Direktur">
-                    <div class="mgt-overlay">
-                        <h3>Yusuf Nur Ulama</h3>
-                        <p>Direktur Marketing</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 
@@ -289,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<section class="org-section">
+<section class="org-section" id="struktur-organisasi">
 
     <div class="org-header">
         <span>STRUKTUR ORGANISASI</span>
@@ -435,7 +381,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<section class="history-section">
+<section class="history-section" id="sejarah-kami">
 
     <div class="history-header">
 
@@ -472,7 +418,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="history-right">
                 <div class="history-image">
-                    <img src="{{ asset('assets/img/46.png') }}" alt="">
+                    <img src="{{ asset('assets/img/18.png') }}" alt="">
                 </div>
             </div>
 
@@ -615,80 +561,206 @@ document.addEventListener("DOMContentLoaded", function () {
 </section>
 
 
-<!-- ================= TRANSFORMASI 2023 ================= -->
-<section class="transformasi-section" id="transformasi">
+<section class="transform-2023">
 
-    <div class="transformasi-container">
+    <div class="transform-overlay"></div>
 
-        <div class="transformasi-header">
-            <span>TRANSFORMASI PERUSAHAAN</span>
-            <h2>Transformasi Manajemen Tahun 2023</h2>
+    <div class="transform-header">
+
+        <span>
+            TRANSFORMASI 2023
+        </span>
+
+        <h2>
+            Membangun Fondasi Perusahaan yang Lebih Profesional,
+            Terstruktur, dan Berorientasi Keselamatan
+        </h2>
+
+    </div>
+
+    <div class="transform-grid">
+
+        <div class="transform-item">
+            <div class="transform-number">01</div>
+
+            <h3>Tata Kelola</h3>
+
             <p>
-                Tahun 2023 menjadi titik penting bagi PT Pasca Dana Sundari dalam
-                membangun sistem kerja yang lebih tertata, profesional, dan berorientasi
-                pada keselamatan pelayaran.
+                Struktur organisasi dan pembagian tanggung jawab
+                yang lebih jelas serta terukur.
             </p>
         </div>
 
-        <div class="transformasi-content">
+        <div class="transform-item">
+            <div class="transform-number">02</div>
 
-            <div class="transformasi-card before">
-                <span>Sebelum Transformasi</span>
-                <h3>Manajemen Belum Terstruktur</h3>
-                <p>
-                    Sebelumnya, pola kerja perusahaan masih berjalan secara tidak
-                    terpusat, kurang terdokumentasi, dan belum sepenuhnya memiliki
-                    alur koordinasi yang rapi.
-                </p>
-            </div>
+            <h3>ISM Code</h3>
 
-            <div class="transformasi-line">
-                <div class="line-dot"></div>
-                <div class="line-dot active"></div>
-                <div class="line-dot"></div>
-            </div>
-
-            <div class="transformasi-card after">
-                <span>Setelah Transformasi</span>
-                <h3>Sistem Kerja Lebih Profesional</h3>
-                <p>
-                    Melalui pembenahan manajemen pada tahun 2023, perusahaan mulai
-                    membangun struktur kerja yang lebih jelas, terukur, dan konsisten.
-                    Transformasi ini turut memperkuat penerapan standar keselamatan,
-                    termasuk pengembangan ISM Code sebagai pedoman operasional.
-                </p>
-            </div>
-
+            <p>
+                Penerapan standar keselamatan internasional sebagai
+                pedoman operasional perusahaan.
+            </p>
         </div>
 
-        <div class="transformasi-bottom">
+        <div class="transform-item">
+            <div class="transform-number">03</div>
 
-            <div>
-                <h4>Struktur Kerja</h4>
-                <p>Alur tanggung jawab dan koordinasi dibuat lebih jelas.</p>
-            </div>
+            <h3>SDM & Budaya Kerja</h3>
 
-            <div>
-                <h4>Standar Operasional</h4>
-                <p>Proses kerja mulai disusun berdasarkan sistem dan prosedur.</p>
-            </div>
+            <p>
+                Pengembangan kompetensi personel dan budaya kerja
+                yang lebih profesional.
+            </p>
+        </div>
 
-            <div>
-                <h4>Keselamatan</h4>
-                <p>ISM Code menjadi salah satu pedoman utama dalam operasional.</p>
-            </div>
+        <div class="transform-item">
+            <div class="transform-number">04</div>
 
+            <h3>SOP & Sistem Kerja</h3>
+
+            <p>
+                Penyusunan standar operasional dan alur kerja yang
+                lebih efektif dan konsisten.
+            </p>
         </div>
 
     </div>
 
 </section>
 
+<section class="transform-video-style" id="transformasi">
+
+    <div class="transform-video-title">
+        <span>TRANSFORMASI 2023</span>
+        <h2>
+            Perubahan Menuju Perusahaan
+            yang Lebih Profesional
+        </h2>
+    </div>
+
+    <div class="transform-panel-wrap">
+
+
+        <div class="transform-panel">
+
+            <div class="transform-card-bg">
+                <img src="{{ asset('assets/img/72.jpeg') }}" alt="">
+            </div>
+
+            <div class="transform-panel-content">
+                <div class="transform-icon">
+                    <i class="fa-solid fa-sitemap"></i>
+                </div>
+
+                <h3>Tata Kelola</h3>
+
+                <p>
+                    Struktur organisasi dan pembagian tanggung jawab yang lebih jelas,
+                    terukur, dan akuntabel.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="transform-panel">
+
+            <div class="transform-card-bg">
+                <img src="{{ asset('assets/img/71.jpeg') }}" alt="">
+            </div>
+
+            <div class="transform-panel-content">
+                <div class="transform-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>ISM Code</h3>
+
+                <p>
+                    Penerapan standar keselamatan sebagai pedoman operasional perusahaan.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="transform-panel">
+
+            <div class="transform-card-bg">
+                <img src="{{ asset('assets/img/70.jpeg') }}" alt="">
+            </div>
+
+            <div class="transform-panel-content">
+                <div class="transform-icon">
+                    <i class="fa-solid fa-users-gear"></i>
+                </div>
+
+                <h3>SDM & Budaya Kerja</h3>
+
+                <p>
+                    Penguatan kompetensi personel serta pembentukan budaya kerja
+                    yang lebih profesional.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="transform-panel">
+
+            <div class="transform-card-bg">
+                <img src="{{ asset('assets/img/24.png') }}" alt="">
+            </div>
+
+            <div class="transform-panel-content">
+                <div class="transform-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+
+                <h3>SOP & Sistem Kerja</h3>
+
+                <p>
+                    Standarisasi proses kerja agar operasional lebih rapi,
+                    efektif, dan konsisten.
+                </p>
+            </div>
+
+        </div>
+
+
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+    if(window.innerWidth <= 768){
+
+        const panels =
+            document.querySelectorAll('.transform-panel');
+
+        panels.forEach(panel => {
+
+            panel.addEventListener('click', function(){
+
+                panels.forEach(item => {
+                    item.classList.remove('active-mobile');
+                });
+
+                this.classList.add('active-mobile');
+
+            });
+
+        });
+
+    }
+
+});
+</script>
+
+
+
 <!-- ========================================
      MAKNA LOGO SECTION
 ======================================== -->
 
-<section class="logo-meaning-section">
+<section class="logo-meaning-section" id="falsafah-logo">
 
     <div class="logo-meaning-container">
 

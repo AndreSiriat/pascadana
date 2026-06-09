@@ -1,183 +1,175 @@
-/* ==========================================================================
-   1. VARIABLES & CORE SETTINGS
-   ========================================================================== */
-:root {
-    --brand-dark: #07162f;
-    --brand-navy: #0a2342;
-    --brand-blue: #0b5cab;
-    --brand-accent: #00bcd4;
-    --text-main: #07111f;
-    --text-muted: #667085;
-    --text-soft: #8a93a3;
-    --bg-soft: #f7f9fc;
-    --border-soft: #e5eaf0;
-    --white: #ffffff;
-    --font-main: 'Plus Jakarta Sans', sans-serif;
-    --transition-smooth: all .45s cubic-bezier(.16, 1, .3, 1);
+/* =========================================================
+   MARITIME NEWS HERO
+========================================================= */
+
+.maritime-news-hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 18, 38, .92) 0%,
+            rgba(3, 18, 38, .76) 42%,
+            rgba(3, 18, 38, .28) 100%
+        ),
+        url("../img/70.jpg") center/cover no-repeat;
+    color: #ffffff;
 }
 
-/* GLOBAL CONTAINER */
+.maritime-news-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(3, 18, 38, .15),
+            rgba(3, 18, 38, .78)
+        );
+    z-index: 1;
+}
+
+.maritime-news-hero::after {
+    content: "";
+    position: absolute;
+    right: -160px;
+    bottom: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: rgba(34, 211, 238, .12);
+    filter: blur(20px);
+    z-index: 1;
+}
+
+.maritime-hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 130px 24px 120px;
+}
+
+.maritime-hero-content {
+    max-width: 760px;
+}
+
+.maritime-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 26px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .10);
+    border: 1px solid rgba(255, 255, 255, .22);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.maritime-hero-label span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22d3ee;
+    box-shadow: 0 0 0 7px rgba(34, 211, 238, .15);
+}
+
+.maritime-hero-content h1 {
+    margin: 0 0 24px;
+    font-size: clamp(40px, 4vw, 56px);
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+}
+
+.maritime-hero-content p {
+    max-width: 680px;
+    margin: 0;
+    color: rgba(255, 255, 255, .84);
+    font-size: 16.5px;
+    line-height: 1.85;
+    font-weight: 400;
+}
+
+.maritime-hero-info {
+    position: absolute;
+    right: 24px;
+    bottom: 70px;
+    padding: 22px 28px;
+    border-left: 3px solid #22d3ee;
+    background: rgba(3, 18, 38, .38);
+    backdrop-filter: blur(14px);
+}
+
+.maritime-hero-info span {
+    display: block;
+    margin-bottom: 7px;
+    color: rgba(255,255,255,.65);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.maritime-hero-info strong {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .maritime-news-hero {
+        min-height: 560px;
+    }
+
+    .maritime-hero-container {
+        padding: 115px 22px 90px;
+    }
+
+    .maritime-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .maritime-hero-content p {
+        font-size: 15.5px;
+        line-height: 1.75;
+    }
+
+    .maritime-hero-info {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 38px;
+        max-width: 320px;
+    }
+}
+/* =========================================================
+   NEWS PAGE - CLEAN MERATUS STYLE
+========================================================= */
+
 .container-premium {
     width: 100%;
-    max-width: 1580px;
+    max-width: 1380px;
     margin: 0 auto;
     padding: 0 32px;
 }
 
-/* =========================================================
-   HERO
-========================================================= */
-
-.premium-hero {
-    position: relative;
-    background:
-        linear-gradient(90deg, rgba(5, 18, 39, .96), rgba(5, 64, 101, .74)),
-        url("../img/52.jpeg") center/cover no-repeat;
-    padding: 150px 0 115px;
-    overflow: hidden;
-}
-
-.hero-ambient-glow {
-    position: absolute;
-    top: -25%;
-    right: -12%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0, 188, 212, .18), rgba(0, 188, 212, 0) 70%);
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.hero-overlay-gradient {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(7, 22, 47, .22), rgba(7, 22, 47, .86));
-    z-index: 2;
-}
-
-.hero-grid-layout {
-    position: relative;
-    z-index: 3;
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) 435px;
-    gap: 80px;
-    align-items: center;
-}
-
-.badge-innovative {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 9px 17px;
-    margin-bottom: 28px;
-    border-radius: 999px;
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(255,255,255,.15);
-    backdrop-filter: blur(14px);
-}
-
-.pulse-dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--brand-accent);
-    box-shadow: 0 0 0 6px rgba(0,188,212,.15);
-}
-
-.badge-text {
-    color: #ffffff;
-    font-family: var(--font-main);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: .15em;
-}
-
-.hero-title {
-    margin: 0 0 24px;
-    color: #ffffff;
-    font-family: var(--font-main);
-    font-size: clamp(46px, 5vw, 68px);
-    line-height: 1.05;
-    font-weight: 900;
-    letter-spacing: -1.8px;
-}
-
-.text-gradient {
-    display: inline-block;
-    background: linear-gradient(135deg, #ffffff 25%, var(--brand-accent) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-description {
-    max-width: 640px;
-    margin: 0;
-    color: rgba(255,255,255,.72);
-    font-family: var(--font-main);
-    font-size: 16px;
-    line-height: 1.85;
-}
-
-.hero-stats-glass {
-    padding: 34px;
-    border-radius: 24px;
-    background: rgba(255,255,255,.09);
-    border: 1px solid rgba(255,255,255,.14);
-    backdrop-filter: blur(20px);
-}
-
-.stat-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.stat-icon-wrapper {
-    width: 56px;
-    height: 56px;
-    display: grid;
-    place-items: center;
-    border-radius: 15px;
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(255,255,255,.12);
-    color: var(--brand-accent);
-    font-size: 23px;
-}
-
-.stat-number {
-    margin: 0 0 6px;
-    color: #ffffff;
-    font-family: var(--font-main);
-    font-size: 34px;
-    font-weight: 900;
-    line-height: 1;
-}
-
-.stat-label {
-    margin: 0;
-    color: rgba(255,255,255,.62);
-    font-family: var(--font-main);
-    font-size: 13px;
-    font-weight: 500;
-}
-
-.stat-divider {
-    height: 1px;
-    margin: 28px 0;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent);
-}
-
-/* =========================================================
-   NEWS PAGE
-========================================================= */
-
+/* SECTION */
 .news-stream-section {
-    padding: 105px 0 115px;
+    padding: 80px 0 100px;
     background: #ffffff;
     font-family: var(--font-main);
 }
 
+/* PAGE HEADING */
 .news-page-heading {
     max-width: 420px;
     margin-bottom: 58px;
@@ -188,17 +180,16 @@
     margin-bottom: 18px;
     color: #e21b4d;
     font-size: 12px;
-    line-height: 1;
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: .22em;
 }
 
 .news-page-heading h2 {
     margin: 0 0 22px;
     color: #07111f;
-    font-size: 48px;
+    font-size: 46px;
     line-height: 1.05;
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: -1.4px;
 }
 
@@ -209,34 +200,40 @@
     line-height: 1.85;
 }
 
-/* LAYOUT */
+/* =========================================================
+   LAYOUT
+========================================================= */
+
 .news-meratus-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 405px;
-    gap: 72px;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 64px;
     align-items: flex-start;
 }
 
 .news-meratus-main {
     display: flex;
     flex-direction: column;
-    gap: 72px;
+    gap: 82px;
 }
 
-/* LEFT CARD */
+/* =========================================================
+   LEFT NEWS CARD
+========================================================= */
+
 .news-meratus-card {
     display: grid;
-    grid-template-columns: 455px minmax(0, 1fr);
-    gap: 36px;
-    align-items: center;
+    grid-template-columns: 405px minmax(0, 1fr);
+    gap: 34px;
+    align-items: stretch;
 }
 
 .news-meratus-image {
     width: 100%;
-    height: 252px;
+    height: 280px;
     display: block;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 9px;
     background: #eef2f7;
 }
 
@@ -254,20 +251,28 @@
     transform: scale(1.045);
 }
 
+/* CONTENT */
 .news-meratus-content {
     min-width: 0;
+    padding-top: 4px;
 }
 
 .news-meratus-content h2 {
-    max-width: 560px;
-    margin: 0 0 22px;
+    max-width: 500px;
+    margin: 0 0 30px;
     color: #07111f;
-    font-size: 25px;
-    line-height: 1.36;
+    font-size: 24px;
+    line-height: 1.34;
     font-weight: 900;
     letter-spacing: -.45px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
+/* khusus kalau judul terlalu panjang */
 .news-meratus-content h2 a,
 .meratus-latest-content h4 a {
     color: inherit;
@@ -280,18 +285,24 @@
 }
 
 .news-meratus-content p {
-    max-width: 555px;
-    margin: 0 0 34px;
+    max-width: 510px;
+    margin: 0 0 36px;
     color: #263244;
     font-size: 16px;
     line-height: 1.78;
     font-weight: 500;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
+/* META */
 .news-meratus-meta {
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 10px;
 }
 
 .news-meratus-meta span {
@@ -305,71 +316,86 @@
     font-size: 13px;
     line-height: 1.5;
     font-weight: 900;
+    text-transform: uppercase;
 }
 
-/* SIDEBAR */
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
 .news-meratus-sidebar {
     position: sticky;
     top: 105px;
 }
 
 .meratus-sidebar-block {
-    margin-bottom: 54px;
+    margin-bottom: 64px;
 }
 
 .meratus-sidebar-block h3 {
-    margin: 0 0 34px;
+    margin: 0 0 38px;
     color: #050505;
-    font-size: 38px;
-    line-height: 1;
-    font-weight: 900;
+    font-size: 36px;
+    line-height: 1.05;
+    font-weight: 700;
     letter-spacing: -1px;
 }
 
+/* LATEST NEWS */
 .latest-news-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 34px;
+    gap: 36px;
 }
 
 .meratus-latest-card {
     display: grid;
-    grid-template-columns: 170px minmax(0, 1fr);
-    gap: 22px;
-    align-items: center;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
 }
 
 .meratus-latest-image {
-    width: 170px;
-    height: 102px;
+    width: 150px;
+    height: 92px;
     display: block;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 7px;
     background: #eef2f7;
 }
 
 .meratus-latest-content {
     min-width: 0;
+    padding-top: 0;
 }
 
 .meratus-latest-content h4 {
-    margin: 0 0 17px;
+    margin: 0 0 24px;
     color: #07111f;
     font-size: 17px;
     line-height: 1.12;
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: -.25px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .meratus-latest-content span {
+    display: block;
     color: #98a1b2;
     font-size: 15px;
     font-weight: 500;
 }
 
-/* CATEGORY */
+/* =========================================================
+   CATEGORY
+========================================================= */
+
 .meratus-category {
-    padding-top: 6px;
+    padding-top: 8px;
 }
 
 .category-list-news {
@@ -407,7 +433,10 @@
     transform: translateX(4px);
 }
 
-/* EMPTY */
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
 .premium-empty-state {
     padding: 80px 24px;
     text-align: center;
@@ -429,72 +458,133 @@
     font-size: 15px;
 }
 
-/* PAGINATION */
+/* =========================================================
+   PAGINATION - SIMPLE CLEAN
+========================================================= */
+
 .premium-pagination-zone {
-    margin-top: 10px;
+    margin-top: 28px;
 }
 
 .premium-pagination-zone nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
+.premium-pagination-zone .pagination {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #e5eaf0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.premium-pagination-zone .page-item {
+    margin: 0;
+}
+
+.premium-pagination-zone .page-link {
+    min-width: 42px;
+    height: 42px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-right: 1px solid #e5eaf0;
+    background: #ffffff;
+    color: #667085;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.premium-pagination-zone .page-item:last-child .page-link {
+    border-right: 0;
+}
+
+.premium-pagination-zone .page-item.active .page-link {
+    background: #f2f7ff;
+    color: #0b5cab;
+    font-weight: 800;
+}
+
+.premium-pagination-zone .page-link:hover {
+    background: #f7f9fc;
+    color: #0b5cab;
+}
+
+.premium-pagination-zone .page-item.disabled .page-link {
+    color: #c3cad5;
+    background: #ffffff;
+    pointer-events: none;
+}
+
+/* Sembunyikan teks kecil bawaan Laravel */
 .premium-pagination-zone p {
     display: none !important;
 }
 
-.premium-pagination-zone nav > div:last-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* Mobile */
+@media (max-width: 576px) {
+    .premium-pagination-zone nav {
+        justify-content: center;
+    }
 
-.premium-pagination-zone a,
-.premium-pagination-zone span {
-    min-width: 42px;
-    height: 42px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin: 0 4px;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.premium-pagination-zone [aria-current="page"] span {
-    background: #0a2342 !important;
-    color: #ffffff !important;
-    border: none !important;
-}
-
-.premium-pagination-zone a {
-    background: #ffffff;
-    border: 1px solid #dbe4ee;
-    color: #0a2342;
-}
-
-.premium-pagination-zone a:hover {
-    background: #0a2342;
-    color: #ffffff;
-}
-
-/* HIDE OLD GRID */
-.news-asymmetric-grid {
-    display: none !important;
+    .premium-pagination-zone .page-link {
+        min-width: 38px;
+        height: 38px;
+        padding: 0 12px;
+        font-size: 13px;
+    }
 }
 
 /* =========================================================
    RESPONSIVE
 ========================================================= */
 
-@media (min-width: 1500px) {
-    .container-premium {
-        max-width: 1440px;
+@media (max-width: 1200px) {
+    .news-meratus-layout {
+        grid-template-columns: minmax(0, 1fr) 330px;
+        gap: 48px;
+    }
+
+    .news-meratus-card {
+        grid-template-columns: 360px minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .news-meratus-image {
+        height: 220px;
+    }
+
+    .meratus-latest-card {
+        grid-template-columns: 135px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .meratus-latest-image {
+        width: 135px;
+        height: 84px;
+    }
+
+    .meratus-latest-content h4 {
+        font-size: 16px;
+        margin-bottom: 20px;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
+    .news-stream-section {
+        padding: 80px 0 90px;
+    }
+
     .news-meratus-layout {
         grid-template-columns: 1fr;
         gap: 70px;
@@ -505,54 +595,29 @@
         top: auto;
     }
 
-    .meratus-sidebar-block {
-        max-width: 760px;
-    }
-}
-
-@media (max-width: 992px) {
-    .hero-grid-layout {
-        grid-template-columns: 1fr;
-        gap: 46px;
-    }
-
-    .hero-stats-glass {
-        max-width: 520px;
-    }
-
     .news-meratus-card {
-        grid-template-columns: 390px minmax(0, 1fr);
+        grid-template-columns: 380px minmax(0, 1fr);
         gap: 28px;
     }
 
     .news-meratus-image {
-        height: 230px;
+        height: 225px;
+    }
+
+    .meratus-sidebar-block h3 {
+        font-size: 32px;
+    }
+
+    .latest-news-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 34px 24px;
     }
 }
 
 @media (max-width: 768px) {
     .container-premium {
-        padding: 0 20px;
-    }
-
-    .premium-hero {
-        padding: 125px 0 85px;
-    }
-
-    .hero-title {
-        font-size: 40px;
-    }
-
-    .hero-description {
-        font-size: 15px;
-    }
-
-    .news-stream-section {
-        padding: 72px 0 85px;
-    }
-
-    .news-page-heading {
-        margin-bottom: 42px;
+        padding: 0 22px;
     }
 
     .news-page-heading h2 {
@@ -560,56 +625,101 @@
     }
 
     .news-meratus-main {
-        gap: 48px;
+        gap: 58px;
     }
 
     .news-meratus-card {
         grid-template-columns: 1fr;
-        gap: 22px;
+        gap: 24px;
     }
 
     .news-meratus-image {
-        height: 230px;
+        height: 240px;
     }
 
     .news-meratus-content h2 {
-        font-size: 22px;
+        font-size: 23px;
+        margin-bottom: 22px;
     }
 
     .news-meratus-content p {
-        margin-bottom: 26px;
+        margin-bottom: 28px;
+        font-size: 15.5px;
+    }
+
+    .latest-news-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .meratus-latest-card {
+        grid-template-columns: 135px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .meratus-latest-image {
+        width: 135px;
+        height: 84px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-premium {
+        padding: 0 18px;
+    }
+
+    .news-stream-section {
+        padding: 65px 0 75px;
+    }
+
+    .news-page-heading {
+        margin-bottom: 42px;
+    }
+
+    .news-page-heading h2 {
+        font-size: 32px;
+    }
+
+    .news-meratus-image {
+        height: 210px;
+        border-radius: 9px;
+    }
+
+    .news-meratus-content h2 {
+        font-size: 21px;
+        line-height: 1.32;
+    }
+
+    .news-meratus-content p {
         font-size: 15px;
+        line-height: 1.7;
     }
 
     .meratus-sidebar-block h3 {
         font-size: 30px;
-    }
-
-    .latest-news-wrapper {
-        gap: 26px;
+        margin-bottom: 30px;
     }
 
     .meratus-latest-card {
-        grid-template-columns: 125px minmax(0, 1fr);
-        gap: 16px;
+        grid-template-columns: 118px minmax(0, 1fr);
+        gap: 15px;
     }
 
     .meratus-latest-image {
-        width: 125px;
-        height: 82px;
+        width: 118px;
+        height: 76px;
     }
 
     .meratus-latest-content h4 {
-        margin-bottom: 10px;
+        margin-bottom: 16px;
         font-size: 15px;
-        line-height: 1.25;
+        line-height: 1.15;
     }
 
     .meratus-latest-content span {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
-
 /* ==========================================================================
    3. EDITORIAL FEATURED (BENTO LAYOUT)
    ========================================================================== */

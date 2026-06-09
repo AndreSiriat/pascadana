@@ -9,11 +9,6 @@
 <!-- =========================================
      PREMIUM HERO CINEMATIC SECTION
 ========================================= -->
-@extends('layouts.app')
-
-@section('title', 'Berita & Aktivitas — PT Pasca Dana Sundari')
-
-@section('content')
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,59 +17,39 @@
 <link rel="stylesheet" href="{{ asset('assets/css/berita.css') }}">
 
 <!-- HERO -->
-<section class="premium-hero">
-    <div class="hero-ambient-glow"></div>
-    <div class="hero-overlay-gradient"></div>
+<section class="maritime-news-hero">
 
-    <div class="container-premium">
-        <div class="hero-grid-layout">
+    <div class="maritime-hero-overlay"></div>
 
-            <div class="hero-text-block">
-                <div class="badge-innovative">
-                    <span class="pulse-dot"></span>
-                    <span class="badge-text">MEDIA CENTER UTAMA</span>
-                </div>
+    <div class="maritime-hero-container">
 
-                <h1 class="hero-title">
-                    Navigasi Informasi & <br>
-                    <span class="text-gradient">Aktivitas Perusahaan</span>
-                </h1>
+        <div class="maritime-hero-content">
 
-                <p class="hero-description">
-                    Eksplorasi pembaruan terkini mengenai operasional pelayaran strategis,
-                    standar keselamatan armada, inovasi layanan, dan momentum pertumbuhan
-                    PT Pasca Dana Sundari.
-                </p>
-            </div>
+            <span class="maritime-hero-label">
+                <span></span>
+                MEDIA CENTER
+            </span>
 
-            <div class="hero-stats-glass">
-                <div class="stat-card">
-                    <div class="stat-icon-wrapper">
-                        <i class="fa-solid fa-layer-group"></i>
-                    </div>
+            <h1>
+                Berita & Publikasi<br>
+                Resmi Perusahaan
+            </h1>
 
-                    <div class="stat-info">
-                        <h3 class="stat-number">{{ $berita->total() }}</h3>
-                        <p class="stat-label">Arsip Publikasi</p>
-                    </div>
-                </div>
-
-                <div class="stat-divider"></div>
-
-                <div class="stat-card">
-                    <div class="stat-icon-wrapper">
-                        <i class="fa-regular fa-calendar-check"></i>
-                    </div>
-
-                    <div class="stat-info">
-                        <h3 class="stat-number">{{ now()->format('Y') }}</h3>
-                        <p class="stat-label">Tahun Fiskal Aktif</p>
-                    </div>
-                </div>
-            </div>
+            <p>
+                Informasi terbaru mengenai aktivitas operasional, layanan
+                penyeberangan, keselamatan armada, serta perkembangan
+                PT Pasca Dana Sundari.
+            </p>
 
         </div>
+
+        <div class="maritime-hero-info">
+            <span>PT PASCA DANA SUNDARI</span>
+            <strong>Reliable Ferry Transportation</strong>
+        </div>
+
     </div>
+
 </section>
 
 
@@ -123,7 +98,7 @@
                 @endforeach
 
                 <div class="premium-pagination-zone">
-                    {{ $berita->links() }}
+                    {{ $berita->onEachSide(1)->links('pagination::bootstrap-4') }}
                 </div>
 
             </main>
@@ -161,17 +136,22 @@
                     </div>
                 </div>
 
-                <div class="meratus-sidebar-block meratus-category">
-                    <h3>Kategori</h3>
+                <div class="category-list-news">
 
-                    <div class="category-list-news">
-                        @foreach($categories as $category)
-                        <a href="#">
+                    <a href="{{ route('berita') }}"
+                    class="{{ request('kategori') ? '' : 'active' }}">
+                        <span>Semua Berita</span>
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+
+                    @foreach($categories as $category)
+                        <a href="{{ route('berita', ['kategori' => $category->kategori]) }}"
+                        class="{{ request('kategori') == $category->kategori ? 'active' : '' }}">
                             <span>{{ $category->kategori }}</span>
                             <i class="fa-solid fa-arrow-right-long"></i>
                         </a>
-                        @endforeach
-                    </div>
+                    @endforeach
+
                 </div>
 
             </aside>
@@ -190,7 +170,5 @@
     </div>
 
 </section>
-
-@endsection
 
 @endsection

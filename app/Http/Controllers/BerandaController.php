@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use App\Models\MaritimPolicy;
+use Illuminate\Http\Request;
 
 class BerandaController extends Controller
 {
@@ -16,21 +17,26 @@ class BerandaController extends Controller
         return view('index', compact('berita'));
     }
 
-    public function berita()
+    public function berita(Request $request)
     {
-        // Kiri hanya 5 berita per halaman
-        $berita = Berita::latest()
-            ->paginate(5);
+        $query = Berita::latest();
 
-        // Sidebar kanan 4 berita terbaru
+        if ($request->filled('kategori')) {
+            $query->where('kategori', $request->kategori);
+        }
+
+        $berita = $query
+            ->paginate(5)
+            ->withQueryString();
+
         $latestBerita = Berita::latest()
             ->take(4)
             ->get();
 
-        // Kategori sidebar
         $categories = Berita::select('kategori')
             ->whereNotNull('kategori')
             ->distinct()
+            ->orderBy('kategori')
             ->get();
 
         return view('pages.berita', compact(
@@ -52,6 +58,7 @@ class BerandaController extends Controller
         $categories = Berita::select('kategori')
             ->whereNotNull('kategori')
             ->distinct()
+            ->orderBy('kategori')
             ->get();
 
         return view('pages.detail-berita', compact(

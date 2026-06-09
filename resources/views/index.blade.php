@@ -129,62 +129,59 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     });
 </script>
 
-<!-- =========================================
-     ABOUT SECTION
-========================================= -->
-<section class="about-section">
+<section class="trusted-simple">
+    <div class="trusted-simple-container">
 
-    <div class="container about-wrapper">
-
-        <div class="about-image">
-            <img src="{{ asset('assets/img/69.png') }}" alt="Pattern">
+        <div class="trusted-simple-image">
+            <img src="{{ asset('assets/img/38.jpeg') }}" alt="Trusted Voyage">
         </div>
 
-        <div class="about-content">
+        <div class="trusted-simple-content">
+            <img class="trusted-simple-logo"
+                 src="{{ asset('assets/img/69.png') }}"
+                 alt="Trusted Voyage">
 
-            <span class="about-subtitle fade-up-element">
-                TRUSTED VOYAGE
-            </span>
-
-            <h2 class="fade-up-element">
-                Kepercayaan Dalam
-                <br>
-                Setiap Perjalanan
+            <h2>
+                Kepercayaan Dalam Setiap Perjalanan
             </h2>
 
-            <div class="about-line fade-up-element"></div>
-
-            <p class="fade-up-element">
-                Tagline ini merepresentasikan semangat PT Pasca Dana Sundari sebagai perusahaan pelayaran yang berkomitmen menghadirkan perjalanan laut yang aman, profesional, dan dapat dipercaya. Trusted Voyage menggambarkan keyakinan bahwa setiap pelayaran adalah wujud tanggung jawab untuk menjaga keselamatan, keandalan, serta kenyamanan seluruh pengguna jasa.
+            <p>
+                Tagline ini merepresentasikan semangat PT Pasca Dana Sundari sebagai perusahaan pelayaran yang berkomitmen menghadirkan perjalanan laut yang aman, 
+                profesional, dan dapat dipercaya. Trusted Voyage menggambarkan keyakinan bahwa setiap pelayaran adalah wujud tanggung jawab untuk menjaga keselamatan, keandalan, serta kenyamanan seluruh pengguna jasa.
             </p>
 
         </div>
 
     </div>
-
 </section>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const aboutSection = document.querySelector('.about-section');
+document.addEventListener("DOMContentLoaded", function () {
 
-        if (aboutSection) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    // Jika section sudah terlihat 15% di layar
-                    if (entry.isIntersecting) {
-                        aboutSection.classList.add('is-visible');
-                        // Unobserve jika Anda ingin animasi hanya berjalan sekali saja saat di-scroll
-                        observer.unobserve(entry.target); 
-                    }
-                });
-            }, {
-                threshold: 0.15 // Memulai animasi sedikit sebelum section benar-center di layar
-            });
+    const sections = document.querySelectorAll('.trusted-simple');
 
-            observer.observe(aboutSection);
-        }
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
     });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+});
 </script>
 
 <!-- =========================================
@@ -333,12 +330,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   <!-- Bagian Atas / Header -->
   <div class="corp-stats__header">
     <div class="corp-stats__header-left">
-      <span class="corp-stats__eyebrow corp-stats__eyebrow--blue">KINERJA OPERASIONAL 2026</span>
+      <span class="corp-stats__eyebrow corp-stats__eyebrow--blue">KINERJA OPERASIONAL</span>
       <h2 class="corp-stats__title">Menjaga Mobilitas, Menghubungkan Ekspedisi</h2>
     </div>
     <div class="corp-stats__header-right">
       <p class="corp-stats__description">
-        Kami terus berkomitmen memberikan pelayanan transportasi yang andal, aman, dan efisien demi mendukung produktivitas dan konektivitas logistik yang terintegrasi setiap harinya.
+        Kami terus berkomitmen memberikan pelayanan penyebrangan yang andal, aman, dan efisien demi mendukung produktivitas dan konektivitas yang terintegrasi setiap harinya.
       </p>
     </div>
   </div>
@@ -427,6 +424,9 @@ document.addEventListener("DOMContentLoaded", () => {
   counters.forEach(counter => counterObserver.observe(counter));
 });
 </script>
+
+
+
 
 
 <!-- RRRRRRRUUUUUUUUUUUUUTTTTTTTTTTEEEEEEEEEEE -->
@@ -843,6 +843,34 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const messageSection = document.querySelector('.message-section');
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add('is-visible');
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    observer.observe(messageSection);
+
+});
+</script>
 
 
 

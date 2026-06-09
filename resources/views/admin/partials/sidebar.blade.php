@@ -13,27 +13,36 @@
     <nav class="sidebar-menu">
 
         <a href="{{ route('admin.berita.index') }}"
-           class="sidebar-link {{ request()->routeIs('admin.berita.*') ? 'active' : '' }}">
+        class="sidebar-link {{ request()->routeIs('admin.berita.*') ? 'active' : '' }}">
             <i class="fa-solid fa-newspaper"></i>
             <span>Berita</span>
         </a>
 
         <a href="{{ route('admin.maritim-policy.index') }}"
-           class="sidebar-link {{ request()->routeIs('admin.maritim-policy.*') ? 'active' : '' }}">
+        class="sidebar-link {{ request()->routeIs('admin.maritim-policy.*') ? 'active' : '' }}">
             <i class="fa-solid fa-file-contract"></i>
             <span>Peraturan</span>
         </a>
 
+        <a href="{{ route('admin.management.index') }}"
+        class="sidebar-link {{ request()->routeIs('admin.management.*') ? 'active' : '' }}">
+            <i class="fa-solid fa-users"></i>
+            <span>Manajemen</span>
+        </a>
+
         <a href="{{ route('admin.kritik-saran.index') }}"
-            class="sidebar-link {{ request()->routeIs('admin.kritik-saran.*') ? 'active' : '' }}">
+        class="sidebar-link {{ request()->routeIs('admin.kritik-saran.*') ? 'active' : '' }}">
 
-                <i class="fa-solid fa-comments"></i>
+            <i class="fa-solid fa-comments"></i>
 
-                <span>
-                    Kritik & Saran
-                </span>
+            <span>
+                Kritik & Saran
+            </span>
 
-            </a>
+        </a>
+
+    </nav>
+
 
     </nav>
 

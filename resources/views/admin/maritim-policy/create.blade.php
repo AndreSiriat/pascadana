@@ -5,6 +5,8 @@
 
 @section('content')
 
+
+
 <div class="berita-header">
     <div>
         <span>CMS PERATURAN</span>
