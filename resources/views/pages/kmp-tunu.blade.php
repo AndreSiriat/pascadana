@@ -4,7 +4,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/kmp-tunu.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/kmp-tunu.css') }}?v=2">
 
 <!-- =========================================
 KMP TUNU PREMIUM CORPORATE PAGE

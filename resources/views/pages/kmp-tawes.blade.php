@@ -4,7 +4,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/kmp-tawes.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/kmp-tawes.css') }}?v=2">
 
 <!-- =========================================
 KMP tawes PREMIUM CORPORATE PAGE

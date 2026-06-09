@@ -13,7 +13,7 @@
 
             <div class="pds-footer-contact">
                 <span>Call Us : 0821 XXXX XXXX</span>
-                <span>Email Us : info@pdsferry.co.id</span>
+                <span>Email Us : info@pascadanasundari.com</span>
             </div>
 
             <div class="pds-footer-social">
