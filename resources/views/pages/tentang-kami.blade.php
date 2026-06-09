@@ -15,7 +15,7 @@
 
 
 <!-- CSS UTAMA -->
-<link rel="stylesheet" href="{{ asset('assets/css/tentang-kami.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/tentang-kami.css') }}?v=2">
 
 <div class="pds-about-premium">
     <div class="pds-about-bg"></div>

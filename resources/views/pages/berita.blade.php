@@ -4,7 +4,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/berita.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/berita.css') }}v=2">
 
 <!-- =========================================
      PREMIUM HERO CINEMATIC SECTION
