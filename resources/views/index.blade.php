@@ -129,31 +129,61 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     });
 </script>
 
+<section class="trusted-route-section">
 
-<section class="trusted-simple">
-    <div class="trusted-simple-container">
+    <div class="trusted-route-container">
 
-        <div class="trusted-simple-image">
-            <img src="{{ asset('assets/img/38.jpeg') }}" alt="Trusted Voyage">
-        </div>
-
-        <div class="trusted-simple-content">
-            <img class="trusted-simple-logo"
-                 src="{{ asset('assets/img/69.png') }}"
-                 alt="Trusted Voyage">
+        <div class="trusted-route-copy">
+            <span class="trusted-route-label">TRUSTED VOYAGE</span>
 
             <h2>
                 Kepercayaan Dalam Setiap Perjalanan
             </h2>
 
             <p>
-                Tagline ini merepresentasikan semangat PT Pasca Dana Sundari sebagai perusahaan pelayaran yang berkomitmen menghadirkan perjalanan laut yang aman, 
+                Tagline ini merepresentasikan semangat PT Pasca Dana Sundari sebagai perusahaan pelayaran yang berkomitmen menghadirkan perjalanan yang aman, 
                 profesional, dan dapat dipercaya. Trusted Voyage menggambarkan keyakinan bahwa setiap pelayaran adalah wujud tanggung jawab untuk menjaga keselamatan, keandalan, serta kenyamanan seluruh pengguna jasa.
             </p>
+        </div>
+
+        <div class="trusted-route-visual">
+
+            <div class="route-map">
+
+                <svg viewBox="0 0 760 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                    <path class="route-path route-shadow"
+                          d="M90 300 C220 130, 410 360, 670 120" />
+
+                    <path class="route-path route-line"
+                          d="M90 300 C220 130, 410 360, 670 120" />
+
+                    <circle class="port-dot port-start" cx="90" cy="300" r="8" />
+                    <circle class="port-dot port-mid" cx="375" cy="255" r="6" />
+                    <circle class="port-dot port-end" cx="670" cy="120" r="8" />
+
+                </svg>
+
+                <div class="ship-marker">
+                    <i class="fa-solid fa-ship"></i>
+                </div>
+
+                <div class="port-label start-label">
+                    <strong>Departure</strong>
+                    <span>Prepared & Checked</span>
+                </div>
+
+                <div class="port-label end-label">
+                    <strong>Arrival</strong>
+                    <span>Safe & Reliable</span>
+                </div>
+
+            </div>
 
         </div>
 
     </div>
+
 </section>
 
 <script>

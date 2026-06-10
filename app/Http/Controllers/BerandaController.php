@@ -72,7 +72,7 @@ class BerandaController extends Controller
     {
         $policies = MaritimPolicy::where('status', 'published')
             ->latest()
-            ->paginate(6);
+            ->paginate(3);
 
         return view('pages.maritim-policy', compact('policies'));
     }

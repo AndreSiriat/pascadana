@@ -150,20 +150,20 @@ FASILITAS
 
         <!-- 1 -->
         <div class="facility-card large">
-            <img src="assets/img/64.jpeg" alt="">
+            <img src="assets/img/74.jpeg" alt="">
 
             <div class="facility-overlay">
                 <span>01</span>
-                <h3>Kantin Penumpang</h3>
+                <h3>Ruang Penumpang</h3>
                 <p>
-                    Area kantin dengan suasana nyaman untuk memenuhi kebutuhan perjalanan.
+                    Ruang penumpang dengan suasana nyaman selama perjalanan.
                 </p>
             </div>
         </div>
 
         <!-- 2 -->
         <div class="facility-card">
-            <img src="assets/img/65.jpeg" alt="">
+            <img src="assets/img/75.jpeg" alt="">
 
             <div class="facility-overlay">
                 <span>02</span>
@@ -176,13 +176,13 @@ FASILITAS
 
         <!-- 3 -->
         <div class="facility-card">
-            <img src="assets/img/66.jpeg" alt="">
+            <img src="assets/img/64.jpeg" alt="">
 
             <div class="facility-overlay">
                 <span>03</span>
-                <h3>Toilet Umum</h3>
+                <h3>Cafetaria</h3>
                 <p>
-                    Fasilitas toilet yang bersih, dan nyaman demi kelancaran dan kenyamanan perjalanan Anda.
+                    Area kantin dengan suasana nyaman untuk memenuhi kebutuhan perjalanan.
                 </p>
             </div>
         </div>
@@ -267,10 +267,10 @@ KESELAMATAN
 
     <div class="safety-gallery">
 
-        <img src="assets/img/61.jpeg" alt="">
-        <img src="assets/img/62.jpeg" alt="">
-        <img src="assets/img/59.jpeg" alt="">
-        <img src="assets/img/60.jpeg" alt="">
+        <img src="assets/img/76.jpeg" alt="">
+        <img src="assets/img/79.jpeg" alt="">
+        <img src="assets/img/78.jpeg" alt="">
+        <img src="assets/img/77.jpeg" alt="">
 
     </div>
 </section>
