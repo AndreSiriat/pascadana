@@ -45,7 +45,7 @@
 
         <div class="maritime-hero-info">
             <span>PT PASCA DANA SUNDARI</span>
-            <strong>Reliable Ferry Transportation</strong>
+            <strong>TRUSTED VOYAGE</strong>
         </div>
 
     </div>

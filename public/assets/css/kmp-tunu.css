@@ -189,7 +189,7 @@ HERO
 .fleet-label {
     display: inline-block;
     margin-bottom: 22px;
-    color: #00bcd4;
+    color: #1f6db6;
     font-size: 13px;
     line-height: 1;
     font-weight: 900;
@@ -374,6 +374,485 @@ HERO
     }
 }
 
+/* =========================================
+   KMP TUNU DALAM ANGKA - COMPACT
+========================================= */
+
+.tunu-impact-section {
+    width: 100%;
+    padding: 80px 0;
+    background: #ffffff;
+    font-family: 'Inter', sans-serif;
+    color: #071735;
+}
+
+.tunu-impact-container {
+    width: min(1280px, 94%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 56% 44%;
+    min-height: 590px;
+    background: #f7f9fc;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.tunu-impact-image {
+    position: relative;
+    height: 670px;
+    overflow: hidden;
+}
+
+.tunu-impact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+
+    filter:
+        brightness(1.03)
+        contrast(.92)
+        saturate(.95);
+
+    transform: scale(1.02);
+}
+
+.tunu-impact-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(247,249,252,0) 55%,
+            rgba(247,249,252,.85) 82%,
+            rgba(247,249,252,1) 100%
+        );
+
+    pointer-events: none;
+}
+
+/* CONTENT */
+
+.tunu-impact-content {
+    padding: 36px 0 36px 52px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tunu-impact-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #1f6db6;
+}
+
+.tunu-impact-content h2 {
+    margin: 0 0 28px;
+    font-size: clamp(36px, 4vw, 54px);
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #071735;
+}
+
+/* RADIO HIDE */
+
+.tunu-impact-tabs input {
+    display: none;
+}
+
+/* DISPLAY */
+
+.tunu-stat-display {
+    position: relative;
+    min-height: 245px;
+}
+
+.tunu-stat-panel {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(14px);
+    pointer-events: none;
+    transition: .4s ease;
+}
+
+.tunu-stat-panel strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: clamp(70px, 7vw, 108px);
+    line-height: .85;
+    font-weight: 900;
+    letter-spacing: -6px;
+    color: #071735;
+}
+
+.tunu-stat-panel h3 {
+    margin: 0 0 14px;
+    font-size: 25px;
+    line-height: 1.25;
+    letter-spacing: -.7px;
+    color: #071735;
+}
+
+.tunu-stat-panel p {
+    max-width: 440px;
+    margin: 0;
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: #566176;
+}
+
+/* ACTIVE PANEL */
+
+#stat-trip:checked ~ .tunu-stat-display .panel-trip,
+#stat-penumpang:checked ~ .tunu-stat-display .panel-penumpang,
+#stat-motor:checked ~ .tunu-stat-display .panel-motor,
+#stat-golongan:checked ~ .tunu-stat-display .panel-golongan {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* NAV */
+
+.tunu-stat-nav {
+    margin-top: auto;
+    border-top: 1px solid #dce4ef;
+}
+
+.tunu-stat-nav label {
+    display: grid;
+    grid-template-columns: 42px 90px 1fr;
+    align-items: center;
+    min-height: 58px;
+    border-bottom: 1px solid #dce4ef;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.tunu-stat-nav label span {
+    font-size: 11px;
+    font-weight: 800;
+    color: #9aa8bb;
+}
+
+.tunu-stat-nav label b {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #071735;
+}
+
+.tunu-stat-nav label small {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #5d6b80;
+}
+
+/* ACTIVE NAV */
+
+#stat-trip:checked ~ .tunu-stat-nav label[for="stat-trip"],
+#stat-penumpang:checked ~ .tunu-stat-nav label[for="stat-penumpang"],
+#stat-motor:checked ~ .tunu-stat-nav label[for="stat-motor"],
+#stat-golongan:checked ~ .tunu-stat-nav label[for="stat-golongan"] {
+    padding-left: 16px;
+    background: #071735;
+}
+
+#stat-trip:checked ~ .tunu-stat-nav label[for="stat-trip"] span,
+#stat-trip:checked ~ .tunu-stat-nav label[for="stat-trip"] b,
+#stat-trip:checked ~ .tunu-stat-nav label[for="stat-trip"] small,
+#stat-penumpang:checked ~ .tunu-stat-nav label[for="stat-penumpang"] span,
+#stat-penumpang:checked ~ .tunu-stat-nav label[for="stat-penumpang"] b,
+#stat-penumpang:checked ~ .tunu-stat-nav label[for="stat-penumpang"] small,
+#stat-motor:checked ~ .tunu-stat-nav label[for="stat-motor"] span,
+#stat-motor:checked ~ .tunu-stat-nav label[for="stat-motor"] b,
+#stat-motor:checked ~ .tunu-stat-nav label[for="stat-motor"] small,
+#stat-golongan:checked ~ .tunu-stat-nav label[for="stat-golongan"] span,
+#stat-golongan:checked ~ .tunu-stat-nav label[for="stat-golongan"] b,
+#stat-golongan:checked ~ .tunu-stat-nav label[for="stat-golongan"] small {
+    color: #ffffff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+    .tunu-impact-section {
+        padding: 70px 0;
+    }
+
+    .tunu-impact-container {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .tunu-impact-image {
+        height: 380px;
+    }
+
+    .tunu-impact-content {
+        padding: 38px 0 0;
+    }
+
+    .tunu-stat-display {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tunu-impact-section {
+        padding: 55px 0;
+    }
+
+    .tunu-impact-container {
+        width: 90%;
+    }
+
+    .tunu-impact-image {
+        height: 280px;
+    }
+
+    .tunu-impact-content h2 {
+        margin-bottom: 26px;
+        font-size: 38px;
+    }
+
+    .tunu-stat-display {
+        min-height: 255px;
+    }
+
+    .tunu-stat-panel strong {
+        font-size: 70px;
+        letter-spacing: -4px;
+    }
+
+    .tunu-stat-panel h3 {
+        font-size: 22px;
+    }
+
+    .tunu-stat-panel p {
+        font-size: 14.5px;
+        line-height: 1.7;
+    }
+
+    .tunu-stat-nav label {
+        grid-template-columns: 32px 76px 1fr;
+        min-height: 58px;
+    }
+
+    .tunu-stat-nav label b {
+        font-size: 21px;
+    }
+
+    .tunu-stat-nav label small {
+        font-size: 12.5px;
+    }
+}
+
+
+
+/* =========================================
+   SHIP TECHNICAL PROFILE
+========================================= */
+
+.ship-tech-section {
+    padding: 120px 0;
+    background: #f6f9fc;
+    font-family: 'Inter', sans-serif;
+    color: #071735;
+}
+
+.ship-tech-container {
+    width: min(1240px, 92%);
+    margin: 0 auto;
+}
+
+.ship-tech-header {
+    max-width: 900px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.ship-tech-header span {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #1f6db6;
+}
+
+.ship-tech-header h2 {
+    margin: 0;
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    color: #071735;
+}
+
+.ship-tech-header p {
+    max-width: 700px;
+    margin: 24px auto 0;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #6b7890;
+}
+
+.ship-tech-layout {
+    display: grid;
+    grid-template-columns: 36% 64%;
+    gap: 28px;
+}
+
+.ship-tech-main {
+    min-height: auto;
+    padding: 50px;
+    background: #071735;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ship-tech-main span {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #31d6e8;
+}
+
+.ship-tech-main h3 {
+    margin: 0 0 22px;
+    font-size: 42px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.ship-tech-main p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255,255,255,.75);
+}
+
+.ship-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: #dce4ef;
+}
+
+.ship-tech-item {
+    min-height: 200px;
+    padding: 28px 32px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ship-tech-item span {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #1f6db6;
+    text-transform: uppercase;
+}
+
+.ship-tech-item strong {
+    display: block;
+    margin-top: 20px;
+    font-size: 52px;
+    letter-spacing: -2px;
+    line-height: 1;
+    font-weight: 900;
+    color: #071735;
+}
+
+.ship-tech-item p {
+    margin: 14px 0 0;
+    font-size: 15px;
+    color: #657286;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .ship-tech-section {
+        padding: 48px 0;
+    }
+
+    .ship-tech-header {
+        margin-bottom: 36px;
+        text-align: left;
+    }
+
+    .ship-tech-header h2 {
+        font-size: 30px;
+        line-height: 1.15;
+        letter-spacing: -1px;
+    }
+
+    .ship-tech-header p {
+        margin-top: 14px;
+        font-size: 14.5px;
+        line-height: 1.65;
+    }
+
+    .ship-tech-layout{
+        display:flex;
+        flex-direction:column;
+        gap:0;
+    }
+
+    .ship-tech-main{
+        order:1;
+        min-height:auto;
+        padding:36px 28px;
+    }
+
+    .ship-tech-grid{
+        order:2;
+        grid-template-columns:1fr;
+    }
+
+    .ship-tech-main h3 {
+        font-size: 32px;
+    }
+
+
+    .ship-tech-item {
+        min-height: auto;
+        padding: 24px 24px;
+        border-bottom: 1px solid #dce4ef;
+    }
+
+    .ship-tech-item span {
+        font-size: 11px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    .ship-tech-item strong {
+        margin-top: 0;
+        font-size: 42px;
+        line-height: 1;
+        letter-spacing: -2px;
+    }
+
+    .ship-tech-item p {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
 
 /* =========================================
 FACILITIES
@@ -393,6 +872,7 @@ FACILITIES
     /* Mengunci tinggi dasar setiap baris tunggal agar seragam di 380px */
     grid-auto-rows: 380px; 
 }
+
 
 .facility-card {
     position: relative;
@@ -447,6 +927,10 @@ FACILITIES
     opacity: .9;
 }
 
+.section-header span{
+    color:#1f6db6;
+}
+
 /* =========================================
 KESELAMATAN SECTION
 ========================================= */
@@ -470,7 +954,7 @@ KESELAMATAN SECTION
 }
 
 .safety-left .section-label {
-    color: #00bcd4;
+    color: #1f6db6;
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 14px;

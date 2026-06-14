@@ -45,10 +45,7 @@
             </h2>
 
             <p>
-                Menjadi Perusahaan Jasa Penyeberangan Kelas Global yang
-                Inovatif, Berdaya Saing, Ramah Lingkungan, Serta Memberikan
-                Nilai Tambah Berkelanjutan Bagi Seluruh Pemangku
-                Kepentingan.
+                Menjadi Perusahaan Jasa Penyeberangan Kelas Global yang Inovatif, Berdaya Saing, Ramah Lingkungan, Serta Memberikan Nilai Tambah Berkelanjutan Bagi Seluruh Pemangku Kepentingan
             </p>
 
         </div>

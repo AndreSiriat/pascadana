@@ -4,7 +4,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/kmp-tawes.css') }}?v=2">
+<link rel="stylesheet" href="{{ asset('assets/css/kmp-tawes.css') }}?v=3">
 
 <!-- =========================================
 KMP tawes PREMIUM CORPORATE PAGE
@@ -29,23 +29,105 @@ KMP tawes PREMIUM CORPORATE PAGE
             <a href="#spesifikasi" class="btn-outline">Detail Kapal</a>
         </div>
     </div>
+</section>
 
-    <div class="hero-stats">
-        <div class="stat-box">
-            <h2>100%</h2>
-            <span>Keselamatan Prioritas</span>
+
+<section class="tunu-impact-section">
+
+    <div class="tunu-impact-container">
+
+        <div class="tunu-impact-image">
+            <img src="{{ asset('assets/img/5.jpeg') }}" alt="KMP Tunu">
         </div>
 
-        <div class="stat-box">
-            <h2>Premium</h2>
-            <span>Fasilitas Penumpang</span>
+        <div class="tunu-impact-content">
+
+            <span class="tunu-impact-label">KONTRIBUSI KMP TAWES</span>
+            <h2>Dalam Angka</h2>
+
+            <div class="tunu-impact-tabs">
+
+                <input type="radio" name="tunuStat" id="stat-trip" checked>
+                <input type="radio" name="tunuStat" id="stat-penumpang">
+                <input type="radio" name="tunuStat" id="stat-motor">
+                <input type="radio" name="tunuStat" id="stat-golongan">
+
+                <div class="tunu-stat-display">
+
+                    <div class="tunu-stat-panel panel-trip">
+                        <strong>280</strong>
+                        <h3>Trip per Bulan</h3>
+                        <p>
+                            KMP Tawes beroperasi secara rutin dalam mendukung
+                            konektivitas penyeberangan yang konsisten, aman,
+                            dan berkelanjutan bagi masyarakat.
+                        </p>
+                    </div>
+
+                    <div class="tunu-stat-panel panel-penumpang">
+                        <strong>1.377</strong>
+                        <h3>Penumpang per Bulan</h3>
+                        <p>
+                            Melayani mobilitas masyarakat dengan mengutamakan
+                            keselamatan, kenyamanan, dan keandalan layanan
+                            penyeberangan setiap bulannya.
+                        </p>
+                    </div>
+
+                    <div class="tunu-stat-panel panel-motor">
+                        <strong>1.224</strong>
+                        <h3>Kendaraan Motor per Bulan</h3>
+                        <p>
+                            Mendukung aktivitas harian masyarakat dan pergerakan
+                            ekonomi lokal melalui layanan angkutan kendaraan
+                            bermotor yang tertib dan efisien.
+                        </p>
+                    </div>
+
+                    <div class="tunu-stat-panel panel-golongan">
+                        <strong>1.539</strong>
+                        <h3>Kendaraan Gol. IV - IX per Bulan</h3>
+                        <p>
+                            Berperan dalam menunjang distribusi logistik,
+                            kendaraan niaga, dan rantai pasok antarwilayah
+                            melalui layanan penyeberangan yang andal.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="tunu-stat-nav">
+                    <label for="stat-trip">
+                        <span></span>
+                        <b>280</b>
+                        <small>Trip</small>
+                    </label>
+
+                    <label for="stat-penumpang">
+                        <span></span>
+                        <b>1.377</b>
+                        <small>Penumpang</small>
+                    </label>
+
+                    <label for="stat-motor">
+                        <span></span>
+                        <b>1.224</b>
+                        <small>Motor</small>
+                    </label>
+
+                    <label for="stat-golongan">
+                        <span></span>
+                        <b>1.539</b>
+                        <small>Gol. IV - IX</small>
+                    </label>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="stat-box">
-            <h2>24/7</h2>
-            <span>Pelayanan Operasional</span>
-        </div>
     </div>
+
 </section>
 
 
@@ -90,7 +172,7 @@ KMP tawes PREMIUM CORPORATE PAGE
 
                 <div class="fleet-spec-item">
                     <span>Kapasitas</span>
-                    <strong>± 1200 Penumpang</strong>
+                    <strong>± 116 Penumpang</strong>
                 </div>
 
             </div>
@@ -273,6 +355,76 @@ KESELAMATAN
         <img src="assets/img/77.jpeg" alt="">
 
     </div>
+</section>
+
+<section class="ship-tech-section">
+
+    <div class="ship-tech-container">
+
+        <div class="ship-tech-header">
+            <span>PROFIL TEKNIS</span>
+            <h2>KMP Tawes</h2>
+            <p>
+                Profil teknis kapal sebagai armada Roll-On/Roll-Off milik
+                PT Pasca Dana Sundari.
+            </p>
+        </div>
+
+        <div class="ship-tech-layout">
+
+            <div class="ship-tech-main">
+                <span>Jenis Kapal</span>
+                <h3>Roll-On / Roll-Off</h3>
+                <p>
+                    Dirancang untuk mendukung layanan penyeberangan penumpang
+                    dan kendaraan secara aman, tertib, dan efisien.
+                </p>
+            </div>
+
+            <div class="ship-tech-grid">
+
+                <div class="ship-tech-item">
+                    <span>Kapasitas Penumpang</span>
+                    <strong>± 116</strong>
+                    <p>Penumpang</p>
+                </div>
+
+                <div class="ship-tech-item">
+                    <span>Gross Tonnage</span>
+                    <strong>707</strong>
+                    <p>GT</p>
+                </div>
+
+                <div class="ship-tech-item">
+                    <span>Length Overall</span>
+                    <strong>60.20</strong>
+                    <p>Meter</p>
+                </div>
+
+                <div class="ship-tech-item">
+                    <span>Call Sign</span>
+                    <strong>YB4111</strong>
+                    <p>Tanda Panggil</p>
+                </div>
+
+                <div class="ship-tech-item">
+                    <span>IMO Number</span>
+                    <strong>8013326</strong>
+                    <p>Nomor Identifikasi</p>
+                </div>
+
+                <div class="ship-tech-item">
+                    <span>Pemilik Kapal</span>
+                    <strong>PDS</strong>
+                    <p>PT Pasca Dana Sundari</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
 @endsection

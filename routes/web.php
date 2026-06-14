@@ -73,7 +73,19 @@ Route::get('/tentang-kami', function () {
         ->orderBy('urutan')
         ->get();
 
-    return view('pages.tentang-kami', compact('dewan', 'manajemen'));
+    $nahkoda = Management::where('group', 'nahkoda')
+        ->where('status', 'active')
+        ->orderBy('urutan')
+        ->get();
+
+    return view(
+        'pages.tentang-kami',
+        compact(
+            'dewan',
+            'manajemen',
+            'nahkoda'
+        )
+    );
 
 })->name('tentang-kami');
 Route::view('/visi-misi', 'pages.visi-misi')->name('visi-misi');

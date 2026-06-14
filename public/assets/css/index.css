@@ -1068,7 +1068,7 @@
 /* CARD STATS GRID */
 .corp-stats__grid {
     display: grid;
-    grid-template-columns: repeat(3, 11fr);
+    grid-template-columns: repeat(4, 11fr);
     gap: 40px;
 }
 
@@ -1082,7 +1082,7 @@
     font-size: 11px;
     font-weight: 700;
     color: var(--corp-blue);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.03em;
     margin-bottom: 24px;
 }
 
@@ -1094,7 +1094,7 @@
 }
 
 .corp-stats__number {
-    font-size: 64px;
+    font-size: 56px;
     font-weight: 700;
     color: var(--text-dark);
     line-height: 1;
@@ -1114,6 +1114,23 @@
     color: var(--text-muted);
     margin: 0;
     max-width: 85%;
+}
+
+
+@media (max-width: 1100px) {
+    .corp-stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .corp-stats__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .corp-stats__number {
+        font-size: 48px;
+    }
 }
 
 

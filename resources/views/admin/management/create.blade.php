@@ -123,10 +123,23 @@
             <div class="form-group">
                 <label>Group</label>
                 <select name="group" required>
-                    <option value="">Pilih Group</option>
-                    <option value="dewan">Dewan Komisaris & Direksi</option>
-                    <option value="manajemen">Manajemen</option>
-                </select>
+    <option value="">Pilih Group</option>
+
+    <option value="dewan"
+        {{ old('group', $management->group ?? '') == 'dewan' ? 'selected' : '' }}>
+        Dewan Komisaris
+    </option>
+
+    <option value="manajemen"
+        {{ old('group', $management->group ?? '') == 'manajemen' ? 'selected' : '' }}>
+        Direksi
+    </option>
+
+    <option value="nahkoda"
+        {{ old('group', $management->group ?? '') == 'nahkoda' ? 'selected' : '' }}>
+        Nahkoda
+    </option>
+</select>
             </div>
 
             <div class="form-group">

@@ -6,72 +6,123 @@
 
 @section('content')
 
-<!-- ================= TRANSFORMASI 2023 ================= -->
-<section class="transformasi-section" id="transformasi">
+<section class="transform-video-style" id="transformasi">
 
-    <div class="transformasi-container">
-
-        <div class="transformasi-header">
-            <span>TRANSFORMASI PERUSAHAAN</span>
-            <h2>Transformasi Manajemen Tahun 2023</h2>
-            <p>
-                Tahun 2023 menjadi titik penting bagi PT Pasca Dana Sundari dalam
-                membangun sistem kerja yang lebih tertata, profesional, dan berorientasi
-                pada keselamatan pelayaran.
-            </p>
-        </div>
-
-        <div class="transformasi-content">
-
-            <div class="transformasi-card before">
-                <span>Sebelum Transformasi</span>
-                <h3>Manajemen Belum Terstruktur</h3>
-                <p>
-                    Sebelumnya, pola kerja perusahaan masih berjalan secara tidak
-                    terpusat, kurang terdokumentasi, dan belum sepenuhnya memiliki
-                    alur koordinasi yang rapi.
-                </p>
-            </div>
-
-            <div class="transformasi-line">
-                <div class="line-dot"></div>
-                <div class="line-dot active"></div>
-                <div class="line-dot"></div>
-            </div>
-
-            <div class="transformasi-card after">
-                <span>Setelah Transformasi</span>
-                <h3>Sistem Kerja Lebih Profesional</h3>
-                <p>
-                    Melalui pembenahan manajemen pada tahun 2023, perusahaan mulai
-                    membangun struktur kerja yang lebih jelas, terukur, dan konsisten.
-                    Transformasi ini turut memperkuat penerapan standar keselamatan,
-                    termasuk pengembangan ISM Code sebagai pedoman operasional.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="transformasi-bottom">
-
-            <div>
-                <h4>Struktur Kerja</h4>
-                <p>Alur tanggung jawab dan koordinasi dibuat lebih jelas.</p>
-            </div>
-
-            <div>
-                <h4>Standar Operasional</h4>
-                <p>Proses kerja mulai disusun berdasarkan sistem dan prosedur.</p>
-            </div>
-
-            <div>
-                <h4>Keselamatan</h4>
-                <p>ISM Code menjadi salah satu pedoman utama dalam operasional.</p>
-            </div>
-
-        </div>
-
+    <div class="transform-video-title">
+        <span>TRANSFORMASI 2023</span>
+        <h2>
+            Perubahan Menuju Perusahaan
+            yang Lebih Profesional
+        </h2>
     </div>
+
+    <div class="transform-panel-wrap">
+
+
+        <div class="transform-panel">
+
+            <div class="transform-card-bg">
+                <img src="{{ asset('assets/img/72.jpeg') }}" alt="">
+            </div>
+
+            <div class="transform-panel-content">
+                <div class="transform-icon">
+                    <i class="fa-solid fa-sitemap"></i>
+                </div>
+
+                <h3>Tata Kelola</h3>
+
+                <p>
+                    Struktur organisasi dan pembagian tanggung jawab yang lebih jelas,
+                    terukur, dan akuntabel.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="transform-panel">
+
+            <div class="transform-card-bg">
+                <img src="{{ asset('assets/img/72.jpeg') }}" alt="">
+            </div>
+
+            <div class="transform-panel-content">
+                <div class="transform-icon">
+                    <i class="fa-solid fa-sitemap"></i>
+                </div>
+
+                <h3>Tata Kelola</h3>
+
+                <p>
+                    Struktur organisasi dan pembagian tanggung jawab yang lebih jelas,
+                    terukur, dan akuntabel.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="transform-panel">
+
+            <div class="transform-card-bg">
+                <img src="{{ asset('assets/img/71.jpeg') }}" alt="">
+            </div>
+
+            <div class="transform-panel-content">
+                <div class="transform-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>ISM Code</h3>
+
+                <p>
+                    Penerapan standar keselamatan sebagai pedoman operasional perusahaan.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="transform-panel">
+
+            <div class="transform-card-bg">
+                <img src="{{ asset('assets/img/70.jpeg') }}" alt="">
+            </div>
+
+            <div class="transform-panel-content">
+                <div class="transform-icon">
+                    <i class="fa-solid fa-users-gear"></i>
+                </div>
+
+                <h3>SDM & Budaya Kerja</h3>
+
+                <p>
+                    Penguatan kompetensi personel serta pembentukan budaya kerja
+                    yang lebih profesional.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="transform-panel">
+
+            <div class="transform-card-bg">
+                <img src="{{ asset('assets/img/24.png') }}" alt="">
+            </div>
+
+            <div class="transform-panel-content">
+                <div class="transform-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+
+                <h3>SOP & Sistem Kerja</h3>
+
+                <p>
+                    Standarisasi proses kerja agar operasional lebih rapi,
+                    efektif, dan konsisten.
+                </p>
+            </div>
+
+        </div>
+
 
 </section>
 

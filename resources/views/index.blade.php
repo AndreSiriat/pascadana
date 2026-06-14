@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
 ========================================= -->
 <section class="about-banner">
 
-    <img src="{{ asset('assets/img/42.png') }}" alt="About Banner">
+    <img src="{{ asset('assets/img/61.jpeg') }}" alt="About Banner">
 
     <div class="about-overlay"></div>
 
@@ -379,16 +379,25 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="corp-stats__card">
   <span class="corp-stats__card-eyebrow">TOTAL PENUMPANG</span>
   <div class="corp-stats__number-wrapper">
-    <span class="corp-stats__number counter" data-target="10000">0</span>
+    <span class="corp-stats__number counter" data-target="2600">0</span>
     <span class="corp-stats__label">/ Bulan</span>
   </div>
   <p class="corp-stats__card-desc">Jumlah penumpang yang dilayani dengan standar keselamatan tertinggi.</p>
 </div>
 
 <div class="corp-stats__card">
-  <span class="corp-stats__card-eyebrow">VOLUME KENDARAAN</span>
+  <span class="corp-stats__card-eyebrow">VOLUME KENDARAAN BERMOTOR</span>
   <div class="corp-stats__number-wrapper">
-    <span class="corp-stats__number counter" data-target="4000">0</span>
+    <span class="corp-stats__number counter" data-target="4500">0</span>
+    <span class="corp-stats__label">/ Bulan</span>
+  </div>
+  <p class="corp-stats__card-desc">Mobilitas armada yang terkelola dengan efisiensi optimal di seluruh lini.</p>
+</div>
+
+<div class="corp-stats__card">
+  <span class="corp-stats__card-eyebrow">VOLUME KENDARAAN GOL. IV sd GOL. IX</span>
+  <div class="corp-stats__number-wrapper">
+    <span class="corp-stats__number counter" data-target="3400">0</span>
     <span class="corp-stats__label">/ Bulan</span>
   </div>
   <p class="corp-stats__card-desc">Mobilitas armada yang terkelola dengan efisiensi optimal di seluruh lini.</p>
@@ -397,7 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="corp-stats__card">
   <span class="corp-stats__card-eyebrow">FREKUENSI PERJALANAN</span>
   <div class="corp-stats__number-wrapper">
-    <span class="corp-stats__number counter" data-target="600">0</span>
+    <span class="corp-stats__number counter" data-target="400">0</span>
     <span class="corp-stats__label">Trip / Bulan</span>
   </div>
   <p class="corp-stats__card-desc">Perjalanan berkala yang terjadwal secara konsisten dan tepat waktu.</p>
@@ -432,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(updateCount, 20); // Jalankan ulang setiap 20 milidetik
           } else {
             // Jika sudah mencapai target, kembalikan tanda ++ khusus untuk kolom 1 dan 2
-            if (target === 10000 || target === 4000) {
+            if (target === 2600 || target === 4500 || target === 3400) {
               counter.innerText = target.toLocaleString('id-ID') + '++';
             } else {
               counter.innerText = target.toLocaleString('id-ID');
@@ -455,6 +464,8 @@ document.addEventListener("DOMContentLoaded", () => {
   counters.forEach(counter => counterObserver.observe(counter));
 });
 </script>
+
+
 
 
 
@@ -485,7 +496,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <i class="fas fa-ship"></i>
                         <span>Dilayani oleh: <strong>KMP TUNU PRATAMA JAYA 2888</strong></span>
                     </div>
-                    <a href="/schedule" class="btn-route">Lihat Jadwal</a>
+                    <a href="/schedule" class="btn-route">Lihat Detail</a>
                 </div>
             </div>
 
@@ -504,7 +515,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <i class="fas fa-ship"></i>
                         <span>Dilayani oleh: <strong>KMP TAWES</strong></span>
                     </div>
-                    <a href="/schedule" class="btn-route">Lihat Jadwal</a>
+                    <a href="/schedule" class="btn-route">Lihat Detail</a>
                 </div>
             </div>
         </div>

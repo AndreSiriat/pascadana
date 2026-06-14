@@ -50,17 +50,22 @@
             </div>
 
             <div class="form-group">
-                <label>Group</label>
-                <select name="group" required>
-                    <option value="dewan" {{ $management->group == 'dewan' ? 'selected' : '' }}>
-                        Dewan Komisaris & Direksi
-                    </option>
+    <label>Group</label>
 
-                    <option value="manajemen" {{ $management->group == 'manajemen' ? 'selected' : '' }}>
-                        Manajemen
-                    </option>
-                </select>
-            </div>
+    <select name="group" required>
+        <option value="dewan" {{ $management->group == 'dewan' ? 'selected' : '' }}>
+            Dewan Komisaris
+        </option>
+
+        <option value="manajemen" {{ $management->group == 'manajemen' ? 'selected' : '' }}>
+            Direksi
+        </option>
+
+        <option value="nahkoda" {{ $management->group == 'nahkoda' ? 'selected' : '' }}>
+            Nahkoda
+        </option>
+    </select>
+</div>
 
             <div class="form-group">
                 <label>Status</label>

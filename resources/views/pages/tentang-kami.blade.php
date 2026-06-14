@@ -109,9 +109,10 @@
             <div class="vision-box">
                 <h3>Visi</h3>
                 <p>
-                    Menjadi perusahaan penyeberangan yang unggul, terpercaya, profesional,
-                    dan berkelanjutan dengan mengutamakan keselamatan, pelayanan, serta
-                    kepuasan pelanggan.
+                    Menjadi Perusahaan Jasa Penyeberangan Kelas Global yang
+                    Inovatif, Berdaya Saing, Ramah Lingkungan, Serta Memberikan
+                    Nilai Tambah Berkelanjutan Bagi Seluruh Pemangku
+                    Kepentingan.
                 </p>
             </div>
 
@@ -122,32 +123,32 @@
 
                     <div class="mission-item">
                         <span>01</span>
-                        <p>Mengutamakan keselamatan penumpang, awak kapal, dan armada dalam setiap operasional.</p>
+                        <p>Menghadirkan Layanan Transportasi Laut Yang Aman dan Terpercaya.</p>
                     </div>
 
                     <div class="mission-item">
                         <span>02</span>
-                        <p>Memberikan layanan yang profesional, ramah, tepat waktu, dan berorientasi pada pelanggan.</p>
+                        <p>Meningkatkan Nilai Ekonomi Perusahaan secara Berkelanjutan untuk Memberikan Keuntungan Optimal bagi Pemegang Saham.</p>
                     </div>
 
                     <div class="mission-item">
                         <span>03</span>
-                        <p>Menjaga kelayakan dan kesiapan armada melalui perawatan serta pengawasan berkala.</p>
+                        <p>Mengutamakan Keselamatan, Kenyamanan, dan Kepuasan Pelanggan melalui Inovasi Layanan.</p>
                     </div>
 
                     <div class="mission-item">
                         <span>04</span>
-                        <p>Mengembangkan sumber daya manusia yang kompeten, disiplin, dan berintegritas.</p>
+                        <p>Menciptakan Lingkungan Kerja yang Sejahtera, Inklusif, dan Profesional guna Meningkatkan Kualitas SDM.</p>
                     </div>
 
                     <div class="mission-item">
                         <span>05</span>
-                        <p>Mendorong inovasi layanan dan tata kelola perusahaan yang modern serta berkelanjutan.</p>
+                        <p>Berkomitmen pada Kelestarian Lingkungan dengan Menerapkan Praktik Pelayaran Hijau (Green Shipping).</p>
                     </div>
 
                     <div class="mission-item">
                         <span>06</span>
-                        <p>Mendukung konektivitas antar wilayah melalui layanan penyeberangan yang aman dan andal.</p>
+                        <p>Menjadi Mitra Strategis Pemerintah dan Masyarakat dalam Mendukung Konektivitas serta Pembangunan Ekonomi Maritim Nasional.</p>
                     </div>
 
                 </div>
@@ -165,7 +166,7 @@
     <div class="mgt-container">
 
         <div class="mgt-group">
-            <h2 class="mgt-title">DEWAN KOMISARIS & DIREKSI</h2>
+            <h2 class="mgt-title">DEWAN KOMISARIS</h2>
 
             <div class="mgt-grid">
                 @foreach ($dewan as $item)
@@ -183,7 +184,7 @@
         </div>
 
         <div class="mgt-group" id="manajemen">
-            <h2 class="mgt-title">MANAJEMEN</h2>
+            <h2 class="mgt-title">DIREKSI</h2>
 
             <div class="mgt-grid four-cols">
                 @foreach ($manajemen as $item)
@@ -199,6 +200,32 @@
                 @endforeach
             </div>
         </div>
+
+        <div class="mgt-group" id="nahkoda">
+
+    <h2 class="mgt-title">NAKHODA</h2>
+
+    <div class="mgt-grid four-cols">
+
+        @foreach ($nahkoda as $item)
+
+            <div class="mgt-card">
+
+                <img src="{{ asset('assets/img/management/' . $item->foto) }}"
+                     alt="{{ $item->nama }}">
+
+                <div class="mgt-overlay">
+                    <h3>{{ $item->nama }}</h3>
+                    <p>{{ $item->jabatan }}</p>
+                </div>
+
+            </div>
+
+        @endforeach
+
+    </div>
+
+</div>
 
     </div>
 </section>
@@ -560,106 +587,137 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </section>
 
+<section class="report-transform" id="transformasi">
+    <div class="report-container report-layout">
 
+        <!-- SIDEBAR -->
+        <aside class="report-sidebar">
+            <span>TRANSFORMASI</span>
+            <h3>2023 – 2026</h3>
 
-<section class="transform-video-style" id="transformasi">
+            <nav class="report-nav">
+                <a href="#tata-kelola">01. Tata Kelola</a>
+                <a href="#sistem-manajemen">02. Sistem Manajemen</a>
+                <a href="#propulsi-kapal">03. Propulsi Kapal</a>
+                <a href="#sdm-budaya">04. SDM & Budaya Kerja</a>
+                <a href="#identitas-korporasi">05. Identitas Korporasi</a>
+            </nav>
+        </aside>
 
-    <div class="transform-video-title">
-        <span>TRANSFORMASI 2023</span>
-        <h2>
-            Perubahan Menuju Perusahaan
-            yang Lebih Profesional
-        </h2>
+        <!-- CONTENT -->
+        <div class="report-main">
+
+            <div class="report-header">
+                <span>TRANSFORMASI 2023 - 2026</span>
+                <h2>
+                    Perjalanan Transformasi<br>
+                    PT Pasca Dana Sundari
+                </h2>
+                <p>
+                    Transformasi dilakukan sebagai langkah strategis untuk membangun
+                    perusahaan yang lebih profesional, terstruktur, aman, dan berkelanjutan.
+                </p>
+            </div>
+
+            <article class="report-item" id="tata-kelola">
+
+                <div class="report-content">
+                    <span>Tata Kelola</span>
+                    <h3>Perbaikan Tata Kelola dan Peraturan Perusahaan</h3>
+                    <p>
+                        Dalam dunia bisnis yang terus berkembang, transformasi bukan lagi pilihan,
+                        melainkan kebutuhan. Transformasi dimulai dari mindset yang positif,
+                        berorientasi pada pertumbuhan dan siap profesional dalam setiap langkah,
+                        untuk ikut terlibat penuh langsung yang kuat untuk pertumbuhan bisnis
+                        yang berkelanjutan dengan melakukan perbaikan tata kelola dan peraturan
+                        perusahaan yang terwujud dalam beberapa Keputusan Direktur (KD)
+                        diantaranya seperti:
+                    </p>
+
+                    <ul>
+                        <li>KD Tentang Struktur Organisasi, Tugas dan Tanggung Jawab</li>
+                        <li>KD Tentang Peraturan Disiplin Karyawan</li>
+                        <li>
+                            Pengesahan Peraturan Perusahaan Nomor: KEP.188.46/32/PP/Disnaker
+                            Tanggal 17 Juli 2024 Tentang Pengesahan Peraturan Perusahaan
+                            PT Pasca Dana Sundari
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="report-item" id="sistem-manajemen">
+
+                <div class="report-content">
+                    <span>Sistem Manajemen</span>
+                    <h3>Penerapan Sistem Manajemen Terintegrasi</h3>
+                    <p>
+                        Sistem manajemen yang telah ditetapkan melalui Keputusan Direktur Nomor:
+                        KD.02/PDS-BPP/VIII/2024 Tanggal 12 Agustus 2024 tentang Penerapan
+                        Sistem Manajemen Terintegrasi di lingkungan PT Pasca Dana Sundari yang
+                        memuat 49 prosedur dan kurang lebih 800 halaman, diharapkan dapat
+                        membentuk PT Pasca Dana Sundari dalam mengoperasikan kapal, pelabuhan,
+                        dan gedung secara selamat, aman dan nyaman serta dapat mencapai tujuan
+                        akhir yaitu pelayanan yang terbaik kepada pengguna jasa.
+                    </p>
+                </div>
+            </article>
+
+            <article class="report-item" id="propulsi-kapal">
+
+                <div class="report-content">
+                    <span>Propulsi Kapal</span>
+                    <h3>Modifikasi Sistem Propulsi Kapal</h3>
+                    <p>
+                        Modifikasi sistem propulsi yang dilakukan pada kapal KMP. Tawes dan
+                        KMP. Tunu Pratama Jaya 2888 merupakan salah satu upaya strategis
+                        untuk meningkatkan efisiensi operasional serta mengurangi konsumsi
+                        bahan bakar kapal.
+                    </p>
+                </div>
+            </article>
+
+            <article class="report-item" id="sdm-budaya">
+
+                <div class="report-content">
+                    <span>SDM & Budaya Kerja</span>
+                    <h3>SDM dan Budaya Kerja</h3>
+                    <p>
+                        SDM dan Budaya Kerja merupakan dua elemen strategis yang saling
+                        berkaitan dalam membangun organisasi yang produktif, adaptif dan
+                        berdaya saing. Melalui surat Edaran Nomor SE.01/PDS-BPP/VI/2026
+                        terkait Budaya Evaluasi Hasil Kinerja Sesuai Bidang dan Tanggung
+                        Jawab Para Pejabat di Lingkungan PT Pasca Dana Sundari, diharapkan
+                        agar pelayanan dapat dilakukan secara berkala dan dievaluasi secara
+                        objektif dan terukur sehingga dapat menghasilkan perbaikan, inovasi
+                        dan peningkatan pelayanan maupun tata kelola kerja.
+                    </p>
+                </div>
+            </article>
+
+            <article class="report-item" id="identitas-korporasi">
+
+                <div class="report-content">
+                    <span>Identitas Korporasi</span>
+                    <h3>Pembaruan Identitas Korporasi</h3>
+                    <p>
+                        Sebagai bagian dari strategi transformasi dan penguatan citra perusahaan,
+                        kami melakukan pembaruan identitas korporasi guna mencerminkan visi,
+                        nilai, dan arah perkembangan bisnis yang lebih relevan. Melalui Keputusan
+                        Direktur PT Pasca Dana Sundari Nomor: KD.01/PDS-BPP/III/2026 Tanggal
+                        31 Maret 2026 Tentang Redesain Visi Misi, Tagline, Detail Logo dan
+                        Penggunaannya di Perusahaan PT Pasca Dana Sundari, diharapkan dapat
+                        memberikan semangat kerja dan motivasi yang luar biasa, untuk
+                        mengembangkan bisnis perusahaan yang lebih baik.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
     </div>
-
-    <div class="transform-panel-wrap">
-
-
-        <div class="transform-panel">
-
-            <div class="transform-card-bg">
-                <img src="{{ asset('assets/img/72.jpeg') }}" alt="">
-            </div>
-
-            <div class="transform-panel-content">
-                <div class="transform-icon">
-                    <i class="fa-solid fa-sitemap"></i>
-                </div>
-
-                <h3>Tata Kelola</h3>
-
-                <p>
-                    Struktur organisasi dan pembagian tanggung jawab yang lebih jelas,
-                    terukur, dan akuntabel.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="transform-panel">
-
-            <div class="transform-card-bg">
-                <img src="{{ asset('assets/img/71.jpeg') }}" alt="">
-            </div>
-
-            <div class="transform-panel-content">
-                <div class="transform-icon">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </div>
-
-                <h3>ISM Code</h3>
-
-                <p>
-                    Penerapan standar keselamatan sebagai pedoman operasional perusahaan.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="transform-panel">
-
-            <div class="transform-card-bg">
-                <img src="{{ asset('assets/img/70.jpeg') }}" alt="">
-            </div>
-
-            <div class="transform-panel-content">
-                <div class="transform-icon">
-                    <i class="fa-solid fa-users-gear"></i>
-                </div>
-
-                <h3>SDM & Budaya Kerja</h3>
-
-                <p>
-                    Penguatan kompetensi personel serta pembentukan budaya kerja
-                    yang lebih profesional.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="transform-panel">
-
-            <div class="transform-card-bg">
-                <img src="{{ asset('assets/img/24.png') }}" alt="">
-            </div>
-
-            <div class="transform-panel-content">
-                <div class="transform-icon">
-                    <i class="fa-solid fa-clipboard-check"></i>
-                </div>
-
-                <h3>SOP & Sistem Kerja</h3>
-
-                <p>
-                    Standarisasi proses kerja agar operasional lebih rapi,
-                    efektif, dan konsisten.
-                </p>
-            </div>
-
-        </div>
-
-
 </section>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function(){

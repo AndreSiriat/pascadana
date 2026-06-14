@@ -77,14 +77,6 @@
                             <li>
                                 <a class="dropdown-item about-jump"
                                 href="{{ route('tentang-kami') }}"
-                                data-target="manajemen">
-                                    Manajemen
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item about-jump"
-                                href="{{ route('tentang-kami') }}"
                                 data-target="struktur-organisasi">
                                     Struktur Organisasi
                                 </a>
