@@ -68,21 +68,6 @@
 
             <article>
 
-                <header class="tentang-article-head">
-                    <span class="tentang-label">
-                        VISION & MISSION
-                    </span>
-
-                    <h2>
-                        Arah Perusahaan Dalam Membangun Layanan Penyeberangan Yang Andal
-                    </h2>
-
-                    <p>
-                        Visi dan misi menjadi landasan perusahaan dalam menjalankan
-                        kegiatan operasional, meningkatkan kualitas layanan, serta
-                        memperkuat komitmen terhadap keselamatan dan keberlanjutan.
-                    </p>
-                </header>
 
                 <section class="visi-editorial-block">
                     <span class="block-number"></span>
