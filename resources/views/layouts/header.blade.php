@@ -108,6 +108,73 @@
 
                         </ul>
 
+
+                        <li class="nav-item dropdown">
+
+    <a class="nav-link dropdown-toggle
+        {{
+            request()->routeIs('tentang.*')
+            ? 'active' : ''
+        }}"
+        href="#"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+
+        Tentang
+
+    </a>
+
+    <ul class="dropdown-menu">
+
+        <li>
+            <a class="dropdown-item" href="{{ route('tentang.profil') }}">
+                Profil Perusahaan
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item" href="{{ route('tentang.visi-misi') }}">
+                Visi & Misi
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item" href="{{ route('tentang.dewan-direksi') }}">
+                Dewan Komisaris & Direksi
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item" href="{{ route('tentang.struktur-organisasi') }}">
+                Struktur Organisasi
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item" href="{{ route('tentang.sejarah') }}">
+                Sejarah Kami
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item" href="{{ route('tentang.transformasi') }}">
+                Transformasi
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item" href="{{ route('tentang.logo') }}">
+                Falsafah Logo
+            </a>
+        </li>
+
+    </ul>
+
+</li>
+
+                        
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ request()->routeIs('kapal') || request()->routeIs('kmp-tunu') || request()->routeIs('kmp-tawes') || request()->routeIs('standar-keselamatan') ? 'active' : '' }}"
                        href="#"

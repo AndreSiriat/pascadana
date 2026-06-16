@@ -1,0 +1,529 @@
+.tentang-hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: flex-end;
+    background: url('../img/27.jpeg') center/cover no-repeat;
+    overflow: hidden;
+}
+
+.tentang-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(3, 20, 39, 0.88),
+        rgba(3, 20, 39, 0.58),
+        rgba(3, 20, 39, 0.18)
+    );
+}
+
+.tentang-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 32px 90px;
+    color: #fff;
+}
+
+.tentang-hero-content span {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #00d4ff;
+}
+
+.tentang-hero-content h1 {
+    margin: 0;
+    font-size: 56px;
+    line-height: 1.08;
+    font-weight: 800;
+}
+
+.tentang-hero-content p {
+    max-width: 640px;
+    margin-top: 22px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.tentang-page {
+    background: #fff;
+    padding: 80px 0 110px;
+}
+
+.tentang-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 70px;
+}
+
+.tentang-sidebar {
+    position: sticky;
+    top: 110px;
+    height: fit-content;
+    border-left: 1px solid #e5e7eb;
+}
+
+.tentang-sidebar a {
+    display: block;
+    padding: 18px 22px;
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 1px solid #eef0f3;
+    transition: 0.25s ease;
+}
+
+.tentang-sidebar a:hover,
+.tentang-sidebar a.active {
+    color: #003b70;
+    background: #f5f8fb;
+    border-left: 4px solid #003b70;
+}
+
+.tentang-content {
+    max-width: 850px;
+}
+
+.tentang-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #0077b6;
+}
+
+.tentang-content h2 {
+    margin: 0 0 28px;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #0b1f33;
+}
+
+.tentang-content p {
+    margin-bottom: 22px;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #4b5563;
+}
+
+@media (max-width: 992px) {
+    .tentang-hero {
+        min-height: 440px;
+    }
+
+    .tentang-hero-content h1 {
+        font-size: 42px;
+    }
+
+    .tentang-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .tentang-sidebar {
+        position: relative;
+        top: 0;
+        border-left: none;
+        border-top: 1px solid #e5e7eb;
+    }
+}
+
+@media (max-width: 576px) {
+    .tentang-hero-content {
+        padding: 0 22px 70px;
+    }
+
+    .tentang-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .tentang-hero-content p {
+        font-size: 15px;
+    }
+
+    .tentang-page {
+        padding: 55px 0 80px;
+    }
+
+    .tentang-container {
+        padding: 0 22px;
+    }
+
+    .tentang-content h2 {
+        font-size: 30px;
+    }
+}
+
+/* ==========================================================================
+   VISI MISI
+   ========================================================================== */
+
+.tentang-article-head {
+    margin-bottom: 56px;
+}
+
+.visi-editorial-block {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 34px;
+    padding: 42px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.block-number {
+    font-size: 14px;
+    font-weight: 800;
+    color: #0077b6;
+    letter-spacing: 2px;
+}
+
+.visi-editorial-block h3,
+.misi-title h3 {
+    margin: 0 0 18px;
+    font-size: 28px;
+    color: #0b1f33;
+}
+
+.misi-editorial-block {
+    margin-top: 60px;
+}
+
+.misi-title {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 34px;
+    margin-bottom: 28px;
+}
+
+.misi-clean-list {
+    border-top: 1px solid #e5e7eb;
+}
+
+.misi-clean-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 34px;
+    padding: 26px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.misi-clean-item span {
+    font-size: 13px;
+    font-weight: 800;
+    color: #0077b6;
+}
+
+.misi-clean-item p {
+    margin: 0;
+}
+
+@media (max-width: 576px) {
+    .visi-editorial-block,
+    .misi-title,
+    .misi-clean-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .visi-editorial-block h3,
+    .misi-title h3 {
+        font-size: 24px;
+    }
+}
+
+/* ==========================================================================
+   DEWAN KOMISARIS DAN DIREKSI
+   ========================================================================== */
+
+.leader-section {
+    margin-top: 56px;
+}
+
+.leader-section-space {
+    margin-top: 80px;
+}
+
+.leader-group-title {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    align-items: center;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.leader-group-title span {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #0077b6;
+}
+
+.leader-group-title h3 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #0b1f33;
+}
+
+.leader-list {
+    display: grid;
+    gap: 34px;
+    margin-top: 34px;
+}
+
+.leader-item {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 36px;
+    align-items: center;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.leader-image {
+    width: 100%;
+    height: 320px;
+    background: #f1f5f9;
+    overflow: hidden;
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.leader-content span {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #0077b6;
+    text-transform: uppercase;
+}
+
+.leader-content h4 {
+    margin: 0 0 16px;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #0b1f33;
+}
+
+.leader-content p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #4b5563;
+}
+
+@media (max-width: 768px) {
+    .leader-group-title,
+    .leader-item {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .leader-image {
+        height: 390px;
+    }
+
+    .leader-content h4 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .leader-image {
+        height: 340px;
+    }
+}
+
+
+/* ==========================================================================
+   Struktur Organisasi
+   ========================================================================== */
+
+/* ===============================
+   ORG CHART PERFECT SVG
+================================ */
+
+.org-modern-section {
+    margin-top: 48px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.org-modern-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0 28px;
+}
+
+.org-modern-chart {
+    position: relative;
+    width: 1180px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.org-lines {
+    position: absolute;
+    inset: 0;
+    width: 1180px;
+    height: 360px;
+    pointer-events: none;
+}
+
+.org-lines line {
+    stroke: #9aa9b8;
+    stroke-width: 1.4;
+    shape-rendering: crispEdges;
+}
+
+.org-node {
+    position: absolute;
+    width: 140px;
+    min-height: 76px;
+    background: #fff;
+    border: 1px solid #dbe3ea;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #0b1f33;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.org-main {
+    width: 170px;
+    height: 72px;
+    background: #003b70;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.org-two {
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.org-two strong {
+    width: 100%;
+    min-height: 48px;
+    background: #003b70;
+    color: #fff;
+    font-size: 9px;
+    line-height: 1.35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 6px;
+}
+
+.org-two span {
+    width: 100%;
+    min-height: 28px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.org-three {
+    height: 66px;
+    font-size: 11px;
+}
+
+.org-scroll-hint {
+    display: none;
+    margin-bottom: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #64748b;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1200px) {
+    .org-scroll-hint {
+        display: block;
+    }
+
+    .org-modern-chart {
+        margin: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .org-modern-scroll {
+        margin-left: -32px;
+        margin-right: -32px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .org-modern-scroll {
+        margin-left: -22px;
+        margin-right: -22px;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .org-modern-chart {
+        width: 1180px;
+        height: 390px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tentang-content h2 {
+        white-space: normal;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .org-modern-section {
+        margin-top: 34px;
+    }
+
+    .org-modern-scroll {
+        width: 100vw;
+        margin-left: calc(-1 * 22px);
+        margin-right: calc(-1 * 22px);
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .org-modern-chart {
+        width: 1180px;
+        min-width: 1180px;
+        height: 400px;
+        margin: 0;
+    }
+}

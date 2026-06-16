@@ -191,3 +191,51 @@ Route::prefix('admin')
 
     });
 
+Route::prefix('tentang')->name('tentang.')->group(function () {
+
+    Route::view('/profil-perusahaan', 'pages.tentang.profil')
+        ->name('profil');
+
+    Route::view('/visi-misi', 'pages.tentang.visi-misi')
+        ->name('visi-misi');
+
+    Route::get('/dewan-komisaris-direksi', function () {
+        $dewan = \App\Models\Management::where('group', 'dewan')
+            ->where('status', 'active')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        $manajemen = \App\Models\Management::where('group', 'manajemen')
+            ->where('status', 'active')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        $nahkoda = \App\Models\Management::where('group', 'nahkoda')
+        ->where('status', 'active')
+        ->orderBy('id')
+        ->get();
+
+        return view(
+        'pages.tentang.dewan-direksi',
+        compact(
+            'dewan',
+            'manajemen',
+            'nahkoda'
+        )
+    );
+
+})->name('dewan-direksi');
+
+    Route::view('/struktur-organisasi', 'pages.tentang.struktur-organisasi')
+        ->name('struktur-organisasi');
+
+    Route::view('/sejarah-kami', 'pages.tentang.sejarah')
+        ->name('sejarah');
+
+    Route::view('/transformasi', 'pages.tentang.transformasi')
+        ->name('transformasi');
+
+    Route::view('/falsafah-logo', 'pages.tentang.logo')
+        ->name('logo');
+
+});

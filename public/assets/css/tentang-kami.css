@@ -520,7 +520,7 @@
 
 /* Khusus Direksi jadi 4 kolom */
 .mgt-grid.four-cols {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 
 /* Card Styling */
