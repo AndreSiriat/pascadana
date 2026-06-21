@@ -4,7 +4,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/kmp-tawes.css') }}?v=3">
+<link rel="stylesheet" href="{{ asset('assets/css/kmp-tawes.css') }}?v=4">
 
 <!-- =========================================
 KMP tawes PREMIUM CORPORATE PAGE
@@ -43,7 +43,7 @@ KMP tawes PREMIUM CORPORATE PAGE
         <div class="tunu-impact-content">
 
             <span class="tunu-impact-label">KONTRIBUSI KMP TAWES</span>
-            <h2>Dalam Angka</h2>
+            <h2>Rata - Rata</h2>
 
             <div class="tunu-impact-tabs">
 
@@ -55,7 +55,7 @@ KMP tawes PREMIUM CORPORATE PAGE
                 <div class="tunu-stat-display">
 
                     <div class="tunu-stat-panel panel-trip">
-                        <strong>280</strong>
+                        <strong>±280</strong>
                         <h3>Trip per Bulan</h3>
                         <p>
                             KMP Tawes beroperasi secara rutin dalam mendukung
@@ -65,7 +65,7 @@ KMP tawes PREMIUM CORPORATE PAGE
                     </div>
 
                     <div class="tunu-stat-panel panel-penumpang">
-                        <strong>1.377</strong>
+                        <strong>±1.377</strong>
                         <h3>Penumpang per Bulan</h3>
                         <p>
                             Melayani mobilitas masyarakat dengan mengutamakan
@@ -75,7 +75,7 @@ KMP tawes PREMIUM CORPORATE PAGE
                     </div>
 
                     <div class="tunu-stat-panel panel-motor">
-                        <strong>1.224</strong>
+                        <strong>±1.224</strong>
                         <h3>Kendaraan Motor per Bulan</h3>
                         <p>
                             Mendukung aktivitas harian masyarakat dan pergerakan
@@ -85,7 +85,7 @@ KMP tawes PREMIUM CORPORATE PAGE
                     </div>
 
                     <div class="tunu-stat-panel panel-golongan">
-                        <strong>1.539</strong>
+                        <strong>±1.539</strong>
                         <h3>Kendaraan Gol. IV - IX per Bulan</h3>
                         <p>
                             Berperan dalam menunjang distribusi logistik,
@@ -99,25 +99,25 @@ KMP tawes PREMIUM CORPORATE PAGE
                 <div class="tunu-stat-nav">
                     <label for="stat-trip">
                         <span></span>
-                        <b>280</b>
+                        <b>±280</b>
                         <small>Trip</small>
                     </label>
 
                     <label for="stat-penumpang">
                         <span></span>
-                        <b>1.377</b>
+                        <b>±1.377</b>
                         <small>Penumpang</small>
                     </label>
 
                     <label for="stat-motor">
                         <span></span>
-                        <b>1.224</b>
+                        <b>±1.224</b>
                         <small>Motor</small>
                     </label>
 
                     <label for="stat-golongan">
                         <span></span>
-                        <b>1.539</b>
+                        <b>±1.539</b>
                         <small>Gol. IV - IX</small>
                     </label>
                 </div>
@@ -391,13 +391,13 @@ KESELAMATAN
 
                 <div class="ship-tech-item">
                     <span>Gross Tonnage</span>
-                    <strong>707</strong>
+                    <strong>270</strong>
                     <p>GT</p>
                 </div>
 
                 <div class="ship-tech-item">
                     <span>Length Overall</span>
-                    <strong>60.20</strong>
+                    <strong>38.40</strong>
                     <p>Meter</p>
                 </div>
 

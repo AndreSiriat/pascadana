@@ -158,6 +158,7 @@ HERO
 
 
 
+
 /* =========================================================
    FLEET PROFILE SECTION
 ========================================================= */
@@ -452,7 +453,7 @@ HERO
 
 .tunu-impact-content h2 {
     margin: 0 0 28px;
-    font-size: clamp(36px, 4vw, 54px);
+    font-size: clamp(28xspx, 2vw, 44px);
     line-height: 1;
     letter-spacing: -2px;
     color: #071735;

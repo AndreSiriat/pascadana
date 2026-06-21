@@ -5,7 +5,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}v=2">
 
 <section class="tentang-hero">
     <div class="tentang-hero-overlay"></div>
@@ -73,10 +73,6 @@
                         COMPANY PROFILE
                     </span>
 
-                    <h2>
-                        Mendukung Bisnis dan Operasional Maritim
-                    </h2>
-
                     <p>
                         PT Pasca Dana Sundari hadir sebagai perusahaan jasa
                         penyeberangan yang mendukung konektivitas wilayah,
@@ -88,10 +84,7 @@
                 <section class="business-pillars">
 
                     <div class="pillar-card">
-
-                        <h3>
-                            Inovasi Green Port Nusantara
-                        </h3>
+                        <h3>Inovasi Green Port Nusantara</h3>
 
                         <p>
                             Mendukung efisiensi operasional dan keberlanjutan
@@ -101,10 +94,7 @@
                     </div>
 
                     <div class="pillar-card">
-
-                        <h3>
-                            Keselamatan dan Kepatuhan
-                        </h3>
+                        <h3>Keselamatan dan Kepatuhan</h3>
 
                         <p>
                             Mengutamakan keselamatan melalui penerapan sistem
@@ -114,10 +104,7 @@
                     </div>
 
                     <div class="pillar-card">
-
-                        <h3>
-                            Kelaikan Teknis Armada
-                        </h3>
+                        <h3>Kelaikan Teknis Armada</h3>
 
                         <p>
                             Memastikan kapal dalam kondisi laik operasi melalui
@@ -131,13 +118,9 @@
                 <section class="certificate-status">
 
                     <div class="certificate-head">
-                        <span>
-                            CERTIFICATION STATUS
-                        </span>
+                        <span>CERTIFICATION STATUS</span>
 
-                        <h3>
-                            Status Sertifikasi Armada
-                        </h3>
+                        <h3>Status Sertifikasi Armada</h3>
 
                         <p>
                             Perusahaan menjaga kelengkapan dokumen dan sertifikasi
@@ -148,22 +131,30 @@
 
                     <div class="certificate-grid">
 
-                        <div class="cert-stat">
-                            <strong>27</strong>
-                            <span>Sertifikat & Dokumen Kapal</span>
-                        </div>
+    @forelse($certificateStats as $item)
 
-                        <div class="cert-stat">
-                            <strong>2</strong>
-                            <span>Armada Operasional</span>
-                        </div>
+        <div class="cert-stat">
 
-                        <div class="cert-stat">
-                            <strong>100%</strong>
-                            <span>Komitmen Kepatuhan Dokumen</span>
-                        </div>
+            <strong>
+                {{ $item->value }}
+            </strong>
 
-                    </div>
+            <span>
+                {{ $item->label }}
+            </span>
+
+        </div>
+
+    @empty
+
+        <div class="cert-stat">
+            <strong>-</strong>
+            <span>Belum ada data</span>
+        </div>
+
+    @endforelse
+
+</div>
 
                     <div class="cert-list">
 
@@ -178,109 +169,68 @@
 
                 </section>
 
-                    <section class="profile-documents">
+                <section class="profile-documents">
 
-    <div class="profile-doc-head">
-        <span>COMPANY DOCUMENTS</span>
-        <h3>Dokumen Pendukung Perusahaan</h3>
-    </div>
+                    <div class="profile-doc-head">
+                        <span>COMPANY DOCUMENTS</span>
+                        <h3>Dokumen Pendukung Perusahaan</h3>
+                    </div>
 
-    <div class="profile-doc-grid">
+                    <div class="profile-doc-grid">
+
+    @forelse($companyDocuments as $doc)
 
         <article class="profile-doc-item">
 
-    <div class="profile-doc-cover">
-        <img src="{{ asset('assets/img/sertitawes.jpg') }}"
-             alt="Sertifikat dan Survey Kapal Tawes">
-    </div>
+            <div class="profile-doc-cover">
 
-    <div class="profile-doc-content">
+                <img
+                    src="{{ asset('assets/img/company-documents/' . $doc->image) }}"
+                    alt="{{ $doc->title }}">
 
-        <h4>
-            Sertifikat dan Survey Kapal Tawes
-        </h4>
+            </div>
 
-        <div class="profile-doc-actions">
+            <div class="profile-doc-content">
 
-            <button
-        type="button"
-        class="doc-preview-btn"
-        data-title="Sertifikat dan Survey Kapal Tawes"
-        data-image="{{ asset('assets/img/sertitawes.jpg') }}">
+                <h4>
+                    {{ $doc->title }}
+                </h4>
 
-        Lihat →
+                <div class="profile-doc-actions">
 
-    </button>
+                    <button
+                        type="button"
+                        class="doc-preview-link"
+                        data-title="{{ $doc->title }}"
+                        data-image="{{ asset('assets/img/company-documents/' . $doc->image) }}">
 
-            <a href="{{ asset('assets/img/sertitawes.jpg') }}"
-               download>
+                        Lihat
 
-                Download
+                    </button>
 
-            </a>
+                </div>
 
-        </div>
+            </div>
 
-    </div>
+        </article>
 
-</article>
+    @empty
 
+        <p>
+            Belum ada dokumen tersedia.
+        </p>
 
-<article class="profile-doc-item">
-
-    <div class="profile-doc-cover">
-        <img src="{{ asset('assets/img/sertitunu.jpg') }}"
-             alt="Sertifikat dan Survey Kapal Tunu">
-    </div>
-
-    <div class="profile-doc-content">
-
-        <h4>
-            Sertifikat dan Survey Kapal Tunu
-        </h4>
-
-        <div class="profile-doc-actions">
-
-            <div class="profile-doc-actions">
-
-    <button
-        type="button"
-        class="doc-preview-btn"
-        data-title="Sertifikat dan Survey Kapal Tunu"
-        data-image="{{ asset('assets/img/sertitunu.jpg') }}">
-
-        Lihat →
-
-    </button>
+    @endforelse
 
 </div>
 
-            <a href="{{ asset('assets/img/sertitunu.jpg') }}"
-               download>
-
-                Download
-
-            </a>
-
-        </div>
-
-    </div>
-    
-
-</article>
-
-    </div>
-
-</section>
+                </section>
 
             </article>
 
         </main>
 
     </div>
-
-
-
 </section>
 
 <div class="doc-modal" id="docModal">
@@ -288,35 +238,19 @@
     <div class="doc-modal-box">
 
         <button
+            type="button"
             class="doc-close"
             id="docClose">
-
             ×
-
         </button>
 
         <h3 id="docTitle"></h3>
 
         <div class="doc-image-wrap">
-
             <img
                 id="docImage"
                 src=""
                 alt="Dokumen">
-
-        </div>
-
-        <div class="doc-footer">
-
-            <a
-                href=""
-                id="docDownload"
-                download>
-
-                Download Dokumen
-
-            </a>
-
         </div>
 
     </div>
@@ -324,54 +258,41 @@
 </div>
 
 <script>
-
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
 
     const modal = document.getElementById('docModal');
     const title = document.getElementById('docTitle');
     const image = document.getElementById('docImage');
-    const download = document.getElementById('docDownload');
     const close = document.getElementById('docClose');
 
     document
-    .querySelectorAll('.doc-preview-btn')
-    .forEach(btn => {
+        .querySelectorAll('.doc-preview-link')
+        .forEach(button => {
 
-        btn.addEventListener('click', function(){
+            button.addEventListener('click', function () {
 
-            title.textContent =
-                this.dataset.title;
+                title.textContent = this.dataset.title;
+                image.src = this.dataset.image;
 
-            image.src =
-                this.dataset.image;
+                modal.classList.add('active');
 
-            download.href =
-                this.dataset.image;
-
-            modal.classList.add('active');
+            });
 
         });
 
-    });
-
-    close.addEventListener('click', function(){
-
+    close.addEventListener('click', function () {
         modal.classList.remove('active');
-
     });
 
-    modal.addEventListener('click', function(e){
+    modal.addEventListener('click', function (event) {
 
-        if(e.target === modal){
-
+        if (event.target === modal) {
             modal.classList.remove('active');
-
         }
 
     });
 
 });
-
 </script>
 
 @endsection

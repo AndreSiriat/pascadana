@@ -5,7 +5,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}?v=2">
 
 <section class="tentang-hero tentang-hero-visi">
     <div class="tentang-hero-overlay"></div>
@@ -73,7 +73,7 @@
                     <span class="block-number"></span>
 
                     <div>
-                        <h3>Visi Perusahaan</h3>
+                        <h3>Visi</h3>
 
                         <p>
                             Menjadi Perusahaan Jasa Penyeberangan Kelas Global yang
@@ -86,20 +86,20 @@
                 <section class="misi-editorial-block">
                     <div class="misi-title">
                         <span class="block-number"></span>
-                        <h3>Misi Perusahaan</h3>
+                        <h3>Misi</h3>
                     </div>
 
                     <div class="misi-clean-list">
 
                         <div class="misi-clean-item">
-                            <span>01</span>
+                            <span>1.</span>
                             <p>
                                 Menghadirkan layanan transportasi laut yang aman dan terpercaya.
                             </p>
                         </div>
 
                         <div class="misi-clean-item">
-                            <span>02</span>
+                            <span>2.</span>
                             <p>
                                 Meningkatkan nilai ekonomi perusahaan secara berkelanjutan
                                 untuk memberikan keuntungan optimal bagi pemegang saham.
@@ -107,7 +107,7 @@
                         </div>
 
                         <div class="misi-clean-item">
-                            <span>03</span>
+                            <span>3.</span>
                             <p>
                                 Mengutamakan keselamatan, kenyamanan, dan kepuasan pelanggan
                                 melalui inovasi layanan.
@@ -115,7 +115,7 @@
                         </div>
 
                         <div class="misi-clean-item">
-                            <span>04</span>
+                            <span>4.</span>
                             <p>
                                 Menciptakan lingkungan kerja yang sejahtera, inklusif, dan
                                 profesional guna meningkatkan kualitas sumber daya manusia.
@@ -123,7 +123,7 @@
                         </div>
 
                         <div class="misi-clean-item">
-                            <span>05</span>
+                            <span>5.</span>
                             <p>
                                 Berkomitmen pada kelestarian lingkungan dengan menerapkan
                                 praktik pelayaran hijau atau green shipping.
@@ -131,7 +131,7 @@
                         </div>
 
                         <div class="misi-clean-item">
-                            <span>06</span>
+                            <span>6.</span>
                             <p>
                                 Menjadi mitra strategis pemerintah dan masyarakat dalam
                                 mendukung konektivitas serta pembangunan ekonomi maritim nasional.

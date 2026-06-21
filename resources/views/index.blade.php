@@ -16,7 +16,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 
 <!-- CSS -->
- <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}?v=3">
+ <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}?v=4">
 
 <!-- =========================================
      HERO SECTION
@@ -496,7 +496,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         <i class="fas fa-ship"></i>
                         <span>Dilayani oleh: <strong>KMP TUNU PRATAMA JAYA 2888</strong></span>
                     </div>
-                    <a href="/schedule" class="btn-route">Lihat Detail</a>
+                    <a href="{{ route('kmp-tunu') }}" class="btn-route">
+    Lihat Detail
+</a>
                 </div>
             </div>
 
@@ -515,7 +517,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         <i class="fas fa-ship"></i>
                         <span>Dilayani oleh: <strong>KMP TAWES</strong></span>
                     </div>
-                    <a href="/schedule" class="btn-route">Lihat Detail</a>
+                    <a href="{{ route('kmp-tawes') }}" class="btn-route">
+    Lihat Detail
+</a>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}v=2">
 
 <section class="tentang-hero">
     <div class="tentang-hero-overlay"></div>
@@ -47,9 +47,6 @@
                 <header class="tentang-article-head sejarah-head">
                     <span class="tentang-label">OUR HISTORY</span>
 
-                    <h2>
-                        Perjalanan Perusahaan Dalam Mendukung Konektivitas Maritim
-                    </h2>
 
                     <p>
                         Sejak berdiri, PT Pasca Dana Sundari terus berkembang melalui

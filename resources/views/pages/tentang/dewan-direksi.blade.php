@@ -5,7 +5,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}v=2">
 
 <section class="tentang-hero">
     <div class="tentang-hero-overlay"></div>
@@ -27,42 +27,42 @@
 
         <aside class="tentang-sidebar">
 
-    <a href="{{ route('tentang.profil') }}"
-       class="{{ request()->routeIs('tentang.profil') ? 'active' : '' }}">
-        Profil Perusahaan
-    </a>
+            <a href="{{ route('tentang.profil') }}"
+               class="{{ request()->routeIs('tentang.profil') ? 'active' : '' }}">
+                Profil Perusahaan
+            </a>
 
-    <a href="{{ route('tentang.visi-misi') }}"
-       class="{{ request()->routeIs('tentang.visi-misi') ? 'active' : '' }}">
-        Visi & Misi
-    </a>
+            <a href="{{ route('tentang.visi-misi') }}"
+               class="{{ request()->routeIs('tentang.visi-misi') ? 'active' : '' }}">
+                Visi & Misi
+            </a>
 
-    <a href="{{ route('tentang.dewan-direksi') }}"
-       class="{{ request()->routeIs('tentang.dewan-direksi') ? 'active' : '' }}">
-        Dewan Komisaris & Direksi
-    </a>
+            <a href="{{ route('tentang.dewan-direksi') }}"
+               class="{{ request()->routeIs('tentang.dewan-direksi') ? 'active' : '' }}">
+                Dewan Komisaris & Direksi
+            </a>
 
-    <a href="{{ route('tentang.struktur-organisasi') }}"
-       class="{{ request()->routeIs('tentang.struktur-organisasi') ? 'active' : '' }}">
-        Struktur Organisasi
-    </a>
+            <a href="{{ route('tentang.struktur-organisasi') }}"
+               class="{{ request()->routeIs('tentang.struktur-organisasi') ? 'active' : '' }}">
+                Struktur Organisasi
+            </a>
 
-    <a href="{{ route('tentang.sejarah') }}"
-       class="{{ request()->routeIs('tentang.sejarah') ? 'active' : '' }}">
-        Sejarah Kami
-    </a>
+            <a href="{{ route('tentang.sejarah') }}"
+               class="{{ request()->routeIs('tentang.sejarah') ? 'active' : '' }}">
+                Sejarah Kami
+            </a>
 
-    <a href="{{ route('tentang.transformasi') }}"
-       class="{{ request()->routeIs('tentang.transformasi') ? 'active' : '' }}">
-        Transformasi
-    </a>
+            <a href="{{ route('tentang.transformasi') }}"
+               class="{{ request()->routeIs('tentang.transformasi') ? 'active' : '' }}">
+                Transformasi
+            </a>
 
-    <a href="{{ route('tentang.logo') }}"
-       class="{{ request()->routeIs('tentang.logo') ? 'active' : '' }}">
-        Falsafah Logo
-    </a>
+            <a href="{{ route('tentang.logo') }}"
+               class="{{ request()->routeIs('tentang.logo') ? 'active' : '' }}">
+                Falsafah Logo
+            </a>
 
-</aside>
+        </aside>
 
         <main class="tentang-content">
 
@@ -73,9 +73,6 @@
                         LEADERSHIP
                     </span>
 
-                    <h2>
-                        Kepemimpinan Yang Mendukung Tata Kelola Perusahaan
-                    </h2>
 
                     <p>
                         Dewan Komisaris dan Direksi memiliki peran penting dalam
@@ -84,10 +81,23 @@
                     </p>
                 </header>
 
-                <section class="leader-section">
+                <nav class="leader-tabs">
+                    <a href="#dewan-komisaris" class="active">
+                        Dewan Komisaris
+                    </a>
+
+                    <a href="#direksi">
+                        Direksi
+                    </a>
+
+                    <a href="#nakhoda">
+                        Nakhoda
+                    </a>
+                </nav>
+
+                <section class="leader-section" id="dewan-komisaris">
 
                     <div class="leader-group-title">
-                        <span>01</span>
                         <h3>Dewan Komisaris</h3>
                     </div>
 
@@ -122,7 +132,9 @@
 
                         @empty
 
-                            <p>Data Dewan Komisaris belum tersedia.</p>
+                            <p class="leader-empty">
+                                Data Dewan Komisaris belum tersedia.
+                            </p>
 
                         @endforelse
 
@@ -130,10 +142,9 @@
 
                 </section>
 
-                <section class="leader-section leader-section-space">
+                <section class="leader-section leader-section-space" id="direksi">
 
                     <div class="leader-group-title">
-                        <span>02</span>
                         <h3>Direksi</h3>
                     </div>
 
@@ -169,7 +180,9 @@
 
                         @empty
 
-                            <p>Data Direksi belum tersedia.</p>
+                            <p class="leader-empty">
+                                Data Direksi belum tersedia.
+                            </p>
 
                         @endforelse
 
@@ -177,58 +190,53 @@
 
                 </section>
 
-                <section class="leader-section leader-section-space">
+                <section class="leader-section leader-section-space" id="nakhoda">
 
-    <div class="leader-group-title">
-        <span>03</span>
-        <h3>Nakhoda</h3>
-    </div>
+                    <div class="leader-group-title">
+                        <h3>Nakhoda</h3>
+                    </div>
 
-    <div class="leader-list">
+                    <div class="leader-list">
 
-        @forelse ($nahkoda as $item)
+                        @forelse ($nahkoda as $item)
 
-            <article class="leader-item">
+                            <article class="leader-item">
 
-                <div class="leader-image">
-                    <img src="{{ asset('assets/img/management/' . $item->foto) }}"
-                         alt="{{ $item->nama }}">
-                </div>
+                                <div class="leader-image">
+                                    <img src="{{ asset('assets/img/management/' . $item->foto) }}"
+                                         alt="{{ $item->nama }}">
+                                </div>
 
-                <div class="leader-content">
+                                <div class="leader-content">
+                                    <span>
+                                        {{ $item->jabatan }}
+                                    </span>
 
-                    <span>
-                        {{ $item->jabatan }}
-                    </span>
+                                    <h4>
+                                        {{ $item->nama }}
+                                    </h4>
 
-                    <h4>
-                        {{ $item->nama }}
-                    </h4>
+                                    <p>
+                                        Nakhoda bertanggung jawab atas keselamatan
+                                        pelayaran, operasional kapal, serta memastikan
+                                        seluruh kegiatan di atas kapal berjalan sesuai
+                                        prosedur dan standar keselamatan yang berlaku.
+                                    </p>
+                                </div>
 
-                    <p>
-                        Nakhoda bertanggung jawab atas keselamatan pelayaran,
-                        operasional kapal, serta memastikan seluruh kegiatan
-                        di atas kapal berjalan sesuai prosedur dan standar
-                        keselamatan yang berlaku.
-                    </p>
+                            </article>
 
-                </div>
+                        @empty
 
-            </article>
+                            <p class="leader-empty">
+                                Data Nakhoda belum tersedia.
+                            </p>
 
-        @empty
+                        @endforelse
 
-            <p>
-                Data Nakhoda belum tersedia.
-            </p>
+                    </div>
 
-        @endforelse
-
-    </div>
-
-</section>
-
-                
+                </section>
 
             </article>
 
@@ -236,5 +244,71 @@
 
     </div>
 </section>
+
+<script>
+document.querySelectorAll('.leader-tabs a').forEach(tab => {
+    tab.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'auto',
+                block: 'start'
+            });
+        }
+
+        document.querySelectorAll('.leader-tabs a').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        this.classList.add('active');
+    });
+});
+</script>
+
+<script>
+const leaderSections = document.querySelectorAll('.leader-section');
+const leaderLinks = document.querySelectorAll('.leader-tabs a');
+
+leaderLinks.forEach(tab => {
+    tab.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'auto',
+                block: 'start'
+            });
+        }
+
+        leaderLinks.forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    leaderSections.forEach(section => {
+        const sectionTop = section.offsetTop - 180;
+
+        if (pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    leaderLinks.forEach(link => {
+        link.classList.remove('active');
+
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
 
 @endsection

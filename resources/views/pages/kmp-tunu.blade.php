@@ -4,7 +4,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/kmp-tunu.css') }}?v=3">
+<link rel="stylesheet" href="{{ asset('assets/css/kmp-tunu.css') }}?v=4">
 
 <!-- =========================================
 KMP TUNU PREMIUM CORPORATE PAGE
@@ -41,22 +41,22 @@ KMP TUNU PREMIUM CORPORATE PAGE
             <img src="{{ asset('assets/img/27.jpeg') }}" alt="KMP Tunu">
         </div>
 
-        <div class="tunu-impact-content">
+            <div class="tunu-impact-content">
 
-            <span class="tunu-impact-label">KONTRIBUSI KMP TUNU</span>
-            <h2>Dalam Angka</h2>
+                <span class="tunu-impact-label">KONTRIBUSI KMP TUNU</span>
+                <h2>Rata - Rata</h2>
 
-            <div class="tunu-impact-tabs">
+                <div class="tunu-impact-tabs">
 
-                <input type="radio" name="tunuStat" id="stat-trip" checked>
-                <input type="radio" name="tunuStat" id="stat-penumpang">
-                <input type="radio" name="tunuStat" id="stat-motor">
-                <input type="radio" name="tunuStat" id="stat-golongan">
+                    <input type="radio" name="tunuStat" id="stat-trip" checked>
+                    <input type="radio" name="tunuStat" id="stat-penumpang">
+                    <input type="radio" name="tunuStat" id="stat-motor">
+                    <input type="radio" name="tunuStat" id="stat-golongan">
 
-                <div class="tunu-stat-display">
+                    <div class="tunu-stat-display">
 
                     <div class="tunu-stat-panel panel-trip">
-                        <strong>120</strong>
+                        <strong>±120</strong>
                         <h3>Trip per Bulan</h3>
                         <p>
                             KMP Tunu beroperasi secara rutin dalam mendukung
@@ -66,7 +66,7 @@ KMP TUNU PREMIUM CORPORATE PAGE
                     </div>
 
                     <div class="tunu-stat-panel panel-penumpang">
-                        <strong>1.231</strong>
+                        <strong>±1.231</strong>
                         <h3>Penumpang per Bulan</h3>
                         <p>
                             Melayani mobilitas masyarakat dengan mengutamakan
@@ -76,7 +76,7 @@ KMP TUNU PREMIUM CORPORATE PAGE
                     </div>
 
                     <div class="tunu-stat-panel panel-motor">
-                        <strong>3.355</strong>
+                        <strong>±3.355</strong>
                         <h3>Kendaraan Motor per Bulan</h3>
                         <p>
                             Mendukung aktivitas harian masyarakat dan pergerakan
@@ -86,7 +86,7 @@ KMP TUNU PREMIUM CORPORATE PAGE
                     </div>
 
                     <div class="tunu-stat-panel panel-golongan">
-                        <strong>1.868</strong>
+                        <strong>±1.868</strong>
                         <h3>Kendaraan Gol. IV - IX per Bulan</h3>
                         <p>
                             Berperan dalam menunjang distribusi logistik,
@@ -100,25 +100,25 @@ KMP TUNU PREMIUM CORPORATE PAGE
                 <div class="tunu-stat-nav">
                     <label for="stat-trip">
                         <span></span>
-                        <b>120</b>
+                        <b>±120</b>
                         <small>Trip</small>
                     </label>
 
                     <label for="stat-penumpang">
                         <span></span>
-                        <b>1.231</b>
+                        <b>±1.231</b>
                         <small>Penumpang</small>
                     </label>
 
                     <label for="stat-motor">
                         <span></span>
-                        <b>3.355</b>
+                        <b>±3.355</b>
                         <small>Motor</small>
                     </label>
 
                     <label for="stat-golongan">
                         <span></span>
-                        <b>1.868</b>
+                        <b>±1.868</b>
                         <small>Gol. IV - IX</small>
                     </label>
                 </div>

@@ -26,88 +26,6 @@
                     </a>
                 </li>
 
-                <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle
-                            {{
-                                request()->routeIs('tentang-kami') ||
-                                request()->routeIs('visi-misi') ||
-                                request()->routeIs('alma') ||
-                                request()->routeIs('keselamatan') ||
-                                request()->routeIs('kelaikan') ||
-                                request()->routeIs('manajemen') ||
-                                request()->routeIs('transformasi')
-                                ? 'active' : ''
-                            }}"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
-
-                            Tentang Kami
-
-                        </a>
-
-                        <ul class="dropdown-menu">
-
-                            <li>
-                                <a class="dropdown-item about-jump"
-                                href="{{ route('tentang-kami') }}"
-                                data-target="">
-                                    Profil Perusahaan
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item about-jump"
-                                href="{{ route('tentang-kami') }}"
-                                data-target="visi-misi">
-                                    Visi & Misi
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item about-jump"
-                                href="{{ route('tentang-kami') }}"
-                                data-target="dewan-komisaris-direksi">
-                                    Dewan Komisaris & Direksi
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item about-jump"
-                                href="{{ route('tentang-kami') }}"
-                                data-target="struktur-organisasi">
-                                    Struktur Organisasi
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item about-jump"
-                                href="{{ route('tentang-kami') }}"
-                                data-target="sejarah-kami">
-                                    Sejarah Kami
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item about-jump"
-                                href="{{ route('tentang-kami') }}"
-                                data-target="transformasi">
-                                    Transformasi
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item about-jump"
-                                href="{{ route('tentang-kami') }}"
-                                data-target="falsafah-logo">
-                                    Falsafah Logo
-                                </a>
-                            </li>
-
-                        </ul>
-
 
                         <li class="nav-item dropdown">
 
@@ -121,7 +39,7 @@
         data-bs-toggle="dropdown"
         aria-expanded="false">
 
-        Tentang
+        Tentang Kami
 
     </a>
 

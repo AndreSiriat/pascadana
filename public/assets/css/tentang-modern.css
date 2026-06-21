@@ -276,6 +276,22 @@
     font-weight: 900;
 }
 
+.doc-preview-link{
+    background:none;
+    border:none;
+    padding:0;
+
+    color:#0077b6;
+    font-size:14px;
+    font-weight:500;
+
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.doc-preview-link:hover{
+    text-decoration:underline;
+}
 
 /* ===============================
    RESPONSIVE
@@ -661,7 +677,7 @@
 }
 
 .visi-editorial-block p {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.6;
     font-weight: 300;
     color: #0b1f33;
@@ -687,59 +703,115 @@
     border-top: 1px solid #e5e7eb;
 }
 
-.misi-clean-item {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 28px;
-    padding: 20px 0;
-    border-bottom: 1px solid #e5e7eb;
+.misi-clean-item{
+    display:grid;
+    grid-template-columns:40px 1fr;
+    gap:20px;
+    padding:22px 0;
+    border-bottom:1px solid #e5e7eb;
 }
 
-.misi-clean-item span {
-    font-size: 32px;
-    font-weight: 800;
-    color: #d1d5db;
-    line-height: 1;
+.misi-clean-item span{
+    font-size:18px;
+    font-weight:700;
+    color:#335fa0;
 }
 
 .misi-clean-item p {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.9;
     color: #334155;
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-    .visi-editorial-block {
-        padding: 40px 0;
+    .visi-editorial-block{
+        padding:24px 0;
     }
 
-    .visi-editorial-block p {
-        font-size: 22px;
+    .visi-editorial-block h2{
+        font-size:42px;
+        line-height:1.05;
+        letter-spacing:1px;
+        margin-bottom:18px;
     }
 
-    .misi-clean-item {
-        grid-template-columns: 1fr;
-        gap: 12px;
+    .visi-editorial-block p{
+        font-size:15px;
+        line-height:1.7;
+        max-width:100%;
     }
 
-    .misi-clean-item span {
-        font-size: 24px;
+    .misi-clean{
+        margin-top:40px;
     }
 
-    .misi-clean-item p {
-        font-size: 16px;
+    .misi-clean-item{
+        display:grid;
+        grid-template-columns:40px 1fr;
+        gap:12px;
+        align-items:start;
+        padding:18px 0;
     }
 
+    .misi-clean-item span{
+        font-size:18px;
+        line-height:1.4;
+        margin-top:2px;
+    }
+
+    .misi-clean-item p{
+        font-size:15px;
+        line-height:1.7;
+        margin:0;
+    }
 }
 
 /* ==========================================================================
-   DEWAN KOMISARIS DAN DIREKSI
+   LEADERSHIP TAB NAVIGATION
+   ========================================================================== */
+
+.leader-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px 0 60px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.leader-tabs a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 68px;
+    padding: 18px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    color: #475569;
+    border-right: 1px solid #e5e7eb;
+    transition: 0.25s ease;
+}
+
+.leader-tabs a:last-child {
+    border-right: none;
+}
+
+.leader-tabs a:hover,
+.leader-tabs a.active {
+    background: #f1f5f9;
+    color: #004987;
+}
+
+/* ==========================================================================
+   DEWAN KOMISARIS, DIREKSI, NAKHODA
    ========================================================================== */
 
 .leader-section {
     margin-top: 56px;
+    scroll-margin-top: 120px;
 }
 
 .leader-section-space {
@@ -747,24 +819,15 @@
 }
 
 .leader-group-title {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 32px;
-    align-items: center;
-    padding-bottom: 22px;
+    padding-bottom: 24px;
+    margin-bottom: 34px;
     border-bottom: 1px solid #e5e7eb;
-}
-
-.leader-group-title span {
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #0077b6;
 }
 
 .leader-group-title h3 {
     margin: 0;
-    font-size: 30px;
+    font-size: 34px;
+    line-height: 1.25;
     font-weight: 800;
     color: #0b1f33;
 }
@@ -772,7 +835,6 @@
 .leader-list {
     display: grid;
     gap: 34px;
-    margin-top: 34px;
 }
 
 .leader-item {
@@ -795,6 +857,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .leader-content span {
@@ -817,16 +880,139 @@
 
 .leader-content p {
     margin: 0;
+    max-width: 650px;
     font-size: 16px;
     line-height: 1.85;
     color: #4b5563;
 }
 
+.leader-empty {
+    margin: 0;
+    padding: 28px 0;
+    font-size: 16px;
+    color: #64748b;
+}
+
+.leader-tabs {
+    position: sticky;
+    top: 85px;
+    z-index: 100;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px 0 60px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, .06);
+}
+
+.leader-tabs a.active {
+    background: #f1f5f9;
+    color: #004987;
+    box-shadow: inset 0 -3px 0 #004987;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
 @media (max-width: 768px) {
-    .leader-group-title,
+
+    .leader-tabs {
+        position: sticky;
+        top: 72px;
+        z-index: 100;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        margin: 28px 0 38px;
+        padding: 0;
+
+        overflow: visible;
+
+        border: 1px solid #e5e7eb;
+        background: #ffffff;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, .06);
+    }
+
+    .leader-tabs a {
+        display: none;
+        width: 100%;
+
+        min-height: 56px;
+        padding: 0 18px;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        font-size: 14px;
+        font-weight: 700;
+        text-align: left;
+        white-space: normal;
+
+        color: #64748b;
+        background: #ffffff;
+
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+        box-shadow: none;
+    }
+
+    .leader-tabs a.active {
+        display: flex;
+        color: #004987;
+        background: #f8fafc;
+        box-shadow: inset 0 -3px 0 #004987;
+    }
+
+    .leader-tabs.is-open a {
+        display: flex;
+    }
+
+    .leader-tabs a:last-child {
+        border-bottom: none;
+    }
+
+    .leader-section {
+        scroll-margin-top: 145px;
+    }
+}
+
+@media (max-width: 768px) {
+    .leader-tabs {
+        grid-template-columns: 1fr;
+        margin: 40px 0 45px;
+    }
+
+    .leader-tabs a {
+        justify-content: flex-start;
+        min-height: 58px;
+        text-align: left;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .leader-tabs a:last-child {
+        border-bottom: none;
+    }
+
+    .leader-section {
+        margin-top: 44px;
+        scroll-margin-top: 100px;
+    }
+
+    .leader-section-space {
+        margin-top: 64px;
+    }
+
+    .leader-group-title h3 {
+        font-size: 28px;
+    }
+
     .leader-item {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 20px;
     }
 
     .leader-image {
@@ -836,11 +1022,25 @@
     .leader-content h4 {
         font-size: 26px;
     }
+
+    .leader-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
 }
 
 @media (max-width: 480px) {
+    .leader-tabs a {
+        padding: 16px 18px;
+        font-size: 14px;
+    }
+
     .leader-image {
         height: 340px;
+    }
+
+    .leader-content h4 {
+        font-size: 24px;
     }
 }
 
@@ -848,9 +1048,8 @@
 /* ==========================================================================
    Struktur Organisasi
    ========================================================================== */
-
 /* ===============================
-   ORG CHART PERFECT SVG
+   ORG CHART DESKTOP
 ================================ */
 
 .org-modern-section {
@@ -859,19 +1058,31 @@
     overflow: hidden;
 }
 
+.org-desktop {
+    display: block;
+}
+
+.org-mobile {
+    display: none;
+}
+
 .org-modern-scroll {
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
     padding: 20px 0 28px;
+
+    display: flex;
+    justify-content: center;
 }
 
 .org-modern-chart {
     position: relative;
     width: 1180px;
     height: 400px;
-    margin: 0 auto;
+    flex: 0 0 1180px;
+
+    transform: scale(.82);
+    transform-origin: top center;
 }
 
 .org-lines {
@@ -892,12 +1103,14 @@
     position: absolute;
     width: 140px;
     min-height: 76px;
-    background: #fff;
+    background: #ffffff;
     border: 1px solid #dbe3ea;
     box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
     color: #0b1f33;
     font-weight: 800;
@@ -908,7 +1121,7 @@
     width: 170px;
     height: 72px;
     background: #003b70;
-    color: #fff;
+    color: #ffffff;
     font-size: 18px;
     letter-spacing: 1px;
 }
@@ -922,12 +1135,14 @@
     width: 100%;
     min-height: 48px;
     background: #003b70;
-    color: #fff;
+    color: #ffffff;
     font-size: 9px;
     line-height: 1.35;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 8px 6px;
 }
 
@@ -935,6 +1150,7 @@
     width: 100%;
     min-height: 28px;
     font-size: 11px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -945,77 +1161,42 @@
     font-size: 11px;
 }
 
-.org-scroll-hint {
-    display: none;
-    margin-bottom: 14px;
-    font-size: 13px;
-    font-weight: 700;
-    color: #64748b;
-}
-
 /* ===============================
-   RESPONSIVE
+   ORG CHART MOBILE IMAGE
 ================================ */
 
-@media (max-width: 1200px) {
-    .org-scroll-hint {
-        display: block;
-    }
-
-    .org-modern-chart {
-        margin: 0;
-    }
-}
-
-@media (max-width: 992px) {
-    .org-modern-scroll {
-        margin-left: -32px;
-        margin-right: -32px;
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-}
-
-@media (max-width: 576px) {
-    .org-modern-scroll {
-        margin-left: -22px;
-        margin-right: -22px;
-        padding-left: 22px;
-        padding-right: 22px;
-    }
-
-    .org-modern-chart {
-        width: 1180px;
-        height: 390px;
-    }
-}
-
-@media (max-width: 576px) {
-    .tentang-content h2 {
-        white-space: normal;
-        overflow-wrap: normal;
-        word-break: normal;
-    }
+@media (max-width: 768px) {
 
     .org-modern-section {
-        margin-top: 34px;
+        margin-top: 32px;
+        overflow: hidden;
     }
 
-    .org-modern-scroll {
-        width: 100vw;
-        margin-left: calc(-1 * 22px);
-        margin-right: calc(-1 * 22px);
-        padding-left: 22px;
-        padding-right: 22px;
+    .org-desktop {
+        display: none !important;
     }
 
-    .org-modern-chart {
-        width: 1180px;
-        min-width: 1180px;
-        height: 400px;
-        margin: 0;
+    .org-mobile {
+        display: block !important;
+        width: 100%;
+        overflow: hidden;
+        background: #ffffff;
     }
+
+    .org-mobile img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+
+        border: 1px solid #dbe3ea;
+        border-radius: 12px;
+        background: #ffffff;
+    }
+
 }
+
+
 
 /* ===============================
    SEJARAH KAMI CLEAN
@@ -1152,13 +1333,17 @@
 }
 
 .transform-summary div {
-    padding: 28px 28px 30px 0;
+    padding: 40px 28px;
     border-right: 1px solid #dbe3ea;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
 }
 
-.transform-summary div:not(:first-child) {
-    padding-left: 28px;
-}
 
 .transform-summary div:last-child {
     border-right: none;
@@ -1181,43 +1366,71 @@
     color: #64748b;
 }
 
+/* ===============================
+   TRANSFORMASI TAB NAVIGATION
+================================ */
+
+.transform-tabs{
+    position:sticky;
+    top:85px;
+    z-index:100;
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+
+    margin:50px 0 60px;
+
+    border:1px solid #e5e7eb;
+    background:#fff;
+
+    box-shadow:
+        0 8px 30px rgba(15,23,42,.06);
+}
+
+.transform-tabs a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:68px;
+    padding:18px 16px;
+
+    text-decoration:none;
+    text-align:center;
+
+    font-size:14px;
+    font-weight:700;
+    line-height:1.4;
+
+    color:#64748b;
+
+    border-right:1px solid #e5e7eb;
+
+    transition:.25s ease;
+}
+
+.transform-tabs a:last-child{
+    border-right:none;
+}
+
+.transform-tabs a:hover{
+    background:#f8fafc;
+    color:#004987;
+}
+
+.transform-tabs a.active{
+    background:#f1f5f9;
+    color:#004987;
+
+    box-shadow:
+        inset 0 -3px 0 #004987;
+}
+/* ===============================
+   TRANSFORMASI CONTENT
+================================ */
+
 .transform-report-layout {
-    display: grid;
-    grid-template-columns: 230px 1fr;
-    gap: 58px;
-    align-items: start;
-}
-
-.transform-report-nav {
-    position: sticky;
-    top: 120px;
-    padding: 26px 24px;
-    background: #f8fafc;
-    border-left: 4px solid #003b70;
-}
-
-.transform-report-nav span {
     display: block;
-    margin-bottom: 20px;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #0077b6;
-}
-
-.transform-report-nav a {
-    display: block;
-    padding: 13px 0;
-    font-size: 14px;
-    line-height: 1.45;
-    font-weight: 700;
-    color: #64748b;
-    text-decoration: none;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.transform-report-nav a:hover {
-    color: #003b70;
 }
 
 .transform-report-main {
@@ -1229,17 +1442,11 @@
     position: relative;
     padding: 42px 0 46px;
     border-top: 1px solid #e5e7eb;
+    scroll-margin-top: 120px;
 }
 
 .transform-chapter:last-child {
     border-bottom: 1px solid #e5e7eb;
-}
-
-.transform-number {
-    font-size: 46px;
-    line-height: 1;
-    font-weight: 800;
-    color: #dbe3ea;
 }
 
 .transform-chapter-content > span {
@@ -1308,77 +1515,156 @@
     color: #334155;
 }
 
-/* RESPONSIVE TRANSFORMASI */
-
-@media (max-width: 1100px) {
-    .transform-report-layout {
-        grid-template-columns: 1fr;
-        gap: 42px;
-    }
-
-    .transform-report-nav {
-        position: relative;
-        top: 0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0 24px;
-    }
-
-    .transform-report-nav span {
-        grid-column: 1 / -1;
-    }
-}
+/* ===============================
+   RESPONSIVE TRANSFORMASI
+================================ */
 
 @media (max-width: 768px) {
-    .transform-intro h2 {
-        font-size: 38px;
-    }
 
-    .transform-summary {
+    .transform-tabs {
+        position: sticky;
+        top: 72px;
+        z-index: 100;
+
+        display: grid;
         grid-template-columns: 1fr;
+
+        margin: 28px 0 38px;
+        padding: 0;
+
+        overflow: visible;
+
+        border: 1px solid #e5e7eb;
+        background: #ffffff;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, .06);
     }
 
-    .transform-summary div,
-    .transform-summary div:not(:first-child) {
-        padding: 24px 0;
+    .transform-tabs a {
+        display: none;
+        width: 100%;
+
+        min-height: 56px;
+        padding: 0 18px;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        font-size: 14px;
+        font-weight: 700;
+        text-align: left;
+        white-space: normal;
+
+        color: #64748b;
+        background: #ffffff;
+
         border-right: none;
-        border-bottom: 1px solid #dbe3ea;
+        border-bottom: 1px solid #e5e7eb;
+        box-shadow: none;
     }
 
-    .transform-summary div:last-child {
+    .transform-tabs a.active {
+        display: flex;
+        color: #004987;
+        background: #f8fafc;
+        box-shadow: inset 0 -3px 0 #004987;
+    }
+
+    .transform-tabs.is-open a {
+        display: flex;
+    }
+
+    .transform-tabs a:last-child {
         border-bottom: none;
     }
 
-    .transform-report-nav {
-        grid-template-columns: 1fr;
-    }
-
     .transform-chapter {
-        grid-template-columns: 1fr;
-        gap: 14px;
         padding: 34px 0 38px;
-    }
-
-    .transform-number {
-        font-size: 34px;
+        scroll-margin-top: 145px;
+        overflow: hidden;
     }
 
     .transform-chapter-content h3 {
         font-size: 25px;
+        line-height: 1.28;
+        word-break: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .transform-chapter-content p,
+    .transform-chapter-content li {
+        font-size: 15.5px;
+        line-height: 1.85;
+        overflow-wrap: anywhere;
     }
 }
 
-@media (max-width: 576px) {
+
+
+@media (max-width: 768px) {
     .transform-intro {
         margin-bottom: 52px;
     }
 
     .transform-intro h2 {
-        font-size: 32px;
-        letter-spacing: -0.5px;
+        font-size: 38px;
     }
 
-    .transform-intro p,
+    .transform-summary{
+        margin-top:32px;
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .transform-summary div{
+        padding:22px 0;
+        text-align:center;
+    }
+
+    .transform-summary strong{
+        font-size:34px;
+        line-height:1;
+        font-weight:700; /* sebelumnya 800 atau 900 */
+        letter-spacing:-1px;
+        color:#004987;
+        margin-bottom:12px;
+    }
+
+    .transform-summary span{
+        display:block;
+        max-width:220px;
+        margin:0 auto;
+        font-size:12px;
+        line-height:1.45;
+        font-weight:600;
+        color:#64748b;
+    }
+
+    .transform-tabs {
+        grid-template-columns: 1fr;
+        margin: 40px 0 45px;
+    }
+
+    .transform-tabs a {
+        justify-content: flex-start;
+        min-height: 58px;
+        padding: 16px 18px;
+        text-align: left;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .transform-tabs a:last-child {
+        border-bottom: none;
+    }
+
+    .transform-chapter {
+        padding: 34px 0 38px;
+        scroll-margin-top: 100px;
+    }
+
+    .transform-chapter-content h3 {
+        font-size: 25px;
+    }
+
     .transform-chapter-content p {
         font-size: 15.5px;
     }
@@ -1386,6 +1672,25 @@
     .transform-highlight {
         padding: 20px;
         font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .transform-intro h2 {
+        font-size: 32px;
+        letter-spacing: -0.5px;
+    }
+
+    .transform-intro p {
+        font-size: 15.5px;
+    }
+
+    .transform-summary strong {
+        font-size: 38px;
+    }
+
+    .transform-tabs a {
+        font-size: 14px;
     }
 }
 

@@ -9,6 +9,8 @@ use App\Http\Controllers\KritikSaranController;
 use App\Http\Controllers\Admin\KritikSaranController as AdminKritikSaranController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\ManagementController;
+use App\Http\Controllers\Admin\CertificateStatController;
+use App\Http\Controllers\Admin\CompanyDocumentController;
 
 
 
@@ -185,6 +187,26 @@ Route::prefix('admin')
         Route::get('/kritik-saran', [AdminKritikSaranController::class, 'index'])
             ->name('kritik-saran.index');
 
+        /*
+        |--------------------------------------------------------------------------
+        | CERTIFICATE STATS
+        |--------------------------------------------------------------------------
+        */
+        Route::resource(
+            'certificate-stats',
+            CertificateStatController::class
+        );
+
+        /*
+        |--------------------------------------------------------------------------
+        | COMPANY DOCUMENTS
+        |--------------------------------------------------------------------------
+        */
+        Route::resource(
+            'company-documents',
+            CompanyDocumentController::class
+        );
+
 
 
         
@@ -193,8 +215,24 @@ Route::prefix('admin')
 
 Route::prefix('tentang')->name('tentang.')->group(function () {
 
-    Route::view('/profil-perusahaan', 'pages.tentang.profil')
-        ->name('profil');
+    Route::get('/profil-perusahaan', function () {
+
+    $certificateStats = \App\Models\CertificateStat::orderBy('urutan')
+        ->get();
+
+    $companyDocuments = \App\Models\CompanyDocument::where('status', 'active')
+        ->orderBy('urutan')
+        ->get();
+
+    return view(
+        'pages.tentang.profil',
+        compact(
+            'certificateStats',
+            'companyDocuments'
+        )
+    );
+
+})->name('profil');
 
     Route::view('/visi-misi', 'pages.tentang.visi-misi')
         ->name('visi-misi');
@@ -239,3 +277,7 @@ Route::prefix('tentang')->name('tentang.')->group(function () {
         ->name('logo');
 
 });
+
+
+Route::view('/kmp-tunu', 'pages.kmp-tunu')
+    ->name('kmp-tunu');

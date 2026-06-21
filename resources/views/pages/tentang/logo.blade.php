@@ -5,7 +5,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}v=2">
 
 <section class="tentang-hero">
     <div class="tentang-hero-overlay"></div>
@@ -45,10 +45,6 @@
 
                 <header class="logo-philosophy-head">
                     <span class="tentang-label">BRAND PHILOSOPHY</span>
-
-                    <h2>
-                        Makna Logo PT Pasca Dana Sundari
-                    </h2>
 
                     <p>
                         Logo PT Pasca Dana Sundari menjadi simbol transformasi
@@ -95,7 +91,6 @@
                             </div>
 
                             <div class="logo-element-content">
-                                <span>01</span>
                                 <h4>Bumerang</h4>
                                 <p>
                                     Melambangkan dinamika perusahaan dalam menghadapi
@@ -111,7 +106,6 @@
                             </div>
 
                             <div class="logo-element-content">
-                                <span>02</span>
                                 <h4>Jajar Genjang & Garis</h4>
                                 <p>
                                     Merepresentasikan komitmen perusahaan terhadap
@@ -127,7 +121,6 @@
                             </div>
 
                             <div class="logo-element-content">
-                                <span>03</span>
                                 <h4>Makna Warna</h4>
                                 <p>
                                     Biru mencerminkan kepercayaan dan profesionalisme.
@@ -143,7 +136,6 @@
                             </div>
 
                             <div class="logo-element-content">
-                                <span>04</span>
                                 <h4>Lingkaran</h4>
                                 <p>
                                     Menjadi simbol kesatuan, kesinambungan, dan komitmen

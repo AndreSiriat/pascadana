@@ -4,6 +4,7 @@
         <div class="brand-logo">
             PDS
         </div>
+
         <div>
             <h3>PDS Ferry</h3>
             <span>Admin CMS</span>
@@ -13,36 +14,40 @@
     <nav class="sidebar-menu">
 
         <a href="{{ route('admin.berita.index') }}"
-        class="sidebar-link {{ request()->routeIs('admin.berita.*') ? 'active' : '' }}">
+           class="sidebar-link {{ request()->routeIs('admin.berita.*') ? 'active' : '' }}">
             <i class="fa-solid fa-newspaper"></i>
             <span>Berita</span>
         </a>
 
         <a href="{{ route('admin.maritim-policy.index') }}"
-        class="sidebar-link {{ request()->routeIs('admin.maritim-policy.*') ? 'active' : '' }}">
+           class="sidebar-link {{ request()->routeIs('admin.maritim-policy.*') ? 'active' : '' }}">
             <i class="fa-solid fa-file-contract"></i>
             <span>Peraturan</span>
         </a>
 
         <a href="{{ route('admin.management.index') }}"
-        class="sidebar-link {{ request()->routeIs('admin.management.*') ? 'active' : '' }}">
+           class="sidebar-link {{ request()->routeIs('admin.management.*') ? 'active' : '' }}">
             <i class="fa-solid fa-users"></i>
             <span>Manajemen</span>
         </a>
 
-        <a href="{{ route('admin.kritik-saran.index') }}"
-        class="sidebar-link {{ request()->routeIs('admin.kritik-saran.*') ? 'active' : '' }}">
-
-            <i class="fa-solid fa-comments"></i>
-
-            <span>
-                Kritik & Saran
-            </span>
-
+        <a href="{{ route('admin.certificate-stats.index') }}"
+           class="sidebar-link {{ request()->routeIs('admin.certificate-stats.*') ? 'active' : '' }}">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span>Status Sertifikat</span>
         </a>
 
-    </nav>
+        <a href="{{ route('admin.company-documents.index') }}"
+           class="sidebar-link {{ request()->routeIs('admin.company-documents.*') ? 'active' : '' }}">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>Dokumen Sertifikat</span>
+        </a>
 
+        <a href="{{ route('admin.kritik-saran.index') }}"
+           class="sidebar-link {{ request()->routeIs('admin.kritik-saran.*') ? 'active' : '' }}">
+            <i class="fa-solid fa-comments"></i>
+            <span>Kritik & Saran</span>
+        </a>
 
     </nav>
 

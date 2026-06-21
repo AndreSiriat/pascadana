@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Transformasi Perusahaan - PT Pasca Dana Sundari')
+@section('title', 'Transformasi - PT Pasca Dana Sundari')
 @section('meta_description', 'Transformasi PT Pasca Dana Sundari tahun 2023 sampai 2026 dalam memperkuat tata kelola, sistem manajemen, keselamatan, efisiensi armada, dan identitas korporasi.')
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}v=2">
 
 <section class="tentang-hero">
     <div class="tentang-hero-overlay"></div>
@@ -27,18 +27,34 @@
 
         <aside class="tentang-sidebar">
 
-            <a href="{{ route('tentang.profil') }}">Profil Perusahaan</a>
-            <a href="{{ route('tentang.visi-misi') }}">Visi & Misi</a>
-            <a href="{{ route('tentang.dewan-direksi') }}">Dewan Komisaris & Direksi</a>
-            <a href="{{ route('tentang.struktur-organisasi') }}">Struktur Organisasi</a>
-            <a href="{{ route('tentang.sejarah') }}">Sejarah Kami</a>
+            <a href="{{ route('tentang.profil') }}">
+                Profil Perusahaan
+            </a>
+
+            <a href="{{ route('tentang.visi-misi') }}">
+                Visi & Misi
+            </a>
+
+            <a href="{{ route('tentang.dewan-direksi') }}">
+                Dewan Komisaris & Direksi
+            </a>
+
+            <a href="{{ route('tentang.struktur-organisasi') }}">
+                Struktur Organisasi
+            </a>
+
+            <a href="{{ route('tentang.sejarah') }}">
+                Sejarah Kami
+            </a>
 
             <a href="{{ route('tentang.transformasi') }}"
                class="{{ request()->routeIs('tentang.transformasi') ? 'active' : '' }}">
                 Transformasi
             </a>
 
-            <a href="{{ route('tentang.logo') }}">Falsafah Logo</a>
+            <a href="{{ route('tentang.logo') }}">
+                Falsafah Logo
+            </a>
 
         </aside>
 
@@ -49,12 +65,9 @@
                 <header class="transform-intro">
 
                     <span class="tentang-label">
-                        TRANSFORMATION JOURNEY
+                        TRANSFORMATION 2023 - 2026
                     </span>
 
-                    <h2>
-                        Transformasi 2023–2026
-                    </h2>
 
                     <p>
                         Transformasi dilakukan sebagai langkah strategis untuk
@@ -63,42 +76,67 @@
                     </p>
 
                     <div class="transform-summary">
+
                         <div>
                             <strong>2023</strong>
-                            <span>Awal Penguatan Budaya Keselamatan</span>
+                            <span>
+                                Penguatan Budaya Keselamatan
+                            </span>
                         </div>
 
                         <div>
                             <strong>49</strong>
-                            <span>Prosedur Sistem Manajemen</span>
+                            <span>
+                                Prosedur Sistem Manajemen
+                            </span>
                         </div>
 
                         <div>
                             <strong>800+</strong>
-                            <span>Halaman Dokumen Tata Kelola</span>
+                            <span>
+                                Halaman Dokumen Tata Kelola
+                            </span>
                         </div>
+
                     </div>
 
                 </header>
 
+                <nav class="transform-tabs">
+
+                    <a href="#tata-kelola" class="active">
+                        Tata Kelola
+                    </a>
+
+                    <a href="#sistem-manajemen">
+                        Sistem Manajemen
+                    </a>
+
+                    <a href="#propulsi-kapal">
+                        Propulsi Kapal
+                    </a>
+
+                    <a href="#sdm-budaya">
+                        SDM & Budaya Kerja
+                    </a>
+
+                    <a href="#identitas-korporasi">
+                        Identitas Korporasi
+                    </a>
+
+                </nav>
+
                 <section class="transform-report-layout">
-
-                    <aside class="transform-report-nav">
-                        <span>FOKUS TRANSFORMASI</span>
-
-                        <a href="#tata-kelola">01. Tata Kelola</a>
-                        <a href="#sistem-manajemen">02. Sistem Manajemen</a>
-                        <a href="#propulsi-kapal">03. Propulsi Kapal</a>
-                        <a href="#sdm-budaya">04. SDM & Budaya Kerja</a>
-                        <a href="#identitas-korporasi">05. Identitas Korporasi</a>
-                    </aside>
 
                     <div class="transform-report-main">
 
                         <section class="transform-chapter" id="tata-kelola">
 
                             <div class="transform-chapter-content">
-                                <span>Tata Kelola</span>
+
+                                <span>
+                                    Tata Kelola
+                                </span>
 
                                 <h3>
                                     Perbaikan Tata Kelola dan Peraturan Perusahaan
@@ -113,17 +151,33 @@
                                 </p>
 
                                 <ul>
-                                    <li>Keputusan Direktur tentang struktur organisasi, tugas, dan tanggung jawab.</li>
-                                    <li>Keputusan Direktur tentang peraturan disiplin karyawan.</li>
-                                    <li>Pengesahan Peraturan Perusahaan sebagai dasar tata kelola ketenagakerjaan.</li>
+                                    <li>
+                                        Keputusan Direktur tentang struktur organisasi,
+                                        tugas, dan tanggung jawab.
+                                    </li>
+
+                                    <li>
+                                        Keputusan Direktur tentang peraturan disiplin
+                                        karyawan.
+                                    </li>
+
+                                    <li>
+                                        Pengesahan Peraturan Perusahaan sebagai dasar
+                                        tata kelola ketenagakerjaan.
+                                    </li>
                                 </ul>
+
                             </div>
+
                         </section>
 
                         <section class="transform-chapter" id="sistem-manajemen">
 
                             <div class="transform-chapter-content">
-                                <span>Sistem Manajemen</span>
+
+                                <span>
+                                    Sistem Manajemen
+                                </span>
 
                                 <h3>
                                     Penerapan Sistem Manajemen Terintegrasi
@@ -140,13 +194,18 @@
                                     KD.02/PDS-BPP/VIII/2024 menetapkan 49 prosedur
                                     dengan kurang lebih 800 halaman dokumen sistem manajemen.
                                 </div>
+
                             </div>
+
                         </section>
 
                         <section class="transform-chapter" id="propulsi-kapal">
 
                             <div class="transform-chapter-content">
-                                <span>Propulsi Kapal</span>
+
+                                <span>
+                                    Propulsi Kapal
+                                </span>
 
                                 <h3>
                                     Modifikasi Sistem Propulsi Kapal
@@ -159,13 +218,18 @@
                                     efisiensi operasional dan mengurangi konsumsi
                                     bahan bakar kapal.
                                 </p>
+
                             </div>
+
                         </section>
 
                         <section class="transform-chapter" id="sdm-budaya">
 
                             <div class="transform-chapter-content">
-                                <span>SDM & Budaya Kerja</span>
+
+                                <span>
+                                    SDM & Budaya Kerja
+                                </span>
 
                                 <h3>
                                     Penguatan SDM dan Budaya Evaluasi Kinerja
@@ -182,13 +246,18 @@
                                     Budaya evaluasi kinerja menjadi dasar perbaikan,
                                     inovasi, dan peningkatan pelayanan secara berkelanjutan.
                                 </div>
+
                             </div>
+
                         </section>
 
                         <section class="transform-chapter" id="identitas-korporasi">
 
                             <div class="transform-chapter-content">
-                                <span>Identitas Korporasi</span>
+
+                                <span>
+                                    Identitas Korporasi
+                                </span>
 
                                 <h3>
                                     Pembaruan Identitas Korporasi
@@ -206,7 +275,9 @@
                                     penggunaannya menjadi bagian dari penguatan arah
                                     perusahaan ke depan.
                                 </div>
+
                             </div>
+
                         </section>
 
                     </div>
@@ -219,5 +290,68 @@
 
     </div>
 </section>
+
+<script>
+document.querySelectorAll('.transform-tabs a').forEach(tab => {
+    tab.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'auto',
+                block: 'start'
+            });
+        }
+
+        document.querySelectorAll('.transform-tabs a').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        this.classList.add('active');
+    });
+});
+</script>
+
+<script>
+
+const sections =
+document.querySelectorAll('.transform-chapter');
+
+const navLinks =
+document.querySelectorAll('.transform-tabs a');
+
+window.addEventListener('scroll', () => {
+
+    let current = '';
+
+    sections.forEach(section => {
+
+        const sectionTop =
+        section.offsetTop - 180;
+
+        if(pageYOffset >= sectionTop){
+            current = section.getAttribute('id');
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove('active');
+
+        if(
+            link.getAttribute('href')
+            === '#' + current
+        ){
+            link.classList.add('active');
+        }
+
+    });
+
+});
+
+</script>
 
 @endsection
