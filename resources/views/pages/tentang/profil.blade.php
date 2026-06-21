@@ -5,7 +5,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}v=2">
+<link rel="stylesheet" href="{{ asset('assets/css/tentang-modern.css') }}?v=3">
 
 <section class="tentang-hero">
     <div class="tentang-hero-overlay"></div>
