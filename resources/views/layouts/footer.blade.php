@@ -12,12 +12,12 @@
             </p>
 
             <div class="pds-footer-contact">
-                <span>Call Us : 0821 XXXX XXXX</span>
+                <span>Call Us : 0821-9056-6660</span>
                 <span>Email Us : info@pascadanasundari.com</span>
             </div>
 
             <div class="pds-footer-social">
-                <a href="https://wa.me/62821XXXXXXXX" target="_blank" class="whatsapp">
+                <a href="https://wa.me/082190566660" target="_blank" class="whatsapp">
                     WhatsApp
                 </a>
 
@@ -49,7 +49,7 @@
 
             <p>Operating Hours: 24 Hours</p>
 
-            <p>Customer Service: 08xxxxxxxx</p>
+            <p>Customer Service: 0821-9056-6660</p>
 
             <p>
                 Head Office: 54, Jl. Manunggal No.83,<br>

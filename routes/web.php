@@ -11,7 +11,8 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\ManagementController;
 use App\Http\Controllers\Admin\CertificateStatController;
 use App\Http\Controllers\Admin\CompanyDocumentController;
-
+use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Admin\UserController;
 
 
 Route::get('/kmp-tunu', function () {
@@ -142,6 +143,7 @@ Route::post('/admin/login', [AuthController::class, 'login'])
 Route::post('/admin/logout', [AuthController::class, 'logout'])
     ->name('admin.logout');
 
+
 Route::get('/admin', function () {
     return redirect('/admin/berita');
 })->name('admin.dashboard');
@@ -152,6 +154,22 @@ Route::prefix('admin')
     ->group(function () {
 
         /*
+        |------------------------------------------------------------------
+        | PROFILE / PASSWORD
+        |------------------------------------------------------------------
+        */
+        Route::get('/password', [ProfileController::class, 'password'])
+            ->name('password');
+
+        Route::post('/password', [ProfileController::class, 'updatePassword'])
+            ->name('password.update');
+
+        Route::resource('users', UserController::class)->except(['show']);
+   
+    
+    
+    
+    /*
         |--------------------------------------------------------------------------
         | BERITA
         |--------------------------------------------------------------------------

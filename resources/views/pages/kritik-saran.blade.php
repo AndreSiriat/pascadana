@@ -30,7 +30,7 @@
 
                 <div class="info-cards">
 
-                    <a href="https://wa.me/628123456789"
+                    <a href="https://wa.me/082190566660"
                        target="_blank"
                        class="info-card-item">
 
@@ -45,7 +45,7 @@
 
                     </a>
 
-                    <a href="https://instagram.com/pds_ferry"
+                    <a href="https://instagram.com/pdsferry"
                        target="_blank"
                        class="info-card-item">
 

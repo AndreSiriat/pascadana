@@ -49,6 +49,14 @@
             <span>Kritik & Saran</span>
         </a>
 
+        <li>
+        <a href="{{ route('admin.users.index') }}"
+        class=" sidebar-link {{ request()->routeIs('admin.users.*') ? 'active' : '' }}">
+            <i class="fa-solid fa-user-shield"></i>
+            <span>User Management</span>
+        </a>
+        </li>
+
     </nav>
 
 </aside>
