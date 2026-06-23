@@ -5,7 +5,7 @@
     <div class="container">
 
         <a class="navbar-brand" href="/">
-            <img src="{{ asset('assets/img/7.png') }}" alt="Logo">
+            <img src="{{ asset('assets/img/107.png') }}" alt="Logo">
         </a>
 
         <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
