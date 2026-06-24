@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}?v=2">
 
 <footer class="pds-footer">
     <div class="pds-footer-container">
