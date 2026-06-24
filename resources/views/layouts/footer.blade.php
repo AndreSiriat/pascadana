@@ -25,6 +25,13 @@
                     Instagram
                 </a>
             </div>
+
+            <div class="pds-footer-visitor">
+                <span>Total Visitors :</span>
+                <strong>
+                    {{ number_format(\App\Models\VisitorStat::first()->total_visitors ?? 0, 0, ',', '.') }}
+                </strong>
+            </div>
         </div>
 
         <div class="pds-footer-column">
