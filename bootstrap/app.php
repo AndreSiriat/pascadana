@@ -17,9 +17,10 @@ return Application::configure(basePath: dirname(__DIR__))
             return route('admin.login');
         });
 
-        // $middleware->web(append: [
-//     CountVisitor::class,
-// ]);
+        $middleware->web(append: [
+            CountVisitor::class,
+        ]);
+
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
