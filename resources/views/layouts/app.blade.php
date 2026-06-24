@@ -9,8 +9,8 @@
     <meta name="description" content="@yield('meta_description', 'PT Pasca Dana Sundari (PDS Ferry) menyediakan layanan transportasi penyeberangan yang aman, profesional, dan terpercaya di Indonesia.')">
 
     <link rel="canonical" href="{{ url()->current() }}">
-        <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('assets/img/37.png') }}">
-    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/img/37.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/img/200.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/img/200.png') }}">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="@yield('og_title', 'PT Pasca Dana Sundari | PDS Ferry')">
