@@ -1,6 +1,41 @@
 @extends('layouts.app')
 
-@section('title', $berita->judul)
+@section('title', $berita->judul . ' | PT Pasca Dana Sundari')
+
+@section('meta_description', Str::limit(strip_tags($berita->isi), 160))
+
+@section('og_title', $berita->judul)
+
+@section(
+    'og_description',
+    \Illuminate\Support\Str::limit(strip_tags($berita->isi), 160)
+)
+
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "NewsArticle",
+    "headline": "{{ $berita->judul }}",
+    "description": "{{ \Illuminate\Support\Str::limit(strip_tags($berita->isi), 160) }}",
+    "image": "{{ $berita->thumbnail ? asset('assets/img/news/' . $berita->thumbnail) : asset('assets/img/107.png') }}",
+    "author": {
+        "@@type": "Organization",
+        "name": "PT Pasca Dana Sundari"
+    },
+    "publisher": {
+        "@@type": "Organization",
+        "name": "PT Pasca Dana Sundari",
+        "logo": {
+            "@@type": "ImageObject",
+            "url": "{{ asset('assets/img/107.png') }}"
+        }
+    },
+    "datePublished": "{{ $berita->created_at->toAtomString() }}",
+    "dateModified": "{{ $berita->updated_at->toAtomString() }}"
+}
+</script>
+@endsection
 
 @section('content')
 

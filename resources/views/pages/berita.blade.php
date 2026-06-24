@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Berita — PT Pasca Dana Sundari')
+@section('title', 'Berita PDS Ferry | PT Pasca Dana Sundari')
+@section('meta_description', 'Berita terbaru PT Pasca Dana Sundari (PDS Ferry), informasi operasional kapal, keselamatan pelayaran, dan perkembangan perusahaan.')
 
 @section('content')
 
