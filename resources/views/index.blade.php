@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Beranda')
+@section('title', 'PT Pasca Dana Sundari | PDS Ferry Indonesia - Trusted Voyage')
+@section('meta_description', 'PT Pasca Dana Sundari (PDS Ferry) menyediakan layanan transportasi penyeberangan yang aman, profesional, dan terpercaya di Indonesia dengan komitmen terhadap keselamatan, keandalan, dan pelayanan berkualitas.')
+@section('og_title', 'PT Pasca Dana Sundari')
+@section('og_description', 'Trusted Voyage - Ferry Transportation Services')
 
 @section('content')
 

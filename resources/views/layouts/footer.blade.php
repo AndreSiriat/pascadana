@@ -17,7 +17,7 @@
             </div>
 
             <div class="pds-footer-social">
-                <a href="https://wa.me/082190566660" target="_blank" class="whatsapp">
+                <a href="https://wa.me/06282190566660" target="_blank" class="whatsapp">
                     WhatsApp
                 </a>
 
