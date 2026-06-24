@@ -27,7 +27,7 @@
             </div>
 
             <div class="pds-footer-visitor">
-                <span>Total Visitors :</span>
+                <span>Total Website Visitors :</span>
                 <strong>
                     {{ number_format(\App\Models\VisitorStat::first()->total_visitors ?? 0, 0, ',', '.') }}
                 </strong>
